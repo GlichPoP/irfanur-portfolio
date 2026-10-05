@@ -49,33 +49,6 @@
   }
 })();
 
-// ==========================================
-// Copy Phone to Clipboard
-// ==========================================
-(function initPhoneCopy() {
-  const copyBtn = document.getElementById('copyPhoneBtn');
-  const copyText = document.getElementById('copyPhoneText');
-  const phoneToCopy = '+8801537295042';
-
-  if (copyBtn && copyText) {
-    copyBtn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(phoneToCopy);
-        const originalText = copyText.textContent;
-        copyText.textContent = 'Copied!';
-        copyBtn.classList.add('copied');
-
-        setTimeout(() => {
-          copyText.textContent = originalText;
-          copyBtn.classList.remove('copied');
-        }, 2000);
-      } catch (err) {
-        fallbackCopy(phoneToCopy, copyText);
-      }
-    });
-  }
-})();
-
 function fallbackCopy(text, labelElement) {
   const textarea = document.createElement('textarea');
   textarea.value = text;
