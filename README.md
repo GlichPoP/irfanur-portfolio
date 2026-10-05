@@ -3,7 +3,7 @@
 [![Live Site](https://img.shields.io/badge/Live_Portfolio-Online-00c853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://glichpop.github.io/irfanur-portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-Personal portfolio website presenting my background as a **Product Builder** combining **Finance & Supply Chain Management** insight with modern AI-driven software creation.
+Personal portfolio website presenting my background in **Finance & Supply Chain Management** and my work as a **Product Builder** creating software tools to increase enterprise efficiency.
 
 Hosted for free on **GitHub Pages**.
 
@@ -11,7 +11,7 @@ Hosted for free on **GitHub Pages**.
 
 ## 👨‍💼 Product Vision & Background
 
-- **Product Building & Problem Solving:** Passionate about identifying operational friction and directing modern technology & AI systems to architect and ship practical software—including **PROBAHO CRM Solutions** (an offline-first desktop suite built with Electron, React 19, and SQLite 3).
+- **Unifying Finance & Supply Chain Operations:** Passionate about solving operational friction at the intersection of corporate finance and supply chain logistics. I direct modern AI systems and software technology to architect and build practical tools that increase efficiency—including **PROBAHO CRM Solutions** (an offline-first enterprise desktop suite built with Electron, React 19, and SQLite 3).
 - **Academic Foundation:** BBA graduate in Finance (Minor in Supply Chain Management) from **BRAC University**.
 - **Corporate Operations & ERP:** Hands-on accounting experience at **Square Toiletries Ltd** managing **Oracle ERP** general ledger entries, bank & trial balance reconciliations, and financial modeling in Advanced Excel.
 - **E-Commerce Operations:** Launched **Strides Co USA** on Shopify, synchronized cross-border inventory between the USA and Bangladesh, and executed organic SEO strategies.
