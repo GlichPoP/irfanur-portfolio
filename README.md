@@ -12,7 +12,7 @@ Hosted for free on **GitHub Pages**.
 ## 👨‍💼 Product Vision & Background
 
 - **Product Building & Problem Solving:** Passionate about identifying operational friction and directing modern technology & AI systems to architect and ship practical software—including **PROBAHO CRM Solutions** (an offline-first desktop suite built with Electron, React 19, and SQLite 3).
-- **Academic Foundation:** BBA graduate in Finance (Minor in Supply Chain Management) from **BRAC University** (CGPA: 3.52 / 4.00).
+- **Academic Foundation:** BBA graduate in Finance (Minor in Supply Chain Management) from **BRAC University**.
 - **Corporate Operations & ERP:** Hands-on accounting experience at **Square Toiletries Ltd** managing **Oracle ERP** general ledger entries, bank & trial balance reconciliations, and financial modeling in Advanced Excel.
 - **E-Commerce Operations:** Launched **Strides Co USA** on Shopify, synchronized cross-border inventory between the USA and Bangladesh, and executed organic SEO strategies.
 
