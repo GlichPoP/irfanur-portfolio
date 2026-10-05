@@ -1036,44 +1036,6 @@ body {
   line-height: 1.4;
 }
 
-.references-box {
-  margin-top: 28px;
-  padding: 20px;
-  background: var(--bg-input);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-}
-
-.references-box h4 {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--accent-primary);
-  margin-bottom: 12px;
-}
-
-.ref-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.ref-item strong {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-main);
-}
-
-.ref-item span {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  display: block;
-}
-
-.ref-item a {
-  font-size: 0.8rem;
-  color: var(--accent-cyan);
-  text-decoration: none;
-}
 
 /* Contact Section */
 .contact-card {
