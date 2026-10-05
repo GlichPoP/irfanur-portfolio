@@ -43,27 +43,58 @@
           copyBtn.classList.remove('copied');
         }, 2000);
       } catch (err) {
-        // Fallback for older browsers or non-HTTPS contexts
-        const textarea = document.createElement('textarea');
-        textarea.value = emailToCopy;
-        textarea.style.position = 'fixed';
-        textarea.style.opacity = '0';
-        document.body.appendChild(textarea);
-        textarea.select();
-        try {
-          document.execCommand('copy');
-          copyText.textContent = 'Copied!';
-          setTimeout(() => {
-            copyText.textContent = 'Copy';
-          }, 2000);
-        } catch (e) {
-          copyText.textContent = 'irfanur6@gmail.com';
-        }
-        document.body.removeChild(textarea);
+        fallbackCopy(emailToCopy, copyText);
       }
     });
   }
 })();
+
+// ==========================================
+// Copy Phone to Clipboard
+// ==========================================
+(function initPhoneCopy() {
+  const copyBtn = document.getElementById('copyPhoneBtn');
+  const copyText = document.getElementById('copyPhoneText');
+  const phoneToCopy = '+8801537295042';
+
+  if (copyBtn && copyText) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(phoneToCopy);
+        const originalText = copyText.textContent;
+        copyText.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyText.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        fallbackCopy(phoneToCopy, copyText);
+      }
+    });
+  }
+})();
+
+function fallbackCopy(text, labelElement) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    const orig = labelElement.textContent;
+    labelElement.textContent = 'Copied!';
+    setTimeout(() => {
+      labelElement.textContent = orig;
+    }, 2000);
+  } catch (e) {
+    labelElement.textContent = text;
+  }
+  document.body.removeChild(textarea);
+}
 
 // ==========================================
 // Active Navigation Highlight on Scroll
