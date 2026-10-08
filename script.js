@@ -1,201 +1,247 @@
 /**
  * IRFANUR RAHMAN — PORTFOLIO RUNTIME ENGINE
- * Design Architecture: Dennis Snellenberg Minimalist Aesthetic & Dynamic Animations
+ * Modeled 100% on Alice Lee (byalicelee.com)
+ * Hero Showcase Carousel, Category Filters & Case Study Dialogs
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
-  // 1. Dennis Snellenberg Signature Preloader
+  // 1. Alice Lee Hero Showcase Slider
   // ==========================================
-  (function initPreloader() {
-    const preloader = document.getElementById('preloader');
-    if (!preloader) return;
+  (function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.getElementById('sliderPrevBtn');
+    const nextBtn = document.getElementById('sliderNextBtn');
 
-    const words = preloader.querySelectorAll('.preloader-word');
-    let currentIndex = 0;
+    if (!slides.length) return;
 
-    const wordInterval = setInterval(() => {
-      words[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % words.length;
-      words[currentIndex].classList.add('active');
-    }, 160);
+    let currentSlide = 0;
+    let slideTimer = null;
 
-    setTimeout(() => {
-      clearInterval(wordInterval);
-      preloader.classList.add('fade-out');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 800);
-    }, 1100);
-  })();
+    function goToSlide(index) {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
 
-  // ==========================================
-  // 2. Real-Time Dhaka, Bangladesh Clock (GMT+6)
-  // ==========================================
-  (function initLiveClocks() {
-    const topClock = document.getElementById('liveDhakaTime');
-    const footerClock = document.getElementById('footerClock');
+      currentSlide = (index + slides.length) % slides.length;
 
-    function updateTime() {
-      try {
-        const options = {
-          timeZone: 'Asia/Dhaka',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: true
-        };
-        const timeString = new Intl.DateTimeFormat('en-US', options).format(new Date());
-        if (topClock) topClock.textContent = `${timeString} GMT+6`;
-        if (footerClock) footerClock.textContent = `${timeString} GMT+6`;
-      } catch (e) {
-        const now = new Date();
-        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-        const dhakaDate = new Date(utc + (3600000 * 6));
-        const str = dhakaDate.toLocaleTimeString() + ' GMT+6';
-        if (topClock) topClock.textContent = str;
-        if (footerClock) footerClock.textContent = str;
+      slides[currentSlide].classList.add('active');
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.add('active');
       }
     }
 
-    updateTime();
-    setInterval(updateTime, 1000);
-  })();
-
-  // ==========================================
-  // 3. Snellenberg Hover Preview Reveal Modal
-  // ==========================================
-  (function initProjectHoverModal() {
-    const hoverModal = document.getElementById('projectHoverModal');
-    const modalBadge = document.getElementById('hoverModalBadge');
-    const modalTitle = document.getElementById('hoverModalTitle');
-    const modalDesc = document.getElementById('hoverModalDesc');
-    const modalStack = document.getElementById('hoverModalStack');
-    const workItems = document.querySelectorAll('.work-item');
-
-    if (!hoverModal || window.matchMedia('(hover: none)').matches) return;
-
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let isMoving = false;
-
-    // Smooth lerp animation loop for hover modal
-    function renderHoverModal() {
-      currentX += (targetX - currentX) * 0.16;
-      currentY += (targetY - currentY) * 0.16;
-
-      hoverModal.style.left = `${currentX}px`;
-      hoverModal.style.top = `${currentY}px`;
-
-      if (isMoving) {
-        requestAnimationFrame(renderHoverModal);
-      }
+    function startAutoSlide() {
+      stopAutoSlide();
+      slideTimer = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 6000);
     }
 
-    window.addEventListener('mousemove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
+    function stopAutoSlide() {
+      if (slideTimer) clearInterval(slideTimer);
+    }
 
-      if (!isMoving) {
-        isMoving = true;
-        renderHoverModal();
-      }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentSlide - 1);
+        startAutoSlide();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentSlide + 1);
+        startAutoSlide();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-slide-target'), 10);
+        goToSlide(targetIndex);
+        startAutoSlide();
+      });
     });
 
-    workItems.forEach((item) => {
-      item.addEventListener('mouseenter', () => {
-        const title = item.getAttribute('data-title') || '';
-        const badge = item.getAttribute('data-badge') || '';
-        const desc = item.getAttribute('data-desc') || '';
-        const stack = item.getAttribute('data-stack') || '';
+    startAutoSlide();
+  })();
 
-        if (modalTitle) modalTitle.textContent = title;
-        if (modalBadge) modalBadge.textContent = badge;
-        if (modalDesc) modalDesc.textContent = desc;
-        if (modalStack) modalStack.textContent = stack;
+  // ==========================================
+  // 2. Work Category Filtering
+  // ==========================================
+  (function initWorkFilters() {
+    const filterButtons = document.querySelectorAll('.filter-tab-btn');
+    const cards = document.querySelectorAll('.portfolio-item-card');
 
-        hoverModal.classList.add('active');
-      });
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      item.addEventListener('mouseleave', () => {
-        hoverModal.classList.remove('active');
-      });
+        const filter = btn.getAttribute('data-filter');
 
-      // Click to toggle inline case study details
-      item.addEventListener('click', (e) => {
-        // Prevent toggle if clicking direct action links
-        if (e.target.closest('a')) return;
-        item.classList.toggle('expanded');
+        cards.forEach((card) => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = '';
+            setTimeout(() => {
+              card.style.opacity = '1';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 250);
+          }
+        });
       });
     });
   })();
 
   // ==========================================
-  // 4. Dennis Snellenberg Magnetic Cursor Physics
+  // 3. Interactive Case Study Dialog Modals
   // ==========================================
-  (function initMagneticButtons() {
-    if (window.matchMedia('(hover: none)').matches) return;
+  (function initCaseStudyModals() {
+    const modal = document.getElementById('caseStudyModal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalBodyContent = document.getElementById('modalBodyContent');
+    const thumbnailLinks = document.querySelectorAll('[data-modal]');
 
-    const magneticElements = document.querySelectorAll('.magnetic-btn');
+    const caseStudyData = {
+      'modal-probaho': {
+        title: 'PROBAHO CRM Solutions',
+        tagline: 'Offline-First Enterprise Business Management & Retail Showroom Operations Platform',
+        problem: 'Retail showrooms and regional distributors throughout Bangladesh face frequent broadband outages. Standard cloud-only CRMs halt cash drawers, freeze customer billing at the counter, and lack localized courier Cash-on-Delivery (COD) reconciliation engines.',
+        architecture: 'Engineered an offline-first execution runtime leveraging SQLite WebAssembly (sql.js) embedded in Electron 43 and React 19. All transactions execute locally on-device in sub-milliseconds, guaranteeing 100% operational uptime without an internet connection.',
+        capabilities: 'Pre-configured dispatch templates for Pathao, Steadfast, and RedX with automated COD fee & return deduction reconciliation. Features silent GitHub CDN auto-updates, thermal invoice printing, hardware barcode scanning, and role-based access audit logs.',
+        links: [
+          { text: 'View Source on GitHub', url: 'https://github.com/GlichPoP/probaho-crm', primary: true },
+          { text: 'Download Windows Installer (.exe)', url: 'https://github.com/GlichPoP/probaho-crm/releases', primary: false }
+        ]
+      },
+      'modal-inventory': {
+        title: 'Cross-Border Inventory & Multi-Warehouse Sync',
+        tagline: 'Multi-warehouse inventory synchronization bridge connecting Shopify USA with Bangladesh fulfillment hubs',
+        problem: 'Unsynchronized inventory tracking and order status latency between North American storefronts (Shopify USA) and local Bangladesh warehousing cause stockout errors and supply chain drift.',
+        architecture: 'Coordinated real-time SKU mapping schedules, international stock buffers, and organic SEO growth frameworks to support international expansion and multi-warehouse order fulfillment.',
+        capabilities: 'Catalog harmonization, live inventory synchronization, cross-border fulfillment monitoring, and Canva-designed digital assets.',
+        links: [
+          { text: 'Explore Repository', url: 'https://github.com/GlichPoP', primary: true }
+        ]
+      },
+      'modal-ledger': {
+        title: 'General Ledger & Trial Balance Reconciliations',
+        tagline: 'Financial modeling framework extracting raw corporate transactions to automate trial balance reconciliations',
+        problem: 'Corporate accounting teams spend hundreds of hours manually verifying bank statement variances, multi-account ledger distributions, and trial balance integrity across complex corporate units.',
+        architecture: 'Leveraged Oracle ERP to record journal entries and balance multi-account ledger distributions. Formulated advanced financial modeling formulas in Advanced Excel to automate variance resolution.',
+        capabilities: 'Bank reconciliations, trial balance variance detection, general ledger journal entries, and automated stock exchange analytical models.',
+        links: [
+          { text: 'Explore GitHub Profile', url: 'https://github.com/GlichPoP', primary: true }
+        ]
+      },
+      'modal-courier': {
+        title: '64-District Logistics Engine',
+        tagline: 'Courier dispatch templates & automated Cash-on-Delivery financial reconciliation',
+        problem: 'Delayed courier settlements (Pathao, Steadfast, RedX) lock up enterprise working capital. Manual spreadsheet reconciliation causes cash leakage from return fees and unverified COD deductions.',
+        architecture: 'Embedded localized courier dispatch mapping directly into the billing engine, automatically reconciling courier disbursement receipts against customer order IDs.',
+        capabilities: 'Full 64-district coverage, tracking number generation, COD financial settlement verification, and automated return processing.',
+        links: [
+          { text: 'View PROBAHO CRM', url: 'https://github.com/GlichPoP/probaho-crm', primary: true }
+        ]
+      },
+      'modal-autoupdate': {
+        title: 'Background Auto-Updater via CDN',
+        tagline: 'In-app real-time release streaming via GitHub CDN with 1-click silent relaunch',
+        problem: 'Desktop applications traditionally suffer from outdated versions, requiring manual downloads that interrupt showroom staff workflows.',
+        architecture: 'Integrated GitHub Releases CDN delivery with real-time download percentage streaming and background patch verification in Electron.',
+        capabilities: 'Silent background sync, SHA256 cryptographic release verification, progress bars, and 1-click relaunch.',
+        links: [
+          { text: 'View GitHub Releases', url: 'https://github.com/GlichPoP/probaho-crm/releases', primary: true }
+        ]
+      },
+      'modal-ecommerce': {
+        title: 'Strides Co USA Storefront Operations',
+        tagline: 'Direct-to-consumer international e-commerce storefront launch on Shopify',
+        problem: 'Expanding a domestic fashion and lifestyle brand to North America requires localized storefront optimization, SEO keywords, and digital assets.',
+        architecture: 'Configured and launched the Shopify USA storefront, managed international payment gateways, and executed organic SEO strategies.',
+        capabilities: 'Shopify architecture, keyword optimization, customer conversion funnels, and marketing collateral.',
+        links: [
+          { text: 'Explore Work on GitHub', url: 'https://github.com/GlichPoP', primary: true }
+        ]
+      },
+      'modal-bizbee': {
+        title: 'BRAC University BIZ BEE Competitions',
+        tagline: 'Corporate relations & operations for national business case competitions',
+        problem: 'Organizing national competitions requires aligning multinational sponsors, case writers, and thousands of participants under tight deadlines.',
+        architecture: 'Managed corporate relations with Marico, HSBC, Shanta Asset Management, and Perfetti Van Melle, directing event operations for BIZ BEE-BIZVERSE and BIZ BEE-BRAINIACS.',
+        capabilities: 'Brand activations, corporate sponsorships, event logistics, and youth career fair leadership.',
+        links: [
+          { text: 'Connect on LinkedIn', url: 'https://www.linkedin.com/in/irfanur-rahman123/', primary: true }
+        ]
+      }
+    };
 
-    magneticElements.forEach((el) => {
-      el.addEventListener('mousemove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+    function openModal(modalKey) {
+      const data = caseStudyData[modalKey];
+      if (!data || !modal || !modalBodyContent) return;
 
-        const deltaX = e.clientX - centerX;
-        const deltaY = e.clientY - centerY;
+      const linksHtml = data.links.map(link => `
+        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="${link.primary ? 'btn-alice-primary' : 'btn-alice-secondary'}">
+          ${link.text} ↗
+        </a>
+      `).join('');
 
-        // Giant button gets more elastic pull, small buttons get subtle pull
-        const strength = el.classList.contains('giant-magnetic-btn') ? 0.38 : 0.22;
+      modalBodyContent.innerHTML = `
+        <h3>${data.title}</h3>
+        <p class="modal-tagline">${data.tagline}</p>
+        
+        <h4 class="modal-section-title">The Operational Problem</h4>
+        <p>${data.problem}</p>
 
-        el.style.transform = `translate(${deltaX * strength}px, ${deltaY * strength}px)`;
+        <h4 class="modal-section-title">System Architecture & Engineering</h4>
+        <p>${data.architecture}</p>
+
+        <h4 class="modal-section-title">Key Capabilities Delivered</h4>
+        <p>${data.capabilities}</p>
+
+        <div class="modal-actions-row">
+          ${linksHtml}
+        </div>
+      `;
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    thumbnailLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = link.getAttribute('data-modal');
+        if (modalId) openModal(modalId);
       });
+    });
 
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = 'translate(0px, 0px)';
-      });
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
     });
   })();
 
   // ==========================================
-  // 5. Minimalist Dark / Light Theme Toggle
-  // ==========================================
-  (function initTheme() {
-    const themeBtn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-
-    const savedTheme = localStorage.getItem('snellenberg_theme') || 'dark';
-    root.setAttribute('data-theme', savedTheme);
-
-    function updateThemeMeta(theme) {
-      let metaTheme = document.querySelector('meta[name="theme-color"]');
-      if (!metaTheme) {
-        metaTheme = document.createElement('meta');
-        metaTheme.name = 'theme-color';
-        document.head.appendChild(metaTheme);
-      }
-      metaTheme.setAttribute('content', theme === 'dark' ? '#141517' : '#F2F2F4');
-    }
-    updateThemeMeta(savedTheme);
-
-    if (themeBtn) {
-      themeBtn.addEventListener('click', () => {
-        const activeTheme = root.getAttribute('data-theme');
-        const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('snellenberg_theme', nextTheme);
-        updateThemeMeta(nextTheme);
-      });
-    }
-  })();
-
-  // ==========================================
-  // 6. 1-Click Email Clipboard Copy
+  // 4. 1-Click Email Copy
   // ==========================================
   (function initEmailCopy() {
     const copyBtn = document.getElementById('copyEmailBtn');
@@ -208,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
           await navigator.clipboard.writeText(emailToCopy);
           copyText.textContent = 'Copied!';
           setTimeout(() => {
-            copyText.textContent = 'Copy';
+            copyText.textContent = 'Copy Email';
           }, 2000);
         } catch (err) {
           const textarea = document.createElement('textarea');
@@ -219,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
           document.body.removeChild(textarea);
           copyText.textContent = 'Copied!';
           setTimeout(() => {
-            copyText.textContent = 'Copy';
+            copyText.textContent = 'Copy Email';
           }, 2000);
         }
       });

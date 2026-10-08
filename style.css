@@ -1,52 +1,52 @@
 /* ==========================================================================
-   IRFANUR RAHMAN — PERSONAL PORTFOLIO
-   Design System: Dennis Snellenberg Minimalist Aesthetic & Dynamic Animations
+   IRFANUR RAHMAN — PORTFOLIO STYLESHEET
+   Exclusively Modeled on Alice Lee (byalicelee.com)
+   Warm Editorial Aesthetics, Bitter Typography & Curated Showcase Grid
    ========================================================================== */
 
 :root {
-  /* Dark Mode Palette (Dennis Snellenberg Signature Dark) */
-  --bg-primary: #141517;
-  --bg-secondary: #1c1d20;
-  --bg-surface: #24262b;
-  --bg-card: rgba(28, 29, 32, 0.75);
-  --bg-card-hover: rgba(36, 38, 43, 0.95);
+  /* Alice Lee Signature Warm Palette */
+  --bg-page: #FFFFFF;
+  --bg-warm-canvas: #FAF9F6;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #F4F2ED;
+  --bg-pill: #F0EDE6;
+  --bg-selection: #FFEDE7;
 
-  --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-subtle: #E8E5DF;
+  --border-card: #E4E0D8;
+  --border-gold: #E5D5C5;
 
-  --text-main: #FFFFFF;
-  --text-muted: #95979D;
-  --text-dim: #606268;
+  --text-headline: #242424;
+  --text-body: #4A4A4A;
+  --text-muted: #7A7875;
+  --text-tag: #8C8A85;
 
-  --accent-cta: #455CE9;
-  --accent-cta-hover: #3549D3;
-  --accent-green: #22C55E;
+  --accent-warm: #E06D53;
+  --accent-warm-hover: #C85940;
+  --accent-peach: #FFEDE7;
+  --accent-sage: #5A8F7D;
+  --accent-navy: #314E6E;
 
+  --font-serif: 'Bitter', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 
-  --ease-snellenberg: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+  --radius-card: 16px;
+  --radius-pill: 30px;
 }
 
-[data-theme="light"] {
-  /* Light Mode Palette (Snellenberg Crisp Light) */
-  --bg-primary: #F2F2F4;
-  --bg-secondary: #E7E8EB;
-  --bg-surface: #DADBE0;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: #FFFFFF;
-
-  --border-hairline: rgba(0, 0, 0, 0.08);
-  --border-strong: rgba(0, 0, 0, 0.16);
-
-  --text-main: #141517;
-  --text-muted: #5E6066;
-  --text-dim: #8E9096;
-
-  --accent-cta: #1C1D20;
-  --accent-cta-hover: #32343A;
-  --accent-green: #16A34A;
+/* Alice Lee Signature Selection */
+::selection {
+  background: var(--bg-selection);
+  color: var(--text-headline);
+}
+::-moz-selection {
+  background: var(--bg-selection);
+  color: var(--text-headline);
 }
 
 /* Base Reset */
@@ -60,1141 +60,1046 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body.body {
   font-family: var(--font-sans);
-  background-color: var(--bg-primary);
-  color: var(--text-main);
+  background-color: var(--bg-page);
+  color: var(--text-body);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 1280px;
+/* Typography Defaults */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--text-headline);
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Containers */
+.wrapper.cc-homepage {
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 32px 60px 32px;
 }
 
-/* Section Badges (Snellenberg Signature Tracking) */
-.section-badge {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
-  display: inline-block;
-  margin-bottom: 24px;
-}
-
-/* ==========================================================================
-   DENNIS SNELLENBERG PRELOADER
-   ========================================================================== */
-.preloader {
-  position: fixed;
-  inset: 0;
-  background-color: var(--bg-primary);
-  z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.8s var(--ease-snellenberg), opacity 0.5s ease;
-  pointer-events: all;
-}
-
-.preloader.fade-out {
-  transform: translateY(-100%);
-  pointer-events: none;
-}
-
-.preloader-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.preloader-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--text-main);
-}
-
-.preloader-text-rail {
-  position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.preloader-word {
-  position: absolute;
-  left: 0;
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  white-space: nowrap;
-}
-
-.preloader-word.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ==========================================================================
-   SNELLENBERG FLOATING HOVER REVEAL MODAL (Follows Cursor)
-   ========================================================================== */
-.project-hover-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 1200;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.85);
-  transition: opacity 0.3s ease, transform 0.35s var(--ease-snellenberg);
-  will-change: transform, left, top;
-}
-
-.project-hover-modal.active {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.hover-preview-card {
-  width: 320px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-strong);
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(16px);
-}
-
-.hover-preview-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent-cta);
-  margin-bottom: 8px;
-}
-
-.hover-preview-card h4 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-  letter-spacing: -0.01em;
-}
-
-.hover-preview-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.45;
-  margin-bottom: 12px;
-}
-
-.hover-modal-stack {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-dim);
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 8px;
-}
-
-/* ==========================================================================
-   SITE HEADER & NAVIGATION
-   ========================================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(20, 21, 23, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-hairline);
-  transition: background-color 0.3s ease;
-}
-
-[data-theme="light"] .site-header {
-  background: rgba(242, 242, 244, 0.85);
-}
-
-.header-inner {
+.nav-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 84px;
 }
 
-.brand-link {
-  display: inline-flex;
+/* ==========================================================================
+   HEADER & NAVIGATION (Alice Lee Style)
+   ========================================================================== */
+.header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all 0.25s ease;
+}
+
+.logo-lockup {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--text-main);
-  font-size: 0.95rem;
-  font-weight: 600;
+  gap: 10px;
 }
 
-.brand-copyright {
-  font-size: 1.1rem;
-  font-weight: 400;
-  opacity: 0.8;
+.logo-mark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent-warm);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--accent-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-headline);
+  letter-spacing: -0.01em;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .nav-link {
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
   color: var(--text-muted);
   transition: color 0.2s ease;
   position: relative;
+  padding: 6px 0;
 }
 
-.nav-link:hover {
-  color: var(--text-main);
+.nav-link:hover, .nav-link.active {
+  color: var(--text-headline);
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-warm);
+  border-radius: 2px;
 }
 
-.theme-btn {
-  background: transparent;
-  border: 1px solid var(--border-hairline);
-  color: var(--text-main);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-}
-
-.theme-btn:hover {
-  border-color: var(--border-strong);
-  transform: scale(1.05);
-}
-
-[data-theme="dark"] .sun-icon { display: inline-block; }
-[data-theme="dark"] .moon-icon { display: none; }
-[data-theme="light"] .sun-icon { display: none; }
-[data-theme="light"] .moon-icon { display: inline-block; }
-
-.pill-cta-btn {
-  background: var(--text-main);
-  color: var(--bg-primary);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 40px;
-  transition: all 0.25s var(--ease-snellenberg);
-}
-
-.pill-cta-btn:hover {
-  transform: scale(1.04);
-}
-
-/* ==========================================================================
-   HERO SECTION
-   ========================================================================== */
-.hero-section {
-  padding: 70px 40px 90px 40px;
-}
-
-.hero-meta-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 50px;
-  font-size: 0.88rem;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.status-indicator-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.pulse-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  box-shadow: 0 0 10px var(--accent-green);
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-@keyframes pulseDot {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.4); opacity: 1; }
-}
-
-.location-clock-wrap {
-  font-family: var(--font-mono);
-  color: var(--text-muted);
-  display: flex;
+.shop-pill-btn {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.84rem;
-}
-
-.clock-display {
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-.dot-separator {
-  color: var(--text-dim);
-}
-
-.hero-heading-block {
-  margin-bottom: 60px;
-}
-
-.hero-title {
-  font-size: clamp(3rem, 7.5vw, 6.2rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-}
-
-.title-sub {
-  font-weight: 400;
-  color: var(--text-muted);
-}
-
-.hero-footer-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 60px;
-  align-items: flex-end;
-}
-
-.hero-lead-text {
-  font-size: 1.35rem;
-  line-height: 1.5;
-  color: var(--text-main);
-  margin-bottom: 16px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-.hero-lead-text strong {
-  font-weight: 700;
-}
-
-.hero-secondary-text {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 36px;
-  max-width: 580px;
-}
-
-.hero-cta-cluster {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Snellenberg Round Action Button */
-.round-action-btn {
-  background: var(--accent-cta);
+  background: var(--text-headline);
   color: #FFFFFF;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s var(--ease-snellenberg);
-  box-shadow: 0 10px 24px rgba(69, 92, 233, 0.25);
-}
-
-.round-action-btn:hover {
-  transform: translateY(-2px);
-  background: var(--accent-cta-hover);
-}
-
-.btn-arrow {
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
-}
-
-.round-action-btn:hover .btn-arrow {
-  transform: translateY(3px);
-}
-
-.text-arrow-btn {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
-  padding: 8px 12px;
-}
-
-.text-arrow-btn:hover {
-  color: var(--text-main);
-}
-
-.hero-portrait-col {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.portrait-frame {
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 4 / 4.8;
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-.portrait-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(12%);
-  transition: filter 0.4s ease, transform 0.4s ease;
-}
-
-.portrait-frame:hover .portrait-img {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
-
-/* ==========================================================================
-   DENNIS SNELLENBERG SIGNATURE INFINITE MARQUEE
-   ========================================================================== */
-.snellenberg-marquee {
-  width: 100%;
-  overflow: hidden;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-hairline);
-  border-bottom: 1px solid var(--border-hairline);
-  padding: 24px 0;
-  white-space: nowrap;
-  margin: 60px 0 100px 0;
-}
-
-.marquee-track {
-  display: inline-flex;
-  animation: snellenbergMarquee 38s linear infinite;
-}
-
-.marquee-chunk {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-muted);
-  padding: 0 40px;
-  white-space: nowrap;
-}
-
-@keyframes snellenbergMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ==========================================================================
-   ABOUT SECTION (Snellenberg 2-Column Editorial)
-   ========================================================================== */
-.about-section {
-  padding: 80px 40px;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-top: 20px;
-}
-
-.about-big-quote {
-  font-size: clamp(2rem, 3.8vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.03em;
-  color: var(--text-main);
-}
-
-.about-body-col {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-.about-body-col strong {
-  color: var(--text-main);
-}
-
-.about-credentials-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 24px;
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 24px;
-}
-
-.cred-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.cred-num {
-  font-family: var(--font-mono);
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
   font-size: 0.85rem;
-  color: var(--accent-cta);
-  font-weight: 700;
-  padding-top: 2px;
-}
-
-.cred-info strong {
-  display: block;
-  font-size: 1rem;
-  color: var(--text-main);
-}
-
-.cred-info span {
-  font-size: 0.88rem;
-  color: var(--text-dim);
-}
-
-/* ==========================================================================
-   RECENT WORK (Snellenberg List Rows & Hover Reveal)
-   ========================================================================== */
-.work-section {
-  padding: 100px 40px;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.work-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.work-count {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-dim);
-}
-
-.work-list {
-  border-top: 1px solid var(--border-hairline);
-}
-
-.work-item {
-  border-bottom: 1px solid var(--border-hairline);
-  padding: 44px 0;
-  cursor: pointer;
-  transition: padding 0.3s ease, background-color 0.25s ease;
-}
-
-.work-item:hover {
-  background-color: rgba(255, 255, 255, 0.015);
-}
-
-[data-theme="light"] .work-item:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-.work-item-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.work-item-main {
-  transition: transform 0.3s var(--ease-snellenberg);
-}
-
-.work-item:hover .work-item-main {
-  transform: translateX(14px);
-}
-
-.work-item-title {
-  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--text-main);
-  margin-bottom: 4px;
-}
-
-.work-item-type {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-.work-item-meta {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.work-item-category {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.work-item-year {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--text-dim);
-}
-
-.work-item-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.inline-action-btn {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-main);
-  text-decoration: none;
-  font-size: 0.8rem;
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
   transition: all 0.2s ease;
 }
 
-.inline-action-btn:hover {
-  background: var(--text-main);
-  color: var(--bg-primary);
+.shop-pill-btn:hover {
+  background: var(--accent-warm);
+  transform: translateY(-1px);
 }
 
-/* Expandable Inline Details */
-.work-item-details {
-  max-height: 0;
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34D399;
+}
+
+/* ==========================================================================
+   ALICE LEE HERO SHOWCASE SLIDER
+   ========================================================================== */
+.hero-slider-section {
+  position: relative;
+  background-color: var(--bg-warm-canvas);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 60px 32px 50px 32px;
   overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s var(--ease-snellenberg), opacity 0.3s ease, margin-top 0.3s ease;
-  margin-top: 0;
 }
 
-.work-item.expanded .work-item-details {
-  max-height: 400px;
-  opacity: 1;
-  margin-top: 30px;
+.slider-wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 420px;
 }
 
-.details-grid {
+.hero-slide {
+  position: absolute;
+  inset: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-hairline);
-  border-radius: 16px;
-  padding: 24px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(40px);
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
 }
 
-.detail-box h4 {
-  font-size: 0.85rem;
+.hero-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.slide-badge-row {
+  margin-bottom: 16px;
+}
+
+.slide-tag {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent-cta);
-  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  color: var(--accent-warm);
+  background: var(--accent-peach);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
 }
 
-.detail-box p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-}
-
-/* ==========================================================================
-   WORK HISTORY & EXPERIENCE (Snellenberg Minimalist Table)
-   ========================================================================== */
-.experience-section {
-  padding: 100px 40px;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.experience-table {
-  border-top: 1px solid var(--border-hairline);
-  margin-top: 10px;
-}
-
-.exp-row {
-  display: grid;
-  grid-template-columns: 280px 1fr 180px;
-  gap: 40px;
-  padding: 36px 0;
-  border-bottom: 1px solid var(--border-hairline);
-  align-items: flex-start;
-  transition: background-color 0.2s ease;
-}
-
-.exp-row:hover {
-  background-color: rgba(255, 255, 255, 0.01);
-}
-
-.exp-company-name {
-  display: block;
-  font-size: 1.25rem;
+.slide-title {
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
   font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-.exp-company-loc {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  margin-top: 4px;
+.slide-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
-.exp-role-title {
-  display: block;
-  font-size: 1.05rem;
+.slide-subtitle strong {
+  color: var(--text-headline);
   font-weight: 600;
-  color: var(--text-main);
+}
+
+.slide-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Alice Lee Action Buttons */
+.btn-alice-primary {
+  background: var(--accent-warm);
+  color: #FFFFFF;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(224, 109, 83, 0.28);
+}
+
+.btn-alice-primary:hover {
+  background: var(--accent-warm-hover);
+  transform: translateY(-1px);
+}
+
+.btn-alice-secondary {
+  background: #FFFFFF;
+  color: var(--text-headline);
+  border: 1px solid var(--border-card);
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-alice-secondary:hover {
+  border-color: var(--text-headline);
+  background: #FAFAFA;
+}
+
+/* Slide Mockup Card */
+.slide-visual-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-mockup-card {
+  width: 100%;
+  max-width: 380px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-medium);
+  overflow: hidden;
+  padding-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.slide-mockup-card:hover {
+  transform: translateY(-4px);
+}
+
+.mockup-header-dots {
+  background: #F7F5F0;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.dot.red { background: #FF5F56; }
+.dot.yellow { background: #FFBD2E; }
+.dot.green { background: #27C93F; }
+
+.mockup-content {
+  padding: 30px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mockup-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.finance-symbol {
+  font-size: 3rem;
+  margin-bottom: 14px;
+}
+
+.mockup-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
-.exp-role-desc {
-  display: block;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.exp-col-period {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  text-align: right;
-}
-
-/* ==========================================================================
-   ACADEMICS SECTION
-   ========================================================================== */
-.academics-section {
-  padding: 90px 40px;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.academic-highlight-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-hairline);
-  border-radius: 20px;
-  padding: 40px;
-  margin-top: 10px;
-}
-
-.acad-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.acad-institution {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.acad-degree {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.acad-timeline {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--text-dim);
-}
-
-.acad-details-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 24px;
-}
-
-.acad-cell {
-  display: flex;
-  flex-direction: column;
-}
-
-.cell-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
-  margin-bottom: 4px;
-}
-
-.cell-val {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-/* ==========================================================================
-   CORE CAPABILITIES / SKILLS (Snellenberg 3-Column Grid)
-   ========================================================================== */
-.capabilities-section {
-  padding: 100px 40px;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.cap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 50px;
-  margin-top: 20px;
-}
-
-.cap-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.cap-index {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent-cta);
-  margin-bottom: 12px;
-}
-
-.cap-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: -0.02em;
-}
-
-.cap-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 24px;
-}
-
-.cap-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 20px;
-}
-
-.cap-list li {
-  position: relative;
-  padding-left: 20px;
-  font-size: 0.92rem;
-  color: var(--text-main);
-  font-weight: 500;
-}
-
-.cap-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--text-dim);
-}
-
-/* ==========================================================================
-   DENNIS SNELLENBERG GRAND FOOTER & MAGNETIC CTA
-   ========================================================================== */
-.snellenberg-footer {
-  padding: 120px 0 50px 0;
-  background: var(--bg-secondary);
-}
-
-.footer-top-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.footer-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.footer-cta-center {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 90px auto;
-}
-
-.footer-prompt {
-  font-size: 1.25rem;
+.mockup-content p {
+  font-size: 0.88rem;
   color: var(--text-muted);
   margin-bottom: 16px;
-  font-weight: 400;
 }
 
-.footer-giant-title {
-  font-size: clamp(2.8rem, 7vw, 5.8rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  margin-bottom: 60px;
-}
-
-/* Giant Snellenberg Magnetic Button */
-.giant-btn-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.giant-magnetic-btn {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  background: var(--accent-cta);
-  color: #FFFFFF;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  box-shadow: 0 20px 50px rgba(69, 92, 233, 0.35);
-  cursor: pointer;
-  transition: transform 0.25s var(--ease-snellenberg), background-color 0.25s ease;
-  will-change: transform;
-}
-
-.giant-magnetic-btn:hover {
-  background: var(--accent-cta-hover);
-}
-
-.giant-btn-text {
-  font-size: 1.15rem;
+.mockup-pill {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
   font-weight: 700;
-}
-
-.giant-btn-arrow {
-  font-size: 1.6rem;
-  transition: transform 0.2s ease;
-}
-
-.giant-magnetic-btn:hover .giant-btn-arrow {
-  transform: translate(4px, -4px);
-}
-
-/* Footer Channels Row */
-.footer-contact-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  border-top: 1px solid var(--border-hairline);
-  border-bottom: 1px solid var(--border-hairline);
-  padding: 40px 0;
-  margin-bottom: 40px;
-}
-
-.contact-pill-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.pill-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-dim);
-}
-
-.pill-action-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.pill-val {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.pill-copy-btn {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-main);
-  font-size: 0.78rem;
-  font-weight: 600;
+  color: var(--accent-sage);
+  background: #E8F3EE;
   padding: 4px 12px;
-  border-radius: 14px;
+  border-radius: var(--radius-pill);
+}
+
+/* Slider Controls */
+.slider-controls {
+  max-width: 1220px;
+  margin: 36px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider-arrow {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-headline);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.slider-arrow:hover {
+  background: var(--text-headline);
+  color: #FFFFFF;
+}
+
+.slider-dots-rail {
+  display: flex;
+  gap: 8px;
+}
+
+.slider-dot {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.slider-dot.active {
+  color: var(--accent-warm);
+  background: var(--accent-peach);
+}
+
+/* ==========================================================================
+   ALICE LEE SIGNATURE INTRODUCTION TEXT
+   ========================================================================== */
+.homepage-introduction-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.7vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-headline);
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 60px 32px 30px 32px;
+  letter-spacing: -0.015em;
+}
+
+.intro-link {
+  color: var(--accent-warm);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.intro-link:hover {
+  color: var(--accent-warm-hover);
+}
+
+/* ==========================================================================
+   WORK CATEGORY FILTER BAR
+   ========================================================================== */
+.work-filter-bar {
+  max-width: 1220px;
+  margin: 0 auto 30px auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-tab-btn {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  padding: 7px 18px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.pill-copy-btn:hover {
-  background: var(--text-main);
-  color: var(--bg-primary);
+.filter-tab-btn:hover {
+  color: var(--text-headline);
+  border-color: var(--border-card);
 }
 
-.pill-link {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-main);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
-}
-
-.pill-link:hover {
-  color: var(--accent-cta);
-}
-
-/* Footer Bottom Bar */
-.footer-bottom-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.footer-brand {
-  font-weight: 700;
-  color: var(--text-main);
-  margin-right: 8px;
-}
-
-.footer-clock {
-  font-family: var(--font-mono);
-  font-weight: 600;
-  color: var(--text-main);
-  margin-left: 6px;
-}
-
-.back-to-top-btn {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
-}
-
-.back-to-top-btn:hover {
-  color: var(--text-main);
+.filter-tab-btn.active {
+  background: var(--text-headline);
+  color: #FFFFFF;
+  border-color: var(--text-headline);
 }
 
 /* ==========================================================================
-   RESPONSIVE QUERIES
+   ALICE LEE THUMBNAIL SHOWCASE GRID
+   ========================================================================== */
+.portfolio-item-card {
+  margin-bottom: 36px;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-link {
+  display: block;
+}
+
+/* Ratio Containers */
+.homepage-ratio {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #F7F5F0;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-ratio:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.homepage-ratio.full-wide {
+  aspect-ratio: 21 / 8;
+  min-height: 280px;
+}
+
+.homepage-ratio.standard-box {
+  aspect-ratio: 4 / 3;
+}
+
+/* Flagship Inner Visual */
+.card-visual-header {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.probaho-bg {
+  background: linear-gradient(135deg, #FFF9F6 0%, #F5EFEB 100%);
+}
+
+.inner-brand-showcase {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.showcase-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.flagship-release-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-warm);
+  margin-bottom: 6px;
+}
+
+.showcase-headline-group h3 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.showcase-headline-group p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.showcase-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.showcase-badges span {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-body);
+  background: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+}
+
+/* 3-Column Grid */
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Graphics inside Standard Cards */
+.card-inner-graphic {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.graphic-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+}
+
+.graphic-center-icon {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+
+.graphic-sub {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.inventory-bg { background: linear-gradient(135deg, #F0F7FF 0%, #E6EEF8 100%); }
+.ledger-bg { background: linear-gradient(135deg, #F3FBF6 0%, #E8F4EC 100%); }
+.courier-bg { background: linear-gradient(135deg, #FFF8F0 0%, #F8EFE4 100%); }
+.update-bg { background: linear-gradient(135deg, #F6F3FF 0%, #ECE6FA 100%); }
+.store-bg { background: linear-gradient(135deg, #FFF2F5 0%, #FCE3E8 100%); }
+.bizbee-bg { background: linear-gradient(135deg, #F5F9FA 0%, #E9EFF1 100%); }
+
+/* Alice Lee Thumbnail Meta Text */
+.thumbnail-meta-row {
+  padding-top: 10px;
+}
+
+.homepage-thumbnail-title {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+.homepage-thumbnail-tag {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-tag);
+}
+
+/* ==========================================================================
+   ALICE LEE ABOUT SECTION
+   ========================================================================== */
+.about-alice-section {
+  margin: 60px 0;
+  padding: 60px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.about-card-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.about-left-image-col {
+  text-align: center;
+}
+
+.about-portrait-wrap {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 16px auto;
+  aspect-ratio: 4 / 4.8;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-medium);
+}
+
+.about-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-caption strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-headline);
+}
+
+.about-caption span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.about-tag-header {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-warm);
+  margin-bottom: 8px;
+}
+
+.about-title-serif {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.about-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.about-narrative strong {
+  color: var(--text-headline);
+  font-weight: 600;
+}
+
+/* Alice Lee Experience Breakdown */
+.experience-breakdown {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 28px;
+}
+
+.breakdown-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.breakdown-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F0EDE6;
+}
+
+.item-year {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-warm);
+}
+
+.item-details h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item-details p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   ALICE LEE CONTACT SECTION
+   ========================================================================== */
+.contact-alice-section {
+  background: var(--bg-warm-canvas);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-card);
+  padding: 60px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-box-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-subtext {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  margin-bottom: 30px;
+}
+
+.contact-interactive-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-soft);
+  flex-wrap: wrap;
+}
+
+.email-display-group {
+  text-align: left;
+}
+
+.email-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.email-value {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-headline);
+}
+
+.email-btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.social-link-item {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  transition: color 0.2s ease;
+}
+
+.social-link-item:hover {
+  color: var(--accent-warm-hover);
+  text-decoration: underline;
+}
+
+/* Alice Lee Gold Bar */
+.gold-bar.footer {
+  height: 4px;
+  background: linear-gradient(90deg, #F1E3D3 0%, #E06D53 50%, #F1E3D3 100%);
+  margin: 30px 0 20px 0;
+  border-radius: 2px;
+}
+
+.alice-footer {
+  padding: 20px 0 40px 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.footer-inner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-city {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   ALICE LEE CASE STUDY MODAL DIALOG
+   ========================================================================== */
+.case-study-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  padding: 20px;
+}
+
+.case-study-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 25, 20, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.modal-dialog {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.case-study-modal.open .modal-dialog {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #F4F2ED;
+  border: none;
+  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-headline);
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #E8E5DF;
+}
+
+.modal-body-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.modal-tagline {
+  font-size: 1rem;
+  color: var(--accent-warm);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.modal-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 18px 0 6px 0;
+}
+
+.modal-body-content p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.modal-actions-row {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 1024px) {
-  .hero-footer-grid {
+  .hero-slide {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
-  .hero-portrait-col {
+  .slide-visual-preview {
     justify-content: flex-start;
   }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .columns-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .exp-row {
+  .about-card-container {
     grid-template-columns: 1fr;
-    gap: 12px;
   }
-  .exp-col-period {
+  .about-left-image-col {
     text-align: left;
+  }
+  .about-portrait-wrap {
+    margin: 0 0 16px 0;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
   .nav-menu {
     display: none;
   }
-  .hero-section {
-    padding: 40px 24px 60px 24px;
+  .columns-grid {
+    grid-template-columns: 1fr;
   }
-  .work-section, .about-section, .experience-section, .capabilities-section {
-    padding: 60px 24px;
+  .homepage-ratio.full-wide {
+    aspect-ratio: auto;
+    min-height: auto;
   }
-  .giant-magnetic-btn {
-    width: 150px;
-    height: 150px;
+  .card-visual-header {
+    padding: 24px;
   }
-  .giant-btn-text {
-    font-size: 1rem;
+  .inner-brand-showcase {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
-  .project-hover-modal {
-    display: none !important;
+  .contact-interactive-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .email-display-group {
+    text-align: center;
+  }
+  .email-btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+  .breakdown-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .modal-dialog {
+    padding: 24px;
   }
 }

@@ -1,325 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Irfanur Rahman • Product Builder & Finance Systems Specialist</title>
-  <meta name="description" content="Personal portfolio of Irfanur Rahman. BBA in Finance & Supply Chain from BRAC University, Corporate Accounting at Square Toiletries Ltd, and Creator of PROBAHO CRM Solutions.">
+  <title>Irfanur Rahman — Product Builder, Finance & Supply Chain</title>
+  <meta name="description" content="Portfolio of Irfanur Rahman. BBA in Finance & Supply Chain Management from BRAC University, Corporate Accounting at Square Toiletries Ltd, and Creator of PROBAHO CRM Solutions.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Irfanur Rahman • Product Builder & Finance Systems Specialist">
-  <meta property="og:description" content="Bridging corporate finance and supply chain operations with modern software tools. Creator of PROBAHO CRM Solutions.">
+  <meta property="og:title" content="Irfanur Rahman — Product Builder & Systems Creator">
+  <meta property="og:description" content="Product building, corporate finance, and supply chain software solutions. Creator of PROBAHO CRM.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://glichpop.github.io/irfanur-portfolio/">
-  <meta name="theme-color" content="#141517">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/probaho-logo.svg">
 
-  <!-- Typography: Neue Haas / Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Typography: Bitter (Serif) & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
 
-  <!-- Dennis Snellenberg Signature Preloader -->
-  <div id="preloader" class="preloader" aria-hidden="true">
-    <div class="preloader-content">
-      <div class="preloader-dot"></div>
-      <div class="preloader-text-rail">
-        <h2 class="preloader-word active">Hello</h2>
-        <h2 class="preloader-word">স্বাগতম</h2>
-        <h2 class="preloader-word">Bonjour</h2>
-        <h2 class="preloader-word">Hola</h2>
-        <h2 class="preloader-word">Ciao</h2>
-        <h2 class="preloader-word">Guten Tag</h2>
-        <h2 class="preloader-word">Hallo</h2>
-      </div>
-    </div>
-  </div>
-
-  <!-- Floating Hover Preview Container for Projects (Snellenberg Hover Reveal) -->
-  <div id="projectHoverModal" class="project-hover-modal" aria-hidden="true">
-    <div class="hover-modal-inner">
-      <div class="hover-preview-card" id="hoverPreviewCard">
-        <div class="hover-preview-badge" id="hoverModalBadge">Desktop Platform</div>
-        <h4 id="hoverModalTitle">PROBAHO CRM</h4>
-        <p id="hoverModalDesc">Offline-First Enterprise Operations Platform with sub-millisecond local queries.</p>
-        <div class="hover-modal-stack" id="hoverModalStack">Electron • React 19 • SQLite</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Header / Navigation -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a href="#hero" class="brand-link magnetic-btn">
-        <span class="brand-copyright">©</span>
-        <span class="brand-text">Code & Systems by Irfanur</span>
+  <!-- Navigation Bar (Alice Lee Style Header) -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <a href="#home" class="logo-lockup">
+        <span class="logo-mark">IR</span>
+        <span class="logo-text">by Irfanur Rahman</span>
       </a>
 
       <nav class="nav-menu">
-        <a href="#work" class="nav-link magnetic-btn">Work</a>
-        <a href="#about" class="nav-link magnetic-btn">About</a>
-        <a href="#experience" class="nav-link magnetic-btn">Experience</a>
-        <a href="#contact" class="nav-link magnetic-btn">Contact</a>
+        <a href="#work" class="nav-link active">Work</a>
+        <a href="#software" class="nav-link">Software</a>
+        <a href="#operations" class="nav-link">Logistics</a>
+        <a href="#finance" class="nav-link">Finance</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <div class="header-actions">
-        <!-- Minimalist Theme Switcher -->
-        <button id="themeToggle" class="theme-btn magnetic-btn" title="Toggle theme" aria-label="Toggle theme">
-          <span class="theme-icon sun-icon">☼</span>
-          <span class="theme-icon moon-icon">☾</span>
-        </button>
-
-        <a href="#contact" class="pill-cta-btn magnetic-btn">
-          <span>Get in Touch</span>
+      <div class="nav-extra">
+        <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="shop-pill-btn">
+          <span>Get PROBAHO CRM</span>
+          <span class="pill-dot"></span>
         </a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-section container">
-      <!-- Status & Location Line -->
-      <div class="hero-meta-bar">
-        <div class="status-indicator-wrap">
-          <span class="pulse-dot"></span>
-          <span class="status-text">Available for Opportunities</span>
-        </div>
-        <div class="location-clock-wrap">
-          <span class="flag-icon">🇧🇩</span>
-          <span>Dhaka, Bangladesh</span>
-          <span class="dot-separator">•</span>
-          <span id="liveDhakaTime" class="clock-display">--:--:-- GMT+6</span>
-        </div>
-      </div>
-
-      <!-- Main Headline -->
-      <div class="hero-heading-block">
-        <h1 class="hero-title">
-          Product Builder <br>
-          <span class="title-sub">&amp; Finance Systems Specialist.</span>
-        </h1>
-      </div>
-
-      <!-- Hero Body Grid -->
-      <div class="hero-footer-grid">
-        <div class="hero-intro-col">
-          <p class="hero-lead-text">
-            BBA in <strong>Finance &amp; Supply Chain Management</strong> from <strong>BRAC University</strong> with corporate accounting experience managing <strong>Oracle ERP</strong> workflows at <strong>Square Toiletries Ltd</strong>.
+  <!-- Alice Lee Interactive Hero Showcase Slider -->
+  <section id="home" class="hero-slider-section">
+    <div class="slider-wrapper">
+      <!-- Slide 1: PROBAHO CRM Solutions -->
+      <div class="hero-slide active" data-slide="0">
+        <div class="slide-content-container">
+          <div class="slide-badge-row">
+            <span class="slide-tag">Featured Release • Desktop Platform</span>
+          </div>
+          <h1 class="slide-title">PROBAHO CRM Solutions</h1>
+          <p class="slide-subtitle">
+            An offline-first enterprise desktop application built with <strong>Electron 43</strong>, <strong>React 19</strong>, and <strong>SQLite WebAssembly</strong> to ensure showroom checkouts never freeze during internet outages.
           </p>
-          <p class="hero-secondary-text">
-            I direct modern software systems to eliminate operational friction—conceptualizing and delivering practical tools including <strong>PROBAHO CRM Solutions</strong>.
-          </p>
-          <div class="hero-cta-cluster">
-            <a href="#work" class="round-action-btn magnetic-btn">
-              <span>Explore Work</span>
-              <span class="btn-arrow">↓</span>
+          <div class="slide-actions">
+            <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="btn-alice-primary">
+              View on GitHub
             </a>
-            <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="text-arrow-btn magnetic-btn">
-              <span>GitHub (GlichPoP)</span>
-              <span>↗</span>
-            </a>
-            <a href="https://www.linkedin.com/in/irfanur-rahman123/" target="_blank" rel="noopener noreferrer" class="text-arrow-btn magnetic-btn">
-              <span>LinkedIn</span>
-              <span>↗</span>
+            <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="btn-alice-secondary">
+              Download Windows Installer (.exe)
             </a>
           </div>
         </div>
-
-        <div class="hero-portrait-col">
-          <div class="portrait-frame">
-            <img src="assets/profile.jpg" alt="Irfanur Rahman" class="portrait-img">
+        <div class="slide-visual-preview">
+          <div class="slide-mockup-card">
+            <div class="mockup-header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="mockup-content">
+              <img src="assets/probaho-logo.png" alt="PROBAHO CRM Solutions" class="mockup-logo">
+              <h3>PROBAHO CRM</h3>
+              <p>Offline-First Enterprise Operations Platform</p>
+              <span class="mockup-pill">&lt; 1ms Local Query Speed</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- DENNIS SNELLENBERG SIGNATURE INFINITE MARQUEE STRIP -->
-    <div class="snellenberg-marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-chunk">Irfanur Rahman — Product Builder — Finance &amp; SCM — PROBAHO CRM — BRAC University — Oracle ERP — Electron &amp; React 19 — SQLite Embedded —</span>
-        <span class="marquee-chunk">Irfanur Rahman — Product Builder — Finance &amp; SCM — PROBAHO CRM — BRAC University — Oracle ERP — Electron &amp; React 19 — SQLite Embedded —</span>
+      <!-- Slide 2: Corporate Finance & Oracle ERP -->
+      <div class="hero-slide" data-slide="1">
+        <div class="slide-content-container">
+          <div class="slide-badge-row">
+            <span class="slide-tag">Corporate Finance & ERP</span>
+          </div>
+          <h2 class="slide-title">General Ledger & Trial Balance Audits</h2>
+          <p class="slide-subtitle">
+            Corporate accounting experience at <strong>Square Toiletries Ltd</strong> managing <strong>Oracle ERP</strong> workflows, general ledger distributions, and financial modeling in Advanced Excel.
+          </p>
+          <div class="slide-actions">
+            <a href="#about" class="btn-alice-primary">Read Career Background</a>
+          </div>
+        </div>
+        <div class="slide-visual-preview">
+          <div class="slide-mockup-card finance-card">
+            <div class="mockup-header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="mockup-content">
+              <div class="finance-symbol">📊</div>
+              <h3>Oracle ERP & Ledger Modeling</h3>
+              <p>Bank & Trial Balance Reconciliations</p>
+              <span class="mockup-pill">Square Toiletries Ltd</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Cross-Border E-Commerce & Logistics -->
+      <div class="hero-slide" data-slide="2">
+        <div class="slide-content-container">
+          <div class="slide-badge-row">
+            <span class="slide-tag">Cross-Border Operations</span>
+          </div>
+          <h2 class="slide-title">Multi-Warehouse Inventory Synchronization</h2>
+          <p class="slide-subtitle">
+            Launched the <strong>Strides Co USA</strong> Shopify storefront and maintained real-time inventory harmonization with Bangladesh warehousing to prevent stockout latency.
+          </p>
+          <div class="slide-actions">
+            <a href="#work" class="btn-alice-primary">Explore Case Study</a>
+          </div>
+        </div>
+        <div class="slide-visual-preview">
+          <div class="slide-mockup-card logistics-card">
+            <div class="mockup-header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="mockup-content">
+              <div class="finance-symbol">🚚</div>
+              <h3>Cross-Border E-Commerce</h3>
+              <p>Shopify USA ✕ BD Fulfillment</p>
+              <span class="mockup-pill">Strides Co USA</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- ABOUT SECTION: Editorial Snellenberg 2-Column Layout -->
-    <section id="about" class="about-section container">
-      <div class="section-badge">( ABOUT ME )</div>
+    <!-- Slider Navigation Dots & Arrows -->
+    <div class="slider-controls">
+      <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Previous Slide">‹</button>
+      <div class="slider-dots-rail">
+        <span class="slider-dot active" data-slide-target="0">01</span>
+        <span class="slider-dot" data-slide-target="1">02</span>
+        <span class="slider-dot" data-slide-target="2">03</span>
+      </div>
+      <button class="slider-arrow next" id="sliderNextBtn" aria-label="Next Slide">›</button>
+    </div>
+  </section>
 
-      <div class="about-grid">
-        <div class="about-lead-col">
-          <h2 class="about-big-quote">
-            Bridging corporate finance with modern software engineering to build high-performance business tools.
+  <!-- Alice Lee Signature Introduction Text Banner -->
+  <div class="homepage-introduction-text">
+    Hi, I'm Irfanur! I'm a <a href="#software" class="intro-link">product builder</a>, 
+    <a href="#finance" class="intro-link">financial modeler</a>, 
+    <a href="#operations" class="intro-link">supply chain strategist</a>, 
+    and creator of <a href="#work" class="intro-link">practical software tools</a>.
+  </div>
+
+  <!-- Filter Category Navigation (Alice Lee Work Filter) -->
+  <div class="work-filter-bar">
+    <button class="filter-tab-btn active" data-filter="all">All Projects</button>
+    <button class="filter-tab-btn" data-filter="software">Desktop & Software</button>
+    <button class="filter-tab-btn" data-filter="operations">Supply Chain & E-Com</button>
+    <button class="filter-tab-btn" data-filter="finance">Financial Modeling</button>
+  </div>
+
+  <!-- Alice Lee Signature Thumbnail Showcase Grid -->
+  <main id="work" class="wrapper cc-homepage">
+
+    <!-- Flagship Wide Thumbnail: PROBAHO CRM Solutions -->
+    <div class="portfolio-item-card wide-card" data-category="software operations">
+      <a href="#modal-probaho" class="thumbnail-link" data-modal="modal-probaho">
+        <div class="homepage-ratio full-wide">
+          <div class="card-visual-header probaho-bg">
+            <div class="inner-brand-showcase">
+              <img src="assets/probaho-logo.png" alt="PROBAHO CRM Solutions" class="showcase-logo">
+              <div class="showcase-headline-group">
+                <span class="flagship-release-tag">Featured Platform • v1.0.0</span>
+                <h3>PROBAHO CRM Solutions</h3>
+                <p>Offline-First Enterprise Business Management & Retail Showroom Operations Platform</p>
+              </div>
+            </div>
+            <div class="showcase-badges">
+              <span>Electron 43</span>
+              <span>React 19</span>
+              <span>SQLite WebAssembly</span>
+              <span>64 BD Districts Logistics</span>
+              <span>GitHub CDN Updates</span>
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-meta-row">
+          <div class="homepage-thumbnail-title">PROBAHO CRM Solutions</div>
+          <div class="homepage-thumbnail-tag">Enterprise Desktop Platform, Production Release</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Alice Lee 3-Column Thumbnails Row -->
+    <div class="columns-grid">
+
+      <!-- Thumbnail 1: Cross-Border Inventory & Multi-Warehouse Sync -->
+      <div class="portfolio-item-card" data-category="operations">
+        <a href="#modal-inventory" class="thumbnail-link" data-modal="modal-inventory">
+          <div class="homepage-ratio standard-box inventory-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">Global Logistics</span>
+              <div class="graphic-center-icon">🌐</div>
+              <span class="graphic-sub">Shopify USA ✕ BD Warehousing</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">Cross-Border Inventory Sync</div>
+            <div class="homepage-thumbnail-tag">Supply chain bridge, Strides Co USA</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Thumbnail 2: General Ledger & Trial Balance Reconciliations -->
+      <div class="portfolio-item-card" data-category="finance">
+        <a href="#modal-ledger" class="thumbnail-link" data-modal="modal-ledger">
+          <div class="homepage-ratio standard-box ledger-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">Corporate Accounting</span>
+              <div class="graphic-center-icon">📈</div>
+              <span class="graphic-sub">Oracle ERP & Advanced Excel</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">General Ledger & Trial Balance</div>
+            <div class="homepage-thumbnail-tag">Financial modeling, Square Toiletries Ltd</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Thumbnail 3: 64-District Courier Logistics & COD Engine -->
+      <div class="portfolio-item-card" data-category="operations software">
+        <a href="#modal-courier" class="thumbnail-link" data-modal="modal-courier">
+          <div class="homepage-ratio standard-box courier-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">Courier Integration</span>
+              <div class="graphic-center-icon">📦</div>
+              <span class="graphic-sub">Pathao • Steadfast • RedX</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">64-District Logistics Engine</div>
+            <div class="homepage-thumbnail-tag">Cash-on-Delivery reconciliation, PROBAHO Suite</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Thumbnail 4: In-App Background Auto-Updater via CDN -->
+      <div class="portfolio-item-card" data-category="software">
+        <a href="#modal-autoupdate" class="thumbnail-link" data-modal="modal-autoupdate">
+          <div class="homepage-ratio standard-box update-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">DevOps & Distribution</span>
+              <div class="graphic-center-icon">⚡</div>
+              <span class="graphic-sub">GitHub Releases CDN Streaming</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">Background Auto-Updater</div>
+            <div class="homepage-thumbnail-tag">Release delivery engine, Desktop systems</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Thumbnail 5: E-Commerce Storefront Operations -->
+      <div class="portfolio-item-card" data-category="operations">
+        <a href="#modal-ecommerce" class="thumbnail-link" data-modal="modal-ecommerce">
+          <div class="homepage-ratio standard-box store-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">Storefront Launch</span>
+              <div class="graphic-center-icon">🛍️</div>
+              <span class="graphic-sub">Organic SEO & Digital Assets</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">Strides Co USA Storefront</div>
+            <div class="homepage-thumbnail-tag">E-Commerce operations, Strides Co Ltd</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Thumbnail 6: BIZ BEE National Corporate Competitions -->
+      <div class="portfolio-item-card" data-category="finance">
+        <a href="#modal-bizbee" class="thumbnail-link" data-modal="modal-bizbee">
+          <div class="homepage-ratio standard-box bizbee-bg">
+            <div class="card-inner-graphic">
+              <span class="graphic-badge">Corporate Partnerships</span>
+              <div class="graphic-center-icon">🤝</div>
+              <span class="graphic-sub">Marico • HSBC • Shanta Holdings</span>
+            </div>
+          </div>
+          <div class="thumbnail-meta-row">
+            <div class="homepage-thumbnail-title">BIZ BEE Business Competitions</div>
+            <div class="homepage-thumbnail-tag">Event operations, BRAC University Business Club</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Alice Lee Style About Section Banner -->
+    <section id="about" class="about-alice-section">
+      <div class="about-card-container">
+        <div class="about-left-image-col">
+          <div class="about-portrait-wrap">
+            <img src="assets/profile.jpg" alt="Irfanur Rahman" class="about-portrait">
+          </div>
+          <div class="about-caption">
+            <strong>Irfanur Rahman</strong>
+            <span>Dhaka, Bangladesh</span>
+          </div>
+        </div>
+
+        <div class="about-right-text-col">
+          <div class="about-tag-header">About Me</div>
+          <h2 class="about-title-serif">
+            Unifying corporate finance with software technology to build high-performance business tools.
           </h2>
-        </div>
 
-        <div class="about-body-col">
-          <p>
-            I graduated with a <strong>BBA in Finance and Minor in Supply Chain Management from BRAC University</strong>, complemented by hands-on corporate accounting experience managing <strong>Oracle ERP</strong> ledger workflows at <strong>Square Toiletries Ltd</strong>.
-          </p>
-          <p>
-            My core focus is eliminating operational and financial bottlenecks. Rather than treating finance and supply chain logistics as disconnected functions, I understand how inventory discrepancies, courier Cash-on-Delivery (COD) cycles, and procurement lead times directly constrain working capital.
-          </p>
-          <p>
-            By directing modern AI systems and software technology with domain insight, I architect production tools—such as <strong>PROBAHO CRM Solutions</strong>—that ensure uninterrupted enterprise operations.
-          </p>
-
-          <div class="about-credentials-list">
-            <div class="cred-item">
-              <span class="cred-num">01</span>
-              <div class="cred-info">
-                <strong>Finance &amp; SCM Foundation</strong>
-                <span>BRAC University • BRAC Business School (BBS)</span>
-              </div>
-            </div>
-            <div class="cred-item">
-              <span class="cred-num">02</span>
-              <div class="cred-info">
-                <strong>Corporate ERP &amp; Reconciliation</strong>
-                <span>Square Toiletries Ltd • Oracle ERP General Ledger</span>
-              </div>
-            </div>
-            <div class="cred-item">
-              <span class="cred-num">03</span>
-              <div class="cred-info">
-                <strong>Offline-First Desktop Systems</strong>
-                <span>Creator of PROBAHO CRM • Electron 43 + React 19 + SQLite</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RECENT WORK / PROJECTS: Dennis Snellenberg Row List with Floating Hover Reveal -->
-    <section id="work" class="work-section container">
-      <div class="work-header">
-        <span class="section-badge">( RECENT WORK )</span>
-        <span class="work-count">03 Projects</span>
-      </div>
-
-      <div class="work-list">
-        <!-- Project Item 1: PROBAHO CRM Solutions -->
-        <div class="work-item" 
-             data-title="PROBAHO CRM Solutions" 
-             data-badge="Flagship Desktop Platform" 
-             data-desc="Offline-first Windows platform with SQLite WASM, 64-district BD courier logistics & background GitHub CDN auto-updater." 
-             data-stack="Electron 43 • React 19 • SQLite3 • TypeScript • Vite">
-          <div class="work-item-inner">
-            <div class="work-item-main">
-              <h3 class="work-item-title">PROBAHO CRM Solutions</h3>
-              <p class="work-item-type">Enterprise Desktop Suite &amp; Showroom POS</p>
-            </div>
-            <div class="work-item-meta">
-              <span class="work-item-category">Desktop App • Offline-First</span>
-              <span class="work-item-year">2026</span>
-              <div class="work-item-actions">
-                <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="inline-action-btn magnetic-btn">
-                  <span>Source</span>
-                  <span>↗</span>
-                </a>
-                <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="inline-action-btn magnetic-btn">
-                  <span>Installer</span>
-                  <span>↓</span>
-                </a>
-              </div>
-            </div>
+          <div class="about-narrative">
+            <p>
+              I graduated with a <strong>BBA in Finance and Minor in Supply Chain Management from BRAC University</strong>, complemented by hands-on corporate accounting experience managing <strong>Oracle ERP</strong> general ledger entries at <strong>Square Toiletries Ltd</strong>.
+            </p>
+            <p>
+              My focus is bridging finance and supply chain operations to eliminate corporate bottlenecks. Rather than viewing financial reconciliation and warehouse logistics as separate silos, I understand how inventory discrepancies, courier Cash-on-Delivery (COD) cycles, and procurement lead times directly constrain working capital.
+            </p>
+            <p>
+              By directing modern AI systems and software technology with domain insight, I architect and build practical tools—such as <strong>PROBAHO CRM Solutions</strong>—that ensure showroom and enterprise checkouts execute without friction.
+            </p>
           </div>
 
-          <!-- Inline Expandable Case Details -->
-          <div class="work-item-details">
-            <div class="details-grid">
-              <div class="detail-box">
-                <h4>The Friction</h4>
-                <p>Retail showrooms face frequent internet outages in Bangladesh. Cloud-only CRMs halt checkouts and lack localized courier Cash-on-Delivery reconciliation.</p>
-              </div>
-              <div class="detail-box">
-                <h4>The Architecture</h4>
-                <p>Engineered an offline-first execution runtime using embedded SQLite WebAssembly in Electron 43 and React 19. All queries execute locally in sub-milliseconds.</p>
-              </div>
-              <div class="detail-box">
-                <h4>Key Capabilities</h4>
-                <p>Integrated 64-district courier engines (Pathao, Steadfast, RedX), silent GitHub CDN auto-updater, thermal POS invoice printing, and RBAC audit logs.</p>
+          <!-- Academic & Corporate Experience List (Alice Lee Style) -->
+          <div class="experience-breakdown">
+            <h3 class="breakdown-heading">Corporate Track Record & Education</h3>
+            
+            <div class="breakdown-item">
+              <div class="item-year">Feb 2026 – May 2026</div>
+              <div class="item-details">
+                <h4>Accounts & Finance Intern • Square Toiletries Ltd</h4>
+                <p>Managed Oracle ERP general ledger entries, completed bank and trial balance reconciliations, and structured financial models in Advanced Excel.</p>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Project Item 2: Cross-Border Inventory & Shopify Management -->
-        <div class="work-item" 
-             data-title="Cross-Border Inventory Sync" 
-             data-badge="E-Commerce & Supply Chain" 
-             data-desc="Multi-warehouse inventory synchronization bridge connecting Shopify USA with Bangladesh fulfillment hubs." 
-             data-stack="Shopify USA • Multi-Warehouse Sync • SEO Strategy">
-          <div class="work-item-inner">
-            <div class="work-item-main">
-              <h3 class="work-item-title">Cross-Border Inventory Sync</h3>
-              <p class="work-item-type">International Storefront &amp; Logistics Bridge</p>
-            </div>
-            <div class="work-item-meta">
-              <span class="work-item-category">Supply Chain &amp; E-Com</span>
-              <span class="work-item-year">2025</span>
-              <div class="work-item-actions">
-                <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="inline-action-btn magnetic-btn">
-                  <span>Repository</span>
-                  <span>↗</span>
-                </a>
+            <div class="breakdown-item">
+              <div class="item-year">Feb 2025 – Sep 2025</div>
+              <div class="item-details">
+                <h4>E-Commerce Executive • Strides Co Ltd</h4>
+                <p>Launched the Strides Co USA storefront on Shopify, maintained cross-border inventory synchronization with Bangladesh hubs, and executed SEO strategies.</p>
               </div>
             </div>
-          </div>
 
-          <div class="work-item-details">
-            <div class="details-grid">
-              <div class="detail-box">
-                <h4>The Friction</h4>
-                <p>Inventory discrepancies and stockout latency between international storefronts (Shopify USA) and domestic warehousing in Bangladesh.</p>
-              </div>
-              <div class="detail-box">
-                <h4>The Execution</h4>
-                <p>Structured unified SKU mapping schedules, stock buffers, and organic SEO growth frameworks to support international expansion.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Item 3: General Ledger & Financial Modeler -->
-        <div class="work-item" 
-             data-title="General Ledger Financial Modeler" 
-             data-badge="Corporate Finance Analytics" 
-             data-desc="Structured financial models extracting raw market data and banking transactions for trial balance reconciliations." 
-             data-stack="Oracle ERP • Advanced Excel • General Ledger • Power BI">
-          <div class="work-item-inner">
-            <div class="work-item-main">
-              <h3 class="work-item-title">General Ledger &amp; Financial Modeler</h3>
-              <p class="work-item-type">Corporate Accounting &amp; Ledger Reconciliation</p>
-            </div>
-            <div class="work-item-meta">
-              <span class="work-item-category">Financial Modeling</span>
-              <span class="work-item-year">2026</span>
-              <div class="work-item-actions">
-                <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="inline-action-btn magnetic-btn">
-                  <span>Overview</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-item-details">
-            <div class="details-grid">
-              <div class="detail-box">
-                <h4>The Friction</h4>
-                <p>Complex manual reconciliation cycles between multi-account corporate transactions, banking statements, and trial balances.</p>
-              </div>
-              <div class="detail-box">
-                <h4>The Execution</h4>
-                <p>Utilized Oracle ERP ledger entries and structured analytical models in Advanced Excel to systematically resolve accounting variances.</p>
+            <div class="breakdown-item">
+              <div class="item-year">2022 – 2026</div>
+              <div class="item-details">
+                <h4>Bachelor of Business Administration (BBA) • BRAC University</h4>
+                <p>Major in Finance, Minor in Supply Chain Management. Coursework in corporate financial modeling, working capital management, and logistics analysis.</p>
               </div>
             </div>
           </div>
@@ -327,209 +382,65 @@
       </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE & WORK HISTORY (Snellenberg Table Format) -->
-    <section id="experience" class="experience-section container">
-      <div class="section-badge">( WORK HISTORY &amp; ROLES )</div>
+    <!-- Alice Lee Style Contact & Inquiry Section -->
+    <section id="contact" class="contact-alice-section">
+      <div class="contact-box-inner">
+        <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-subtext">
+          Whether you have an opportunity in business operations, corporate finance, or want to discuss practical software tools, feel free to reach out.
+        </p>
 
-      <div class="experience-table">
-        <!-- Row 1: Square Toiletries Ltd -->
-        <div class="exp-row">
-          <div class="exp-col-company">
-            <span class="exp-company-name">Square Toiletries Ltd</span>
-            <span class="exp-company-loc">Dhaka, Bangladesh</span>
+        <div class="contact-interactive-card">
+          <div class="email-display-group">
+            <span class="email-label">Direct Email</span>
+            <span class="email-value">irfanur6@gmail.com</span>
           </div>
-          <div class="exp-col-role">
-            <span class="exp-role-title">Accounts &amp; Finance Intern</span>
-            <span class="exp-role-desc">Oracle ERP General Ledger, Bank &amp; Trial Balance Reconciliations, Financial Modeling in Advanced Excel.</span>
-          </div>
-          <div class="exp-col-period">
-            <span>Feb 2026 – May 2026</span>
-          </div>
-        </div>
-
-        <!-- Row 2: Strides Co Ltd -->
-        <div class="exp-row">
-          <div class="exp-col-company">
-            <span class="exp-company-name">Strides Co Ltd</span>
-            <span class="exp-company-loc">International &amp; Domestic</span>
-          </div>
-          <div class="exp-col-role">
-            <span class="exp-role-title">E-Commerce Executive</span>
-            <span class="exp-role-desc">Launched Shopify USA storefront, managed cross-border inventory synchronization and organic SEO growth strategies.</span>
-          </div>
-          <div class="exp-col-period">
-            <span>Feb 2025 – Sep 2025</span>
-          </div>
-        </div>
-
-        <!-- Row 3: BIZ BEE Club -->
-        <div class="exp-row">
-          <div class="exp-col-company">
-            <span class="exp-company-name">BRAC University BIZ BEE</span>
-            <span class="exp-company-loc">BRAC Business School</span>
-          </div>
-          <div class="exp-col-role">
-            <span class="exp-role-title">Senior Executive</span>
-            <span class="exp-role-desc">Organized brand activations with Marico, HSBC, Shanta Asset Management, and managed operations for national business competitions.</span>
-          </div>
-          <div class="exp-col-period">
-            <span>2023 – 2024</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACADEMIC FOUNDATION: BRAC University -->
-    <section id="academics" class="academics-section container">
-      <div class="section-badge">( ACADEMIC FOUNDATION )</div>
-
-      <div class="academic-highlight-card">
-        <div class="acad-header">
-          <div>
-            <span class="acad-institution">BRAC University • BRAC Business School (BBS)</span>
-            <h3 class="acad-degree">Bachelor of Business Administration (BBA)</h3>
-          </div>
-          <span class="acad-timeline">2022 – 2026</span>
-        </div>
-
-        <div class="acad-details-row">
-          <div class="acad-cell">
-            <span class="cell-label">Major</span>
-            <span class="cell-val">Finance</span>
-          </div>
-          <div class="acad-cell">
-            <span class="cell-label">Minor</span>
-            <span class="cell-val">Supply Chain Management</span>
-          </div>
-          <div class="acad-cell">
-            <span class="cell-label">Core Competencies</span>
-            <span class="cell-val">Managerial Finance, Working Capital, Inventory Modeling</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE CAPABILITIES / SKILLS: Minimalist 3-Column Snellenberg Grid -->
-    <section id="capabilities" class="capabilities-section container">
-      <div class="section-badge">( CORE CAPABILITIES )</div>
-
-      <div class="cap-grid">
-        <div class="cap-column">
-          <span class="cap-index">01</span>
-          <h4 class="cap-title">Financial Engineering</h4>
-          <p class="cap-desc">Corporate accounting governance, working capital modeling, and trial balance reconciliation.</p>
-          <ul class="cap-list">
-            <li>Oracle ERP Ledger Governance</li>
-            <li>Trial Balance &amp; Bank Audits</li>
-            <li>Advanced Excel Financial Models</li>
-            <li>Cash Flow &amp; Working Capital Forecasting</li>
-            <li>Power BI &amp; SQL Query Analysis</li>
-          </ul>
-        </div>
-
-        <div class="cap-column">
-          <span class="cap-index">02</span>
-          <h4 class="cap-title">Product &amp; Systems</h4>
-          <p class="cap-desc">Architecting robust offline-first desktop systems with sub-millisecond local query performance.</p>
-          <ul class="cap-list">
-            <li>Offline-First System Design</li>
-            <li>Electron 43 Desktop Runtime</li>
-            <li>React 19 &amp; TypeScript</li>
-            <li>SQLite3 WebAssembly (sql.js)</li>
-            <li>GitHub Releases Background Auto-Updates</li>
-          </ul>
-        </div>
-
-        <div class="cap-column">
-          <span class="cap-index">03</span>
-          <h4 class="cap-title">Operations &amp; Logistics</h4>
-          <p class="cap-desc">Bridging e-commerce operations with localized nationwide distribution networks.</p>
-          <ul class="cap-list">
-            <li>64-District BD Logistics Engine</li>
-            <li>Courier COD Reconciliations (Pathao/Steadfast/RedX)</li>
-            <li>Multi-Warehouse Stock Synchronization</li>
-            <li>Shopify USA Operations</li>
-            <li>Thermal Invoicing &amp; Barcode Systems</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- DENNIS SNELLENBERG GRAND FOOTER & MAGNETIC CTA -->
-    <footer id="contact" class="snellenberg-footer">
-      <div class="footer-inner container">
-        <div class="footer-top-meta">
-          <span class="section-badge">( WHAT'S NEXT )</span>
-          <div class="footer-status-pill">
-            <span class="pulse-dot"></span>
-            <span>Open for Full-Time Roles &amp; Selected Ventures</span>
-          </div>
-        </div>
-
-        <div class="footer-cta-center">
-          <p class="footer-prompt">Have a project, challenge, or corporate opportunity?</p>
-          <h2 class="footer-giant-title">Let's work together.</h2>
-
-          <!-- Giant Dennis Snellenberg Magnetic Button -->
-          <div class="giant-btn-wrap">
-            <a href="mailto:irfanur6@gmail.com?subject=Inquiry%20from%20Portfolio" class="giant-magnetic-btn magnetic-btn" id="giantCtaBtn">
-              <span class="giant-btn-text">Get in touch</span>
-              <span class="giant-btn-arrow">↗</span>
+          <div class="email-btn-group">
+            <button id="copyEmailBtn" class="btn-alice-secondary">
+              <span id="copyText">Copy Email</span>
+            </button>
+            <a href="mailto:irfanur6@gmail.com?subject=Inquiry%20from%20Portfolio" class="btn-alice-primary">
+              Send Message
             </a>
           </div>
         </div>
 
-        <!-- Direct Contact Channels -->
-        <div class="footer-contact-row">
-          <div class="contact-pill-item">
-            <span class="pill-label">Email</span>
-            <div class="pill-action-group">
-              <span class="pill-val">irfanur6@gmail.com</span>
-              <button id="copyEmailBtn" class="pill-copy-btn magnetic-btn" title="Copy email address">
-                <span id="copyText">Copy</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="contact-pill-item">
-            <span class="pill-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/irfanur-rahman123/" target="_blank" rel="noopener noreferrer" class="pill-link magnetic-btn">
-              <span>in/irfanur-rahman123</span>
-              <span>↗</span>
-            </a>
-          </div>
-
-          <div class="contact-pill-item">
-            <span class="pill-label">GitHub</span>
-            <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="pill-link magnetic-btn">
-              <span>github.com/GlichPoP</span>
-              <span>↗</span>
-            </a>
-          </div>
+        <div class="social-links-row">
+          <a href="https://www.linkedin.com/in/irfanur-rahman123/" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            LinkedIn Profile ↗
+          </a>
+          <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            GitHub (GlichPoP) ↗
+          </a>
+          <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            PROBAHO CRM Repository ↗
+          </a>
         </div>
+      </div>
+    </section>
 
-        <!-- Footer Bottom Bar -->
-        <div class="footer-bottom-bar">
-          <div class="footer-left">
-            <span class="footer-brand">Irfanur Rahman</span>
-            <span class="footer-subtext">© 2026. Handcrafted personal portfolio.</span>
-          </div>
+    <!-- Alice Lee Signature Decorative Bar -->
+    <div class="gold-bar footer full-width"></div>
 
-          <div class="footer-center">
-            <span class="footer-time-label">Local Time:</span>
-            <span id="footerClock" class="footer-clock">--:--:-- GMT+6</span>
-          </div>
-
-          <div class="footer-right">
-            <a href="#hero" class="back-to-top-btn magnetic-btn">
-              <span>Back to Top</span>
-              <span>↑</span>
-            </a>
-          </div>
-        </div>
+    <!-- Minimalist Footer -->
+    <footer class="alice-footer">
+      <div class="footer-inner-content">
+        <p>© 2026 Irfanur Rahman. Designed with warmth and care.</p>
+        <p class="footer-city">Dhaka, Bangladesh</p>
       </div>
     </footer>
   </main>
+
+  <!-- Interactive Case Study Modal (Alice Lee Project Detail Modal) -->
+  <div id="caseStudyModal" class="case-study-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">×</button>
+      <div class="modal-body-content" id="modalBodyContent">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
