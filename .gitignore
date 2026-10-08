@@ -1,0 +1,13 @@
+# Agent coordination metadata
+.agents/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.swp
+*~
