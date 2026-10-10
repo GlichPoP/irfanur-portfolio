@@ -1137,6 +1137,250 @@ code {
   color: var(--text-headline);
 }
 
+/* Academic Badges & CGPA Lockup */
+.academic-badge.cgpa-badge {
+  background-color: var(--accent-peach);
+  color: var(--accent-terracotta);
+  border: 1px solid var(--border-input);
+}
+
+.academic-badge.credits-badge {
+  background-color: var(--bg-surface-soft);
+  color: var(--text-headline);
+  border: 1px solid var(--border-subtle);
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.course-tags span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  color: var(--text-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.course-tags span strong {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  color: var(--accent-terracotta);
+  font-size: 0.76rem;
+}
+
+.course-tags span:hover {
+  border-color: var(--accent-terracotta);
+  background-color: var(--accent-peach);
+}
+
+/* Featured Institutional Finance Research Projects Grid */
+.finance-research-header {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.finance-research-header h4 {
+  font-size: 1.4rem;
+  color: var(--text-headline);
+}
+
+.finance-research-header p {
+  font-size: 0.96rem;
+  color: var(--text-muted);
+}
+
+.finance-projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.finance-project-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 32px 34px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.finance-project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-terracotta);
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.course-code-pill {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  background-color: var(--accent-peach);
+  color: var(--accent-terracotta);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-input);
+}
+
+.project-supervisor {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-title {
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  color: var(--text-headline);
+  line-height: 1.3;
+}
+
+.project-assets-analyzed {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.project-assets-analyzed strong {
+  color: var(--text-headline);
+}
+
+/* Irfanur's Contribution Callout Box */
+.contribution-callout-box {
+  background: linear-gradient(135deg, #FAF8F5 0%, #FFFDF9 100%);
+  border: 1px solid var(--border-card);
+  border-left: 4px solid var(--accent-terracotta);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contribution-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-terracotta);
+}
+
+.contribution-header .contrib-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-terracotta);
+}
+
+.contribution-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contribution-list li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  position: relative;
+  padding-left: 18px;
+}
+
+.contribution-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-terracotta);
+  font-weight: 700;
+}
+
+/* Key Metrics Box */
+.project-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.metric-highlight-box {
+  background: var(--bg-canvas-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metric-highlight-box .metric-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.metric-highlight-box .metric-value {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-headline);
+}
+
+.metric-highlight-box .metric-sub {
+  font-size: 0.78rem;
+  color: var(--accent-sage);
+  font-weight: 600;
+}
+
+.project-methodology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.method-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--bg-surface-soft);
+  color: var(--text-body);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
 /* ==========================================================================
    SECTION 4: CONTACT & OUTREACH (#contact)
    Alice Lee Clean Contact Box & Social Links
