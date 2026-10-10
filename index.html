@@ -3,48 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio of Irfan</title>
-  <meta name="description" content="Portfolio of Irfanur Rahman. BBA in Finance & Supply Chain Management from BRAC University, Corporate Accounting at Square Toiletries Ltd, and Creator of PROBAHO CRM Solutions.">
+  <title>Irfanur Rahman | Finance and Supply Chain Graduate</title>
+  <meta name="description" content="Finance and supply chain graduate who builds practical business tools. BBA from BRAC University. Major in Finance, minor in Supply Chain Management. 2022 to 2026.">
 
-  <!-- Canonical & Open Graph -->
+  <!-- Canonical and Open Graph -->
   <link rel="canonical" href="https://irfanurrahman.vercel.app">
-  <meta property="og:title" content="Portfolio of Irfan">
-  <meta property="og:description" content="Product building, corporate finance, and supply chain software solutions. Creator of PROBAHO CRM Solutions.">
+  <meta property="og:title" content="Irfanur Rahman | Finance and Supply Chain Graduate">
+  <meta property="og:description" content="Finance and supply chain graduate who builds practical business tools. BBA from BRAC University.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://irfanurrahman.vercel.app">
+  <meta property="og:image" content="https://irfanurrahman.vercel.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/portfolio-favicon.svg">
 
-  <!-- Typography: Bitter (Serif) & Plus Jakarta Sans -->
+  <!-- Typography: Bitter and Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <link rel="stylesheet" href="style.css?v=3.0">
+
+  <!-- Privacy friendly analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="body">
 
-  <!-- Header Navigation (Alice Lee Style Header) -->
+  <!-- Header Navigation -->
   <header class="header-nav">
     <div class="nav-container">
       <a href="#home" class="logo-lockup" aria-label="Irfanur Rahman Home">
-        <span class="logo-mark">IR</span>
-        <span class="logo-text">by Irfanur Rahman</span>
+        <span class="logo-text">Irfanur Rahman</span>
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="#software" class="nav-link">Software</a>
+        <a href="#work" class="nav-link">Work</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#academics" class="nav-link">Academics</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <div class="nav-extra">
-        <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="shop-pill-btn">
-          <span>Get PROBAHO CRM</span>
-          <span class="pill-dot"></span>
-        </a>
+      <div class="nav-actions">
+        <a href="https://www.linkedin.com/in/irfanur-rahman123/" target="_blank" rel="noopener noreferrer" class="nav-social-link">LinkedIn</a>
+        <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="nav-social-link">GitHub</a>
+        <a href="#work" class="btn-alice-primary nav-cta-btn">View my work</a>
+        <a href="#contact" class="btn-alice-secondary nav-cta-btn">Contact</a>
       </div>
     </div>
   </header>
@@ -52,12 +57,15 @@
   <!-- Main Container -->
   <main class="wrapper cc-homepage">
 
-    <!-- Hero / Introduction Section (Alice Lee Editorial Hero) -->
+    <!-- Hero Section -->
     <section id="home" class="hero-editorial-section">
       <div class="hero-editorial-container">
         <div class="hero-portrait-col">
           <div class="hero-portrait-wrap">
-            <img src="assets/profile.jpg" alt="Irfanur Rahman" class="hero-portrait" width="472" height="591">
+            <picture>
+              <source srcset="assets/profile.webp" type="image/webp">
+              <img src="assets/profile.jpg" alt="Irfanur Rahman" class="hero-portrait" width="472" height="591">
+            </picture>
           </div>
           <div class="hero-portrait-caption">
             <strong>Irfanur Rahman</strong>
@@ -68,175 +76,312 @@
         <div class="hero-content-col">
           <div class="hero-tag-badge">
             <span class="badge-dot"></span>
-            <span>Product Builder & Corporate Systems Specialist</span>
+            <span>Finance and Supply Chain Graduate</span>
           </div>
 
           <h1 class="hero-title">
-            Hi, I'm Irfanur!
+            Finance and supply chain graduate who builds practical business tools
           </h1>
 
           <p class="hero-lead">
-            I unite <strong>Corporate Finance</strong>, <strong>Supply Chain Logistics</strong>, and <strong>Modern Software Tools</strong> to eliminate operational friction and build resilient business systems.
+            BBA from BRAC University. I have worked in accounts on Oracle ERP, managed inventory across a two country Shopify store, and built PROBAHO, a free retail system that keeps showrooms selling when the internet drops.
           </p>
 
-          <p class="hero-bio">
-            Graduated with a BBA in Finance and Supply Chain Management from <strong>BRAC University</strong>, with corporate accounting experience managing <strong>Oracle ERP</strong> general ledgers and reconciliations at <strong>Square Toiletries Ltd</strong>, cross-border e-commerce at <strong>Strides Co Ltd</strong>, and creator of <strong>PROBAHO CRM Solutions</strong>.
-          </p>
+          <div class="hero-glance-row" id="heroGlanceRow">
+            <span class="glance-item">2 corporate roles</span>
+            <span class="glance-sep">•</span>
+            <span class="glance-item">1 tool released</span>
+            <span class="glance-sep">•</span>
+            <span class="glance-item" id="caseGlanceCount">3 case projects</span>
+          </div>
 
-          <!-- 3-Pillar Domain Summary -->
-          <div class="hero-pillars-grid">
-            <div class="pillar-card">
-              <div class="pillar-icon">📊</div>
-              <div class="pillar-text">
-                <h3>Corporate Finance</h3>
-                <p>Oracle ERP General Ledger, Bank & Trial Balance Reconciliations, Financial Modeling in Advanced Excel.</p>
-              </div>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-icon">🌐</div>
-              <div class="pillar-text">
-                <h3>Supply Chain</h3>
-                <p>Cross-Border Multi-Warehouse Inventory Sync, 64-District Logistics & Working Capital Preservation.</p>
-              </div>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-icon">⚡</div>
-              <div class="pillar-text">
-                <h3>Software Tools</h3>
-                <p>Offline-First Desktop Systems built with Electron 43, React 19, SQLite WebAssembly, and GitHub CDN delivery.</p>
-              </div>
-            </div>
+          <div class="hero-degree-note">
+            <span>BBA, BRAC University. Major in Finance, minor in Supply Chain Management. 2022 to 2026.</span>
           </div>
 
           <div class="hero-actions">
-            <a href="#software" class="btn-alice-primary">Explore Software ↗</a>
-            <a href="#experience" class="btn-alice-secondary">Corporate Track Record ↗</a>
-            <a href="#contact" class="btn-alice-secondary">Get in Touch</a>
+            <a href="#work" class="btn-alice-primary">View my work ↓</a>
+            <a href="#contact" class="btn-alice-secondary">Contact</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Alice Lee Signature Introduction Text Banner -->
-    <div class="homepage-introduction-text">
-      Hi, I'm Irfanur! I'm a <a href="#software" class="intro-link">product builder</a>, 
-      <a href="#experience" class="intro-link">financial & operations specialist</a>, 
-      and creator of <a href="#software" class="intro-link">practical software tools</a> bridging enterprise finance, supply chains, and modern software engineering.
-    </div>
-
-    <!-- Section 1: Software Projects Section (#software) -->
-    <section id="software" class="section-block">
+    <!-- Section 1: Selected Work (#work) -->
+    <section id="work" class="section-block">
       <div class="section-header-row">
         <div>
-          <span class="section-eyebrow">Production Software</span>
-          <h2 class="section-title">Software Projects</h2>
+          <span class="section-eyebrow">Selected Work</span>
+          <h2 class="section-title">Work and Research</h2>
         </div>
         <p class="section-desc">
-          Flagship desktop software engineered for performance, data sovereignty, and uncompromised uptime in real-world retail and enterprise environments.
+          Practical software tools for business operations, and quantitative finance case projects.
         </p>
       </div>
 
-      <!-- Flagship Wide Showcase Card: PROBAHO CRM Solutions -->
-      <article class="flagship-showcase-card">
-        <div class="card-visual-header probaho-bg">
-          <div class="inner-brand-showcase">
-            <picture>
-              <source srcset="assets/probaho-logo.svg" type="image/svg+xml">
-              <img src="assets/probaho-logo.png" alt="PROBAHO CRM Solutions Logo" class="showcase-logo" width="84" height="84">
-            </picture>
-            <div class="showcase-headline-group">
-              <div class="badge-row">
-                <span class="flagship-release-tag">Featured Platform • v1.0.0 Production Release</span>
-                <span class="status-pill"><span class="status-dot"></span>Production Ready</span>
+      <!-- Group 1: Tools I built -->
+      <div class="work-group-block">
+        <h3 class="work-group-title">Tools I built</h3>
+
+        <article class="flagship-showcase-card">
+          <div class="card-visual-header probaho-bg">
+            <div class="inner-brand-showcase">
+              <picture>
+                <source srcset="assets/probaho-logo.svg" type="image/svg+xml">
+                <img src="assets/probaho-logo.png" alt="PROBAHO CRM Solutions Logo" class="showcase-logo" width="80" height="80">
+              </picture>
+              <div class="showcase-headline-group">
+                <div class="badge-row">
+                  <span class="flagship-release-tag">v1.0.0 released</span>
+                  <span class="status-pill"><span class="status-dot"></span>Free and open source</span>
+                </div>
+                <h4 class="flagship-title">PROBAHO CRM Solutions</h4>
+                <p class="flagship-subtitle">Desktop business system for retail showrooms and distributors</p>
               </div>
-              <h3 class="flagship-title">PROBAHO CRM Solutions</h3>
-              <p class="flagship-subtitle">Enterprise Business Operations & Showroom Management Suite — Offline-First Desktop Platform</p>
             </div>
-          </div>
 
-          <!-- Complete, Uncut Desktop Software Mockup Frame -->
-          <div class="showcase-mockup-frame">
-            <div class="mockup-header-bar">
-              <div class="mockup-dots">
-                <span class="mockup-dot red"></span>
-                <span class="mockup-dot yellow"></span>
-                <span class="mockup-dot green"></span>
+            <div class="card-origin-banner">
+              Built with AI tools. I designed the product, defined the features, tested and released it.
+            </div>
+
+            <!-- Complete Desktop Software Preview Frame -->
+            <div class="showcase-mockup-frame">
+              <div class="mockup-header-bar">
+                <div class="mockup-dots">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                </div>
+                <div class="mockup-address-bar">PROBAHO CRM Desktop (Offline SQLite WebAssembly)</div>
+                <div class="mockup-meta-pill">v1.0.0 Stable</div>
               </div>
-              <div class="mockup-address-bar">PROBAHO CRM Desktop — Executive Command Center (Offline Relational SQLite WASM)</div>
-              <div class="mockup-meta-pill">v1.0.0 Stable</div>
+              <div class="mockup-viewport">
+                <picture>
+                  <source srcset="assets/probaho-dashboard.webp" type="image/webp">
+                  <img src="assets/probaho-dashboard.png" alt="PROBAHO CRM Solutions desktop interface showing sales and inventory" class="mockup-img" width="2880" height="1800" loading="lazy">
+                </picture>
+              </div>
             </div>
-            <div class="mockup-viewport">
-              <img src="assets/probaho-dashboard.png" alt="PROBAHO CRM Solutions Executive Command Center Dashboard" class="mockup-img" width="2880" height="1800" loading="eager">
+
+            <div class="showcase-badges">
+              <span class="tech-pill">Electron</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">SQLite WebAssembly</span>
+              <span class="tech-pill">Offline first</span>
+              <span class="tech-pill">Courier delivery profiles</span>
             </div>
           </div>
 
-          <div class="showcase-badges">
-            <span class="tech-pill">Electron 43</span>
-            <span class="tech-pill">React 19</span>
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">SQLite WebAssembly (sql.js)</span>
-            <span class="tech-pill">Vite 8</span>
-            <span class="tech-pill">64 BD Districts Logistics</span>
-            <span class="tech-pill">GitHub CDN Updates</span>
+          <div class="showcase-card-body">
+            <div class="showcase-narrative">
+              <p>
+                A free desktop business system for retail showrooms and distributors that keeps billing and inventory records working when the internet drops. Built with local SQLite WebAssembly storage, automatic update checking, and courier delivery management.
+              </p>
+            </div>
+
+            <div class="software-facts-grid">
+              <div class="software-fact-item">
+                <span class="fact-bullet">•</span>
+                <span>Keeps billing and inventory working when the internet is down</span>
+              </div>
+              <div class="software-fact-item">
+                <span class="fact-bullet">•</span>
+                <span>Records who created and last edited each record</span>
+              </div>
+              <div class="software-fact-item">
+                <span class="fact-bullet">•</span>
+                <span>Built in courier profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban and eCourier</span>
+              </div>
+              <div class="software-fact-item">
+                <span class="fact-bullet">•</span>
+                <span>Local backup export with single file database persistence</span>
+              </div>
+              <div class="software-fact-item">
+                <span class="fact-bullet">•</span>
+                <span>v1.0.0 released</span>
+              </div>
+            </div>
+
+            <!-- Media gallery area (hidden until user supplies assets in assets/probaho) -->
+            <div class="probaho-media-gallery is-hidden" id="probahoMediaGallery" aria-hidden="true"></div>
+
+            <div class="showcase-actions-bar">
+              <button class="btn-alice-primary" data-modal="modal-probaho" type="button">
+                Case study
+              </button>
+              <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="btn-alice-secondary">
+                View repository on GitHub ↗
+              </a>
+              <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="btn-alice-secondary link-subtle">
+                Download installer ↗
+              </a>
+            </div>
           </div>
+        </article>
+      </div>
+
+      <!-- Group 2: Case work and research -->
+      <div class="work-group-block" style="margin-top: 56px;">
+        <h3 class="work-group-title">Case work and research</h3>
+
+        <div class="case-projects-grid" id="caseProjectsGrid">
+
+          <!-- Case Card 1: FIN423 Portfolio Optimization -->
+          <article class="case-card">
+            <div class="case-card-thumb-wrap">
+              <picture>
+                <source srcset="assets/thumb-fin423.webp" type="image/webp">
+                <img src="assets/thumb-fin423.png" alt="Portfolio Optimization Report cover" class="case-card-thumb" width="600" height="776" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="case-card-body">
+              <div class="case-meta-row">
+                <span class="case-course-pill">FIN423: Securities Analysis and Portfolio Management, 2025</span>
+                <span class="case-team-badge">Team project</span>
+              </div>
+
+              <h4 class="case-card-title">Portfolio Optimization and Efficient Frontier Simulation</h4>
+
+              <div class="case-role-line">
+                <strong>My role:</strong> Lead analyst for Grameenphone stock valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.
+              </div>
+
+              <div class="case-summary-block">
+                <p>Evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days.</p>
+                <p>Simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal Sharpe ratio allocation.</p>
+              </div>
+
+              <div class="case-metrics-grid">
+                <div class="case-metric-box">
+                  <span class="metric-num">3.44</span>
+                  <span class="metric-lbl">Optimum Sharpe ratio</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">56.59%</span>
+                  <span class="metric-lbl">Optimum expected return</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">51% / 28% / 21%</span>
+                  <span class="metric-lbl">Optimal allocation (BRAC Bank, Square, GP)</span>
+                </div>
+              </div>
+
+              <div class="case-card-footer">
+                <a href="pdfs/fin423-portfolio-optimization-efficient-frontier.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                  Open PDF ↗
+                </a>
+                <span class="case-file-meta">38 pages, 2.39 MB</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Card 2: FIN433 Square Pharma Equity Research -->
+          <article class="case-card">
+            <div class="case-card-thumb-wrap">
+              <picture>
+                <source srcset="assets/thumb-fin433.webp" type="image/webp">
+                <img src="assets/thumb-fin433.png" alt="Square Pharmaceuticals Equity Research cover" class="case-card-thumb" width="600" height="776" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="case-card-body">
+              <div class="case-meta-row">
+                <span class="case-course-pill">FIN433: Financial Modeling, 2025</span>
+                <span class="case-team-badge">Team project</span>
+              </div>
+
+              <h4 class="case-card-title">Equity Research and Valuation Modeling of Square Pharmaceuticals Ltd</h4>
+
+              <div class="case-role-line">
+                <strong>My role:</strong> Corporate governance structure, shareholding breakdown, board risk assessment, and long term revenue growth drivers.
+              </div>
+
+              <div class="case-summary-block">
+                <p>Prepared an institutional equity research report on Square Pharmaceuticals Ltd.</p>
+                <p>Built a valuation model combining free cash flow to firm, dividend discount models, and relative peer multiples alongside five year pro forma projections.</p>
+              </div>
+
+              <div class="case-metrics-grid">
+                <div class="case-metric-box">
+                  <span class="metric-num">BDT 397.20</span>
+                  <span class="metric-lbl">Target fair value</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">79.6%</span>
+                  <span class="metric-lbl">Implied upside</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">10.49%</span>
+                  <span class="metric-lbl">WACC discount rate</span>
+                </div>
+              </div>
+
+              <div class="case-card-footer">
+                <a href="pdfs/fin433-equity-research-square-pharmaceuticals.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                  Open PDF ↗
+                </a>
+                <span class="case-file-meta">48 pages, 9.42 MB</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Card 3: FIN422 Pharma Sector Valuation -->
+          <article class="case-card">
+            <div class="case-card-thumb-wrap">
+              <picture>
+                <source srcset="assets/thumb-fin422.webp" type="image/webp">
+                <img src="assets/thumb-fin422.png" alt="Pharma Sector Valuation Report cover" class="case-card-thumb" width="600" height="776" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="case-card-body">
+              <div class="case-meta-row">
+                <span class="case-course-pill">FIN422: Fundamentals of Investments, 2024</span>
+                <span class="case-team-badge">Team project</span>
+              </div>
+
+              <h4 class="case-card-title">Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals</h4>
+
+              <div class="case-role-line">
+                <strong>My role:</strong> Valuation models, return distribution statistics, and pharmaceutical industry competitive analysis.
+              </div>
+
+              <div class="case-summary-block">
+                <p>Analysed company fundamentals, industry growth trends, and ten year stock return distributions across four pharmaceutical firms.</p>
+                <p>Applied two stage dividend discount models and cash flow methods to compare intrinsic values against market prices.</p>
+              </div>
+
+              <div class="case-metrics-grid">
+                <div class="case-metric-box">
+                  <span class="metric-num">BDT 210.98</span>
+                  <span class="metric-lbl">FCFF intrinsic value</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">BDT 208.00</span>
+                  <span class="metric-lbl">FCFE intrinsic value</span>
+                </div>
+                <div class="case-metric-box">
+                  <span class="metric-num">4.91%</span>
+                  <span class="metric-lbl">Ten year standard deviation</span>
+                </div>
+              </div>
+
+              <div class="case-card-footer">
+                <a href="pdfs/fin422-equity-research-pharma-valuation.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                  Open PDF ↗
+                </a>
+                <span class="case-file-meta">22 pages, 1.76 MB</span>
+              </div>
+            </div>
+          </article>
+
         </div>
-
-        <div class="showcase-card-body">
-          <div class="showcase-narrative">
-            <p>
-              <strong>PROBAHO CRM Solutions</strong> is a purpose-built desktop application designed for Bangladesh's fast-moving retail showrooms, apparel chains, and wholesale distributors. In emerging markets where broadband interruptions routinely crash cloud-only POS systems, PROBAHO delivers <strong>100% operational uptime</strong> with zero dependence on constant cloud connections.
-            </p>
-            <p>
-              Engineered with <strong>Electron 43</strong> and <strong>React 19</strong>, PROBAHO embeds an in-memory and local-file <strong>SQLite 3 WebAssembly engine via sql.js</strong> that executes inventory deductions, billing lookups, and customer accounts with sub-millisecond (<code>&lt; 1ms</code>) query latency.
-            </p>
-          </div>
-
-          <!-- Technical Pillars Grid -->
-          <div class="software-pillars-grid">
-            <div class="software-feature-box">
-              <div class="feature-icon">💾</div>
-              <h4>Offline-First SQLite WASM</h4>
-              <p>In-process relational SQLite database running locally on showroom hardware. Full cash drawer and checkout operations proceed seamlessly during ISP outages.</p>
-            </div>
-
-            <div class="software-feature-box">
-              <div class="feature-icon">🚚</div>
-              <h4>64-District Courier Logistics</h4>
-              <p>Native integration profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban, and eCourier with automated COD fee & return deduction reconciliation.</p>
-            </div>
-
-            <div class="software-feature-box">
-              <div class="feature-icon">⚡</div>
-              <h4>In-App Background Auto-Updater</h4>
-              <p>Streams cryptographic release binaries via GitHub Releases CDN with live download percentage progress and 1-click silent relaunch without data loss.</p>
-            </div>
-
-            <div class="software-feature-box">
-              <div class="feature-icon">🛡️</div>
-              <h4>Enterprise Security & Audit Logs</h4>
-              <p>Role-Based Access Control (Admin vs. Staff) with immutable audit stamps (<code>created_by</code>, <code>last_modified_by</code>) and local JSON/SQLite export backups.</p>
-            </div>
-          </div>
-
-          <!-- Showcase Action Links -->
-          <div class="showcase-actions-bar">
-            <button class="btn-alice-primary" data-modal="modal-probaho">
-              Case Study & Technical Architecture ↗
-            </button>
-            <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="btn-alice-secondary">
-              View Repository on GitHub ↗
-            </a>
-            <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="btn-alice-secondary">
-              Download Installer (NSIS & Portable .exe) ↗
-            </a>
-          </div>
-        </div>
-      </article>
+      </div>
     </section>
 
-    <!-- Section 2: Corporate Experience Section (#experience) -->
+    <!-- Section 2: Corporate Experience (#experience) -->
     <section id="experience" class="section-block">
       <div class="section-header-row">
         <div>
@@ -244,7 +389,7 @@
           <h2 class="section-title">Corporate Experience</h2>
         </div>
         <p class="section-desc">
-          Hands-on corporate accounting, ERP systems management, and international e-commerce supply chain operations.
+          Corporate accounting, ERP systems, and international ecommerce inventory management.
         </p>
       </div>
 
@@ -253,10 +398,10 @@
         <article class="experience-card">
           <div class="exp-card-header">
             <div class="exp-badge-row">
-              <span class="exp-org-badge">FMCG Conglomerate</span>
-              <span class="exp-timeline-badge">Feb 2026 – May 2026</span>
+              <span class="exp-org-badge">FMCG</span>
+              <span class="exp-timeline-badge">Feb 2026 to May 2026</span>
             </div>
-            <h3 class="exp-role-title">Accounts & Finance Intern</h3>
+            <h3 class="exp-role-title">Accounts and Finance Intern</h3>
             <div class="exp-company-location">
               <strong>Square Toiletries Ltd</strong> • Dhaka, Bangladesh
             </div>
@@ -264,352 +409,140 @@
 
           <div class="exp-card-body">
             <p class="exp-summary">
-              Hands-on corporate accounting responsibilities at one of Bangladesh's premier FMCG conglomerates, handling high-volume ledger distributions, reconciliation workflows, and financial modeling.
+              Corporate accounting at Square Toiletries Ltd, supporting general ledger maintenance, reconciliation workflows, and financial analysis.
             </p>
 
             <ul class="exp-bullet-list">
               <li>
-                <strong>Oracle ERP General Ledger Management:</strong> Posted daily transaction vouchers, executed multi-account ledger distributions, and maintained journal integrity across commercial units.
+                Posted daily transaction vouchers and maintained journal entries across commercial accounts in Oracle ERP.
               </li>
               <li>
-                <strong>Bank & Trial Balance Reconciliations:</strong> Executed systematic reconciliations between commercial bank statements and GL ledger balances, investigating variances and certifying trial balance accuracy.
+                Reconciled commercial bank statements with general ledger balances, investigated variances, and resolved discrepancies.
               </li>
               <li>
-                <strong>Financial Modeling in Advanced Excel:</strong> Formulated structured financial models, depreciation schedules, and variance analysis sheets to automate corporate reporting pipelines.
+                Built financial schedules, depreciation models, and variance sheets in Excel to support monthly accounts closing.
               </li>
               <li>
-                <strong>Working Capital & Vendor Settlements:</strong> Monitored cash outflows and supplier invoice schedules to maintain corporate working capital liquidity.
+                Monitored cash outflows and verified vendor invoices against delivery records to assist working capital management.
               </li>
             </ul>
 
             <div class="exp-skill-tags">
               <span class="tag-pill">Oracle ERP</span>
               <span class="tag-pill">General Ledger</span>
-              <span class="tag-pill">Trial Balance Audits</span>
               <span class="tag-pill">Bank Reconciliation</span>
+              <span class="tag-pill">Variance Analysis</span>
               <span class="tag-pill">Advanced Excel</span>
-              <span class="tag-pill">Financial Modeling</span>
               <span class="tag-pill">Working Capital</span>
             </div>
           </div>
         </article>
 
-        <!-- Experience Card 2: Strides Co Ltd / Strides Co USA -->
+        <!-- Experience Card 2: Strides Co Ltd -->
         <article class="experience-card">
           <div class="exp-card-header">
             <div class="exp-badge-row">
-              <span class="exp-org-badge">E-Commerce & Fashion Brand</span>
-              <span class="exp-timeline-badge">Feb 2025 – Sep 2025</span>
+              <span class="exp-org-badge">Ecommerce</span>
+              <span class="exp-timeline-badge">Feb 2025 to Sep 2025</span>
             </div>
-            <h3 class="exp-role-title">E-Commerce Executive & Logistics Lead</h3>
+            <h3 class="exp-role-title">Ecommerce Executive and Logistics Lead</h3>
             <div class="exp-company-location">
-              <strong>Strides Co Ltd / Strides Co USA</strong> • Dhaka & North America
+              <strong>Strides Co Ltd</strong> • Dhaka and North America
             </div>
           </div>
 
           <div class="exp-card-body">
             <p class="exp-summary">
-              Spearheaded international digital storefront launch and managed cross-border supply chain operations bridging Bangladesh manufacturing with North American retail distribution.
+              Digital storefront operations and cross border supply chain coordination between Bangladesh production and North American distribution.
             </p>
 
             <ul class="exp-bullet-list">
               <li>
-                <strong>Shopify USA Storefront Architecture:</strong> Configured and launched the direct-to-consumer North American storefront, structuring international currency conversions, gateways, and checkout flows.
+                Managed the direct to consumer North American storefront on Shopify, setting up currency conversion, payment gateways, and checkout settings.
               </li>
               <li>
-                <strong>Cross-Border Multi-Warehouse Inventory Sync:</strong> Engineered inventory tracking and safety stock buffers between Bangladesh manufacturing warehouses and USA fulfillment hubs to prevent stockouts.
+                Tracked inventory balances and safety stock levels between Bangladesh production and United States storage to prevent stockouts.
               </li>
               <li>
-                <strong>Organic SEO & Product Catalog Taxonomy:</strong> Optimized product listings, metadata taxonomies, and keyword rankings to drive qualified organic traffic and conversion funnels.
+                Updated product listings, descriptions, and category tags to improve search visibility and help buyers find items.
               </li>
               <li>
-                <strong>Fulfillment Pipelines & Marketing Creatives:</strong> Monitored international parcel dispatch milestones and produced branded acquisition creative assets in Canva.
+                Monitored international shipping milestones and created product promotional graphics in Canva.
               </li>
             </ul>
 
             <div class="exp-skill-tags">
               <span class="tag-pill">Shopify USA</span>
-              <span class="tag-pill">Cross-Border Logistics</span>
-              <span class="tag-pill">Multi-Warehouse Inventory</span>
+              <span class="tag-pill">Cross Border Logistics</span>
+              <span class="tag-pill">Inventory Tracking</span>
               <span class="tag-pill">Supply Chain Sync</span>
               <span class="tag-pill">Organic SEO</span>
-              <span class="tag-pill">Canva Marketing</span>
+              <span class="tag-pill">Canva</span>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Section 3: Academic Foundation Section (#academics) -->
-    <section id="academics" class="section-block">
+    <!-- Section 3: Education & Credentials (#education) -->
+    <section id="education" class="section-block">
       <div class="section-header-row">
         <div>
-          <span class="section-eyebrow">Academic Credentials &amp; Research</span>
-          <h2 class="section-title">Academic Foundation</h2>
+          <span class="section-eyebrow">Academic Foundation</span>
+          <h2 class="section-title">Education and Credentials</h2>
         </div>
         <p class="section-desc">
-          Rigorous business degree from BRAC Business School combining institutional financial modeling, portfolio optimization, and quantitative supply chain systems.
+          Business degree, professional certifications, and student leadership in corporate competitions.
         </p>
       </div>
 
       <div class="academics-container">
-        <!-- Degree Overview Card -->
+        <!-- Education Card -->
         <article class="academic-main-card">
           <div class="academic-header">
             <div class="academic-badge-row">
-              <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-                <span class="academic-badge">Bachelor Degree</span>
-                <span class="academic-badge cgpa-badge">CGPA 3.52 / 4.00</span>
-                <span class="academic-badge credits-badge">130 Credits Earned</span>
-              </div>
-              <span class="academic-years">2021 – 2026</span>
+              <span class="academic-badge">Undergraduate Degree</span>
+              <span class="academic-years">2022 to 2026</span>
             </div>
             <h3 class="academic-degree-title">Bachelor of Business Administration (BBA)</h3>
             <div class="academic-institution">
-              <strong>BRAC University</strong> — BRAC Business School (BBS) • Dhaka, Bangladesh
+              <strong>BRAC University</strong> • Dhaka, Bangladesh
             </div>
           </div>
 
           <div class="academic-body">
-            <p class="academic-intro">
-              Graduated with a cumulative CGPA of <strong>3.52 / 4.00</strong> across 130 credits, completing a dual concentration: <strong>Major in Finance</strong> and <strong>Minor in Supply Chain Management</strong>. This analytical foundation underpins all corporate accounting, valuation, and enterprise software engineering work.
-            </p>
-
-            <div class="specialization-columns">
-              <div class="spec-col">
-                <div class="spec-icon">📈</div>
-                <h4>Major in Finance</h4>
-                <p>Institutional valuation, econometric forecasting, risk-return modeling, general ledger distributions, and portfolio optimization across equity and debt markets.</p>
-                <div class="course-tags">
-                  <span><strong>FIN433</strong> Financial Modeling</span>
-                  <span><strong>FIN423</strong> Securities Analysis &amp; Portfolio Mgmt</span>
-                  <span><strong>FIN421</strong> Corporate Finance</span>
-                  <span><strong>FIN422</strong> Fundamentals of Investments</span>
-                  <span><strong>FIN425</strong> Int'l Financial Management</span>
-                  <span><strong>FIN441</strong> Bank Mgmt &amp; Digital Banking</span>
-                  <span><strong>FIN201</strong> Financial Environment &amp; Banking</span>
-                  <span><strong>FIN301</strong> Financial Management</span>
-                </div>
-              </div>
-
-              <div class="spec-col">
-                <div class="spec-icon">📦</div>
-                <h4>Minor in Supply Chain Management</h4>
-                <p>Operations research, multi-warehouse inventory control, material requirements planning (MRP), cross-border logistics, and enterprise distribution systems.</p>
-                <div class="course-tags">
-                  <span><strong>MSC423</strong> Intro to Supply Chain Management</span>
-                  <span><strong>MSC427</strong> Logistics &amp; Distribution Management</span>
-                  <span><strong>MSC425</strong> Materials Management</span>
-                  <span><strong>MSC301</strong> Production Operations Management</span>
-                  <span><strong>MSC321</strong> Management Information Systems</span>
-                  <span><strong>MSC221</strong> Computer Applications in Business</span>
-                  <span><strong>BUS490</strong> Corporate Accounting Internship</span>
-                  <span><strong>MGT480</strong> Business Strategy</span>
-                </div>
-              </div>
+            <div class="education-summary-block">
+              <p class="education-degree-text">
+                BBA, BRAC University. Major in Finance, minor in Supply Chain Management. 2022 to 2026.
+              </p>
+              <p class="education-context-text">
+                Coursework covered corporate valuation, portfolio optimization, investment analysis, financial modeling, inventory management, and logistics distribution.
+              </p>
             </div>
 
-            <!-- Quantitative & Analytical Core -->
-            <div style="background: var(--bg-canvas-alt); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px 22px; display: flex; flex-direction: column; gap: 8px;">
-              <strong style="font-size: 0.92rem; color: var(--text-headline); font-family: var(--font-serif);">Quantitative, Accounting &amp; Economic Foundations:</strong>
-              <div class="course-tags" style="margin-top: 2px;">
-                <span><strong>STA101</strong> Introduction to Statistics</span>
-                <span><strong>BUS232</strong> Research Methods &amp; Business Analytics</span>
-                <span><strong>BUS209</strong> Quantitative Methods in Business &amp; Economics</span>
-                <span><strong>ACT202</strong> Management Accounting</span>
-                <span><strong>ACT201</strong> Financial Accounting</span>
-                <span><strong>ECO102</strong> Introduction to Macroeconomics</span>
-                <span><strong>ECO101</strong> Introduction to Microeconomics</span>
-                <span><strong>BUS204</strong> Business Law &amp; Corporate Governance</span>
-              </div>
+            <!-- Certifications Line (Text only, no images) -->
+            <div class="certifications-box">
+              <strong class="cert-title">Certifications:</strong>
+              <span class="cert-list">Google Certified Educator Level 1 and Level 2, Gemini Certified Educator, Gemini Certified Student, and Claude certifications from Anthropic.</span>
             </div>
 
-            <!-- Featured Academic Finance & Valuation Research Projects -->
-            <div class="finance-research-header">
-              <h4>Institutional Finance &amp; Valuation Research Projects</h4>
-              <p>Selected capstone financial research papers, DCF modeling, and econometric simulations completed at BRAC Business School.</p>
-            </div>
-
-            <div class="finance-projects-grid">
-
-              <!-- Research Project 1: FIN423 Modern Portfolio Theory & Efficient Frontier -->
-              <article class="finance-project-card">
-                <div class="project-card-header">
-                  <div class="project-meta-row">
-                    <span class="course-code-pill">FIN423: Securities Analysis &amp; Portfolio Management</span>
-                    <span class="project-supervisor">Supervisor: Farhana Zahir, CFA, FRM • Fall 2025</span>
-                  </div>
-                  <h3 class="project-title">4-Asset Modern Portfolio Theory &amp; 34-Combination Efficient Frontier Simulation</h3>
-                  <div class="project-assets-analyzed">
-                    <strong>Asset Universe:</strong> Grameenphone (DSE: GP), BRAC Bank (DSE: BRACBANK), Square Pharmaceuticals (DSE: SQPH), Apex Tannery (DSE: APEXTANRY)
-                  </div>
-                </div>
-
-                <div class="contribution-callout-box">
-                  <div class="contribution-header">
-                    <span class="contrib-dot"></span>
-                    <span>My Individual Core Contribution</span>
-                  </div>
-                  <ul class="contribution-list">
-                    <li><strong>Grameenphone (GP) Stock Analysis:</strong> Formulated fundamental valuation using Gordon Growth DDM (intrinsic BDT 223.23) and 5-year historical P/E multiple model (intrinsic BDT 291.35). Evaluated 6-year DSEX regression establishing Beta of 0.7902 and return dispersion (Kurtosis 7.99, Skewness 1.04).</li>
-                    <li><strong>Risk-Return &amp; Covariance Matrix Formulation:</strong> Computed daily &amp; annualized variance-covariance matrices across 250 trading days for all four equities to map systematic vs. unsystematic asset dependencies.</li>
-                    <li><strong>34-Combination Efficient Frontier Simulation:</strong> Modeled 34 randomized portfolio weight iterations to construct the convex Efficient Frontier, calculating the Minimum Variance Portfolio (Risk 9.92%, Return 29.65%, Sharpe 2.22) and discovering the <strong>Optimum Maximum Sharpe Portfolio</strong> (Sharpe 3.44).</li>
-                  </ul>
-                </div>
-
-                <div class="project-metrics-row">
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">Optimum Sharpe Ratio</span>
-                    <span class="metric-value">3.44</span>
-                    <span class="metric-sub">Maximum Efficiency</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">Optimum Expected Return</span>
-                    <span class="metric-value">56.59%</span>
-                    <span class="metric-sub">at 14.25% Volatility</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">Optimal Allocation</span>
-                    <span class="metric-value">51% / 28% / 21%</span>
-                    <span class="metric-sub">BRAC / SQPH / GP</span>
-                  </div>
-                </div>
-
-                <div class="project-methodology-tags">
-                  <span class="method-tag">Markowitz Portfolio Theory</span>
-                  <span class="method-tag">Efficient Frontier Simulation</span>
-                  <span class="method-tag">Covariance Matrix</span>
-                  <span class="method-tag">Capital Allocation Line (CAL)</span>
-                  <span class="method-tag">Beta Regression (0.79)</span>
-                  <span class="method-tag">Gordon DDM Valuation</span>
-                </div>
-              </article>
-
-              <!-- Research Project 2: FIN433 Financial Modeling — Square Pharmaceuticals -->
-              <article class="finance-project-card">
-                <div class="project-card-header">
-                  <div class="project-meta-row">
-                    <span class="course-code-pill">FIN433: Financial Modeling</span>
-                    <span class="project-supervisor">Supervisor: Farhana Zahir, CFA, FRM • Summer 2025</span>
-                  </div>
-                  <h3 class="project-title">Institutional Equity Research &amp; Valuation Modeling: Square Pharmaceuticals Ltd. (SQPH)</h3>
-                  <div class="project-assets-analyzed">
-                    <strong>Recommendation:</strong> BUY | Current Price: BDT 221.00 | Target Fair Value: <strong>BDT 397.20</strong> (+79.6% Implied Upside)
-                  </div>
-                </div>
-
-                <div class="contribution-callout-box">
-                  <div class="contribution-header">
-                    <span class="contrib-dot"></span>
-                    <span>My Individual Core Contribution</span>
-                  </div>
-                  <ul class="contribution-list">
-                    <li><strong>Corporate Governance Architecture:</strong> Evaluated shareholding structure (35.46% Sponsor/Directors, 35.65% Public, 15.13% Institutions, 13.76% Foreign) and assessed compliance with BSEC Corporate Governance Code.</li>
-                    <li><strong>Management Board &amp; Governance Risk:</strong> Analyzed founder family board dynamics, independent director oversight mechanisms, and internal control structures mitigating regulatory compliance risks.</li>
-                    <li><strong>Growth Drivers &amp; Event Assessment:</strong> Quantified the financial impact of Square's Tk 500 crore expansion capex, 110% cash dividend payout, 22.4% YoY export growth, and PIC/S certification for penicillin manufacturing.</li>
-                  </ul>
-                </div>
-
-                <div class="project-metrics-row">
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">Target Intrinsic Value</span>
-                    <span class="metric-value">BDT 397.20</span>
-                    <span class="metric-sub">+79.6% Implied Upside</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">WACC Discount Rate</span>
-                    <span class="metric-value">10.49%</span>
-                    <span class="metric-sub">Cost of Equity 12.51%</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">Terminal Growth Rate</span>
-                    <span class="metric-value">5.82%</span>
-                    <span class="metric-sub">GDP-Benchmarked</span>
-                  </div>
-                </div>
-
-                <div class="project-methodology-tags">
-                  <span class="method-tag">Valuation Football Field</span>
-                  <span class="method-tag">FCFF &amp; FCFE Modeling</span>
-                  <span class="method-tag">Pro Forma (2025F–2029F)</span>
-                  <span class="method-tag">WACC Sensitivity Grid</span>
-                  <span class="method-tag">Revenue CAGR 11.66%</span>
-                  <span class="method-tag">LDC Risk Materiality Matrix</span>
-                </div>
-              </article>
-
-              <!-- Research Project 3: FIN422 Fundamentals of Investments -->
-              <article class="finance-project-card">
-                <div class="project-card-header">
-                  <div class="project-meta-row">
-                    <span class="course-code-pill">FIN422: Fundamentals of Investments</span>
-                    <span class="project-supervisor">Instructor: Alavi Khondoker • Fall 2024</span>
-                  </div>
-                  <h3 class="project-title">Industry Equity Research &amp; Valuation Analysis: Bangladesh Pharmaceutical Sector</h3>
-                  <div class="project-assets-analyzed">
-                    <strong>Companies Compared:</strong> Square Pharmaceuticals Ltd., Beximco Pharma, Renata Ltd., and Ibn Sina Pharmaceuticals Ltd.
-                  </div>
-                </div>
-
-                <div class="contribution-callout-box">
-                  <div class="contribution-header">
-                    <span class="contrib-dot"></span>
-                    <span>Key Research Deliverables &amp; Findings</span>
-                  </div>
-                  <ul class="contribution-list">
-                    <li><strong>Multi-Method Valuation:</strong> Modeled intrinsic values using Dividend Discount Model (DDM: BDT 157.99), Free Cash Flow to Firm (FCFF: BDT 210.98), Free Cash Flow to Equity (FCFE: BDT 208.00), and relative P/E multiples (Square 11.84 vs Industry 12.63).</li>
-                    <li><strong>Statistical Return Dispersion:</strong> Computed 10-year monthly return volatility metrics (Standard Deviation 4.91%, Skewness 0.76, Kurtosis 3.49) proving leptokurtic distribution characteristics.</li>
-                    <li><strong>Porter's Five Forces &amp; Macro Analysis:</strong> Evaluated WTO-TRIPS patent flexibilities, LDC graduation timeline, and raw material API import dependency (over 85% imported from China &amp; India).</li>
-                  </ul>
-                </div>
-
-                <div class="project-metrics-row">
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">FCFF Intrinsic Value</span>
-                    <span class="metric-value">BDT 210.98</span>
-                    <span class="metric-sub">Tracks Market Price</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">FCFE Intrinsic Value</span>
-                    <span class="metric-value">BDT 208.00</span>
-                    <span class="metric-sub">Equity Cash Flow</span>
-                  </div>
-                  <div class="metric-highlight-box">
-                    <span class="metric-label">WACC &amp; Cost of Debt</span>
-                    <span class="metric-value">12.36%</span>
-                    <span class="metric-sub">Cost of Equity 12.45%</span>
-                  </div>
-                </div>
-
-                <div class="project-methodology-tags">
-                  <span class="method-tag">FCFF &amp; FCFE Models</span>
-                  <span class="method-tag">Two-Stage DDM</span>
-                  <span class="method-tag">Porter's Five Forces</span>
-                  <span class="method-tag">10-Year Return Volatility</span>
-                  <span class="method-tag">Peer Multiple Valuation</span>
-                </div>
-              </article>
-
-            </div>
-
-            <!-- Extracurricular Leadership: BIZ BEE -->
+            <!-- Leadership and Activities Subsection -->
             <div class="academic-leadership-box">
               <div class="leadership-header">
-                <div class="leadership-icon">🤝</div>
                 <div>
                   <h4 class="leadership-title">Corporate Competition Leadership • BIZ BEE (BRAC University Business Club)</h4>
-                  <span class="leadership-role">Corporate Relations &amp; Operations Lead</span>
+                  <span class="leadership-role">Corporate Relations and Operations Lead</span>
                 </div>
               </div>
               <p class="leadership-desc">
-                Directed corporate relations, event operations, and sponsorship coordination for flagship national business competitions including <strong>BIZ BEE-BIZVERSE</strong> and <strong>BIZ BEE-BRAINIACS</strong>. Liaised directly with executives and talent acquisition teams from premier multinational corporations:
+                Organised corporate outreach, event logistics, and guest coordination for national student competitions including BIZ BEE BIZVERSE and BIZ BEE BRAINIACS. Communicated with recruitment and brand teams from companies such as Marico, HSBC, Shanta Asset Management, and Perfetti Van Melle.
               </p>
               <div class="sponsor-tags-row">
                 <span class="sponsor-pill">Marico</span>
                 <span class="sponsor-pill">HSBC</span>
                 <span class="sponsor-pill">Shanta Asset Management</span>
                 <span class="sponsor-pill">Perfetti Van Melle</span>
-                <span class="sponsor-pill">National Student Competitions</span>
+                <span class="sponsor-pill">Student Competitions</span>
               </div>
             </div>
           </div>
@@ -617,13 +550,16 @@
       </div>
     </section>
 
-    <!-- Section 4: Contact & Outreach Section (#contact) -->
+    <!-- Section 4: Contact & Outreach (#contact) -->
     <section id="contact" class="section-block contact-alice-section">
       <div class="contact-box-inner">
         <span class="section-eyebrow">Get in Touch</span>
         <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-availability">
+          Open to management trainee and graduate programmes in operations, supply chain, FMCG, telecom and finance.
+        </p>
         <p class="contact-subtext">
-          Whether you are looking to discuss corporate finance, supply chain operations, retail business software, or high-impact product roles, I'd love to connect.
+          If you would like to discuss an opportunity, business challenge, or my work, please reach out by email or connect on LinkedIn.
         </p>
 
         <div class="contact-interactive-card">
@@ -648,39 +584,33 @@
           <a href="https://github.com/GlichPoP" target="_blank" rel="noopener noreferrer" class="social-link-item">
             GitHub (GlichPoP) ↗
           </a>
-          <a href="https://github.com/GlichPoP/probaho-crm" target="_blank" rel="noopener noreferrer" class="social-link-item">
-            PROBAHO CRM Repository ↗
-          </a>
-          <a href="https://github.com/GlichPoP/probaho-crm/releases" target="_blank" rel="noopener noreferrer" class="social-link-item">
-            Releases & Downloads ↗
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Alice Lee Signature Decorative Gold-Terracotta Bar -->
+    <!-- Subtle Divider -->
     <div class="gold-bar footer full-width"></div>
 
     <!-- Minimalist Footer -->
     <footer class="alice-footer">
       <div class="footer-inner-content">
-        <p>© 2026 Irfanur Rahman. Designed with warmth and care.</p>
+        <p>© 2026 Irfanur Rahman. Plain British English, factual presentation.</p>
         <p class="footer-city">Dhaka, Bangladesh</p>
       </div>
     </footer>
   </main>
 
-  <!-- Interactive Case Study Modal (Alice Lee Project Detail Modal) -->
+  <!-- Interactive Case Study Modal -->
   <div id="caseStudyModal" class="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-dialog">
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">×</button>
       <div class="modal-body-content" id="modalBodyContent">
-        <!-- Dynamically injected via JavaScript -->
+        <!-- Dynamically injected via JavaScript with 5 standard headings -->
       </div>
     </div>
   </div>
 
-  <script src="script.js?v=2.2"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>

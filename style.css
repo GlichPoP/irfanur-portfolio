@@ -1,7 +1,7 @@
 /* ==========================================================================
    IRFANUR RAHMAN — PORTFOLIO STYLESHEET
-   100% Alice Lee (byalicelee.com) Design System
-   Warm Editorial Aesthetics, Bitter Typography & Curated Showcase Layout
+   Alice Lee Design System (Warm Editorial, Bitter Serif & Plus Jakarta Sans)
+   Strictly plain British English, zero buzzwords, zero dash punctuation
    ========================================================================== */
 
 :root {
@@ -11,7 +11,7 @@
   --bg-surface: #FFFFFF;         /* Crisp white card & modal background */
   --bg-surface-soft: #F5F2EB;    /* Soft warm beige for cards/pills */
   --bg-pill: #F0EDE6;            /* Neutral warm pill background */
-  --bg-selection: #FFEDE7;       /* Signature Alice Lee peach selection */
+  --bg-selection: #FFEDE7;       /* Peach selection */
 
   /* Foreground & Text Tokens */
   --text-headline: #2D2A26;      /* Warm dark charcoal display text */
@@ -20,24 +20,23 @@
   --text-tag: #8C867E;           /* Warm subtle tag text */
 
   /* Brand & Accent Tokens */
-  --accent-terracotta: #D97757;  /* Primary Alice Lee soft terracotta */
-  --accent-terracotta-hover: #C65E3E; /* Darker terracotta on hover */
+  --accent-terracotta: #D97757;  /* Soft terracotta accent */
+  --accent-terracotta-hover: #C65E3E;
   --accent-peach: #FFEDE7;       /* Soft peach badge & highlight fill */
-  --accent-sage: #5A8F7D;        /* Secondary sage green for production status */
-  --accent-navy: #314E6E;        /* Subtle slate navy accent */
+  --accent-sage: #5A8F7D;        /* Sage green for status */
   --accent-gold-line: linear-gradient(90deg, #F1E3D3 0%, #D97757 50%, #F1E3D3 100%);
 
   /* Border Tokens */
   --border-subtle: #EAE5DE;      /* Delicate warm divider line */
   --border-card: #E2DCD2;        /* Structural card border */
-  --border-input: #FFD9D0;       /* Alice Lee signature warm input border */
-  --border-focus: #D97757;       /* Focus state indicator */
+  --border-input: #FFD9D0;       /* Signature warm input border */
+  --border-focus: #D97757;       /* Focus indicator */
 
   /* Typography */
   --font-serif: 'Bitter', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Elevation Shadows */
+  /* Shadows */
   --shadow-subtle: 0 2px 8px rgba(45, 42, 38, 0.04);
   --shadow-card: 0 4px 20px rgba(45, 42, 38, 0.06);
   --shadow-hover: 0 12px 32px rgba(45, 42, 38, 0.10);
@@ -70,7 +69,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px; /* Offset for sticky header preventing title occlusion */
+  scroll-padding-top: 96px;
 }
 
 body.body {
@@ -118,21 +117,21 @@ code {
   color: var(--accent-terracotta);
 }
 
-/* Main Container Wrappers */
+/* Container Wrapper */
 .wrapper.cc-homepage {
-  max-width: 1220px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px 60px 32px;
 }
 
 /* ==========================================================================
-   HEADER & STICKY NAVIGATION (Alice Lee Editorial Bar)
+   HEADER & STICKY NAVIGATION
    ========================================================================== */
 .header-nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(250, 248, 245, 0.94);
+  background: rgba(250, 248, 245, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
@@ -140,47 +139,27 @@ code {
 }
 
 .nav-container {
-  max-width: 1220px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: 80px;
   gap: 20px;
 }
 
 .logo-lockup {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
-}
-
-.logo-mark {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--accent-terracotta);
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--accent-peach);
-  border: 1px solid var(--border-input);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-}
-
-.logo-lockup:hover .logo-mark {
-  transform: scale(1.04);
 }
 
 .logo-text {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   color: var(--text-headline);
   letter-spacing: -0.015em;
 }
@@ -193,7 +172,7 @@ code {
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-body);
   position: relative;
@@ -221,42 +200,31 @@ code {
   border-radius: 2px;
 }
 
-.nav-extra {
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   flex-shrink: 0;
 }
 
-.shop-pill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 18px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-pill);
+.nav-social-link {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--text-headline);
-  box-shadow: var(--shadow-subtle);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-muted);
+  transition: color 0.2s ease;
 }
 
-.shop-pill-btn:hover {
-  background-color: var(--accent-peach);
-  border-color: var(--border-input);
+.nav-social-link:hover {
   color: var(--accent-terracotta);
-  transform: translateY(-1px);
 }
 
-.pill-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-sage);
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(90, 143, 125, 0.2);
+.nav-cta-btn {
+  padding: 9px 18px;
+  font-size: 0.88rem;
 }
 
 /* ==========================================================================
-   BUTTONS (Alice Lee Button Hierarchy)
+   BUTTONS
    ========================================================================== */
 .btn-alice-primary {
   display: inline-flex;
@@ -313,22 +281,32 @@ code {
   box-shadow: var(--shadow-card);
 }
 
+.btn-alice-secondary.link-subtle {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.86rem;
+}
+
 /* ==========================================================================
-   HERO / INTRODUCTION SECTION (Alice Lee Warm Editorial Hero)
+   HERO / INTRODUCTION SECTION
    ========================================================================== */
 .hero-editorial-section {
-  padding: 56px 0 36px 0;
+  padding: 48px 0 36px 0;
 }
 
 .hero-editorial-container {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 56px;
+  grid-template-columns: 290px 1fr;
+  gap: 48px;
   align-items: flex-start;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 44px;
+  padding: 40px;
   box-shadow: var(--shadow-card);
 }
 
@@ -336,12 +314,12 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .hero-portrait-wrap {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   aspect-ratio: 4 / 5;
   border-radius: 14px;
   overflow: hidden;
@@ -369,19 +347,19 @@ code {
 
 .hero-portrait-caption strong {
   font-family: var(--font-serif);
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   color: var(--text-headline);
 }
 
 .hero-portrait-caption span {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
 }
 
 .hero-content-col {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .hero-tag-badge {
@@ -389,11 +367,11 @@ code {
   align-items: center;
   gap: 8px;
   align-self: flex-start;
-  padding: 5px 14px;
+  padding: 4px 12px;
   background-color: var(--accent-peach);
   border: 1px solid var(--border-input);
   border-radius: var(--radius-pill);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -401,76 +379,57 @@ code {
 }
 
 .badge-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: var(--accent-terracotta);
 }
 
 .hero-title {
-  font-size: clamp(2.3rem, 4.4vw, 3.4rem);
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
   letter-spacing: -0.025em;
-  line-height: 1.16;
+  line-height: 1.18;
   color: var(--text-headline);
 }
 
 .hero-lead {
-  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  line-height: 1.6;
-  color: var(--text-headline);
-}
-
-.hero-lead strong {
-  color: var(--accent-terracotta);
-  font-weight: 700;
-}
-
-.hero-bio {
-  font-size: 1.02rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.68;
   color: var(--text-body);
 }
 
-/* 3-Pillar Domain Summary */
-.hero-pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 8px;
+.hero-glance-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
 }
 
-.pillar-card {
+.glance-item {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  background-color: var(--accent-peach);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-input);
+}
+
+.glance-sep {
+  color: var(--border-card);
+  font-size: 0.8rem;
+}
+
+.hero-degree-note {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
   background-color: var(--bg-canvas-alt);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.pillar-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--border-card);
-  box-shadow: var(--shadow-subtle);
-  background-color: var(--bg-surface);
-}
-
-.pillar-icon {
-  font-size: 1.5rem;
-}
-
-.pillar-text h3 {
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-  color: var(--text-headline);
-}
-
-.pillar-text p {
-  font-size: 0.86rem;
-  line-height: 1.55;
-  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 2px;
 }
 
 .hero-actions {
@@ -478,52 +437,28 @@ code {
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
-}
-
-/* Alice Lee Signature Introduction Text Banner */
-.homepage-introduction-text {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.5vw, 1.95rem);
-  line-height: 1.55;
-  letter-spacing: -0.015em;
-  color: var(--text-headline);
-  padding: 44px 0 32px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 50px;
-}
-
-.intro-link {
-  color: var(--accent-terracotta);
-  border-bottom: 2px solid var(--accent-peach);
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
-}
-
-.intro-link:hover {
-  border-bottom-color: var(--accent-terracotta);
-  background-color: var(--accent-peach);
+  margin-top: 8px;
 }
 
 /* ==========================================================================
    SECTION COMMON BLOCKS
    ========================================================================== */
 .section-block {
-  padding: 30px 0 50px 0;
+  padding: 36px 0 44px 0;
 }
 
 .section-header-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 32px;
-  gap: 24px;
+  margin-bottom: 28px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .section-eyebrow {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -532,21 +467,33 @@ code {
 }
 
 .section-title {
-  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   letter-spacing: -0.02em;
   color: var(--text-headline);
 }
 
 .section-desc {
-  max-width: 520px;
-  font-size: 0.98rem;
+  max-width: 500px;
+  font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
 
+/* Work Groups */
+.work-group-block {
+  margin-top: 16px;
+}
+
+.work-group-title {
+  font-size: 1.35rem;
+  color: var(--text-headline);
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
 /* ==========================================================================
-   SECTION 1: SOFTWARE PROJECTS (#software)
-   Flagship Wide Showcase Card for PROBAHO CRM Solutions
+   FLAGSHIP SHOWCASE CARD (PROBAHO CRM)
    ========================================================================== */
 .flagship-showcase-card {
   background-color: var(--bg-surface);
@@ -557,46 +504,28 @@ code {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.homepage-ratio.full-wide {
-  aspect-ratio: auto;
-  min-height: auto;
-  width: 100%;
-}
-
 .card-visual-header.probaho-bg {
   width: 100%;
-  height: auto;
   background: linear-gradient(135deg, #2D253A 0%, #1E1B2E 100%);
   color: #FFFFFF;
-  padding: 40px 44px 34px 44px;
+  padding: 36px 40px 30px 40px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 22px;
   position: relative;
   overflow: hidden;
-}
-
-.card-visual-header.probaho-bg::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  right: -10%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(217, 119, 87, 0.18) 0%, rgba(217, 119, 87, 0) 70%);
-  pointer-events: none;
 }
 
 .inner-brand-showcase {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   z-index: 1;
 }
 
 .showcase-logo {
-  width: 90px;
-  height: 90px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
 }
@@ -604,7 +533,7 @@ code {
 .showcase-headline-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .badge-row {
@@ -615,7 +544,7 @@ code {
 }
 
 .flagship-release-tag {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -644,40 +573,43 @@ code {
 }
 
 .flagship-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   letter-spacing: -0.015em;
   color: #FFFFFF;
 }
 
 .flagship-subtitle {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 680px;
+  max-width: 650px;
   line-height: 1.5;
 }
 
-/* Desktop App Mockup Frame filling the showcase center */
+.card-origin-banner {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.86rem;
+  color: #F1D4CA;
+  z-index: 1;
+}
+
 .showcase-mockup-frame {
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
   background: #181522;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
   z-index: 1;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-.showcase-mockup-frame:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(217, 119, 87, 0.35);
 }
 
 .mockup-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 9px 14px;
   background: #231E30;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   gap: 12px;
@@ -691,8 +623,8 @@ code {
 }
 
 .mockup-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -704,7 +636,7 @@ code {
 .mockup-address-bar {
   color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   text-align: center;
@@ -715,8 +647,8 @@ code {
 }
 
 .mockup-meta-pill {
-  font-size: 0.72rem;
-  padding: 3px 10px;
+  font-size: 0.7rem;
+  padding: 2px 8px;
   background: rgba(90, 143, 125, 0.3);
   color: #A3D9C9;
   border-radius: var(--radius-pill);
@@ -727,10 +659,6 @@ code {
 
 .mockup-viewport {
   width: 100%;
-  height: auto;
-  overflow: visible;
-  background: #0F0E17;
-  position: relative;
   line-height: 0;
 }
 
@@ -757,76 +685,219 @@ code {
   font-size: 0.78rem;
   font-weight: 600;
   color: #FFFFFF;
-  letter-spacing: 0.02em;
 }
 
 .showcase-card-body {
-  padding: 40px;
+  padding: 36px 40px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
-}
-
-.showcase-narrative {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  gap: 22px;
 }
 
 .showcase-narrative p {
   font-size: 1.02rem;
-  line-height: 1.72;
+  line-height: 1.7;
 }
 
-/* 4-Pillar Software Feature Boxes */
-.software-pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.software-feature-box {
-  background-color: var(--bg-canvas-alt);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 22px;
+.software-facts-grid {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  transition: all 0.2s ease;
+  gap: 10px;
+  background: var(--bg-canvas-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
 }
 
-.software-feature-box:hover {
-  background-color: var(--bg-surface-soft);
-  border-color: var(--border-card);
-}
-
-.feature-icon {
-  font-size: 1.6rem;
-}
-
-.software-feature-box h4 {
-  font-size: 1.1rem;
-  color: var(--text-headline);
-}
-
-.software-feature-box p {
-  font-size: 0.92rem;
-  line-height: 1.6;
+.software-fact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
   color: var(--text-body);
+  line-height: 1.55;
+}
+
+.fact-bullet {
+  color: var(--accent-terracotta);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.probaho-media-gallery.is-hidden {
+  display: none !important;
 }
 
 .showcase-actions-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
 }
 
 /* ==========================================================================
-   SECTION 2: CORPORATE EXPERIENCE (#experience)
-   Dedicated Cards for Square Toiletries Ltd & Strides Co Ltd
+   CASE WORK & RESEARCH CARDS (PDFs)
+   ========================================================================== */
+.case-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.case-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-terracotta);
+}
+
+.case-card-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #EAE6DF;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.case-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-card-thumb {
+  transform: scale(1.02);
+}
+
+.case-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.case-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.case-course-pill {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  background: var(--accent-peach);
+  border: 1px solid var(--border-input);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.case-team-badge {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.case-card-title {
+  font-size: 1.22rem;
+  line-height: 1.35;
+  color: var(--text-headline);
+}
+
+.case-role-line {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  background: var(--bg-canvas-alt);
+  border-left: 3px solid var(--accent-terracotta);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.5;
+}
+
+.case-summary-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-summary-block p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.case-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.case-metric-box {
+  background: var(--bg-canvas-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.case-metric-box .metric-num {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-headline);
+}
+
+.case-metric-box .metric-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.case-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.case-file-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   CORPORATE EXPERIENCE SECTION (#experience)
    ========================================================================== */
 .experience-cards-grid {
   display: grid;
@@ -838,11 +909,11 @@ code {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 36px;
+  padding: 34px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -851,19 +922,19 @@ code {
   flex-direction: column;
   gap: 8px;
   border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 18px;
+  padding-bottom: 16px;
 }
 
 .exp-badge-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .exp-org-badge {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -880,13 +951,13 @@ code {
 }
 
 .exp-role-title {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--text-headline);
   line-height: 1.3;
 }
 
 .exp-company-location {
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   color: var(--text-body);
 }
 
@@ -897,12 +968,12 @@ code {
 .exp-card-body {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   flex-grow: 1;
 }
 
 .exp-summary {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   line-height: 1.65;
   color: var(--text-body);
 }
@@ -911,7 +982,7 @@ code {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .exp-bullet-list li {
@@ -919,17 +990,17 @@ code {
   line-height: 1.65;
   color: var(--text-body);
   position: relative;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .exp-bullet-list li::before {
   content: '•';
   position: absolute;
-  left: 4px;
+  left: 2px;
   top: 0;
   color: var(--accent-terracotta);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .exp-skill-tags {
@@ -951,8 +1022,7 @@ code {
 }
 
 /* ==========================================================================
-   SECTION 3: ACADEMIC FOUNDATION (#academics)
-   BRAC University BBA & BIZ BEE Corporate Competitions
+   EDUCATION & CREDENTIALS SECTION (#education)
    ========================================================================== */
 .academics-container {
   display: flex;
@@ -964,11 +1034,11 @@ code {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 40px;
+  padding: 36px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -977,7 +1047,7 @@ code {
   flex-direction: column;
   gap: 8px;
   border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .academic-badge-row {
@@ -989,7 +1059,7 @@ code {
 }
 
 .academic-badge {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1006,12 +1076,12 @@ code {
 }
 
 .academic-degree-title {
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
   color: var(--text-headline);
 }
 
 .academic-institution {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-body);
 }
 
@@ -1022,69 +1092,63 @@ code {
 .academic-body {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 22px;
 }
 
-.academic-intro {
-  font-size: 1.02rem;
-  line-height: 1.7;
-}
-
-.specialization-columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.spec-col {
+.education-summary-block {
   background-color: var(--bg-canvas-alt);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.spec-icon {
-  font-size: 1.8rem;
-}
-
-.spec-col h4 {
-  font-size: 1.2rem;
+.education-degree-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--text-headline);
+  line-height: 1.45;
 }
 
-.spec-col p {
+.education-context-text {
   font-size: 0.94rem;
-  line-height: 1.62;
   color: var(--text-body);
+  line-height: 1.65;
 }
 
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-.course-tags span {
-  font-size: 0.76rem;
-  font-weight: 600;
-  background-color: var(--bg-surface);
+.certifications-box {
+  background-color: var(--bg-surface-soft);
   border: 1px solid var(--border-card);
-  padding: 3px 9px;
-  border-radius: var(--radius-pill);
-  color: var(--text-body);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* BIZ BEE Leadership Box */
+.cert-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cert-list {
+  font-size: 0.92rem;
+  color: var(--text-headline);
+  line-height: 1.6;
+}
+
 .academic-leadership-box {
   background: linear-gradient(135deg, #FFFDFB 0%, #FBF6EF 100%);
   border: 1px solid var(--border-card);
   border-left: 4px solid var(--accent-terracotta);
   border-radius: var(--radius-md);
-  padding: 24px 28px;
+  padding: 22px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1092,22 +1156,17 @@ code {
 
 .leadership-header {
   display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.leadership-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .leadership-title {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   color: var(--text-headline);
 }
 
 .leadership-role {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--accent-terracotta);
   text-transform: uppercase;
@@ -1115,7 +1174,7 @@ code {
 }
 
 .leadership-desc {
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   line-height: 1.65;
   color: var(--text-body);
 }
@@ -1124,7 +1183,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .sponsor-pill {
@@ -1137,295 +1196,55 @@ code {
   color: var(--text-headline);
 }
 
-/* Academic Badges & CGPA Lockup */
-.academic-badge.cgpa-badge {
-  background-color: var(--accent-peach);
-  color: var(--accent-terracotta);
-  border: 1px solid var(--border-input);
-}
-
-.academic-badge.credits-badge {
-  background-color: var(--bg-surface-soft);
-  color: var(--text-headline);
-  border: 1px solid var(--border-subtle);
-}
-
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 8px;
-}
-
-.course-tags span {
-  font-size: 0.78rem;
-  font-weight: 600;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-card);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  color: var(--text-body);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-}
-
-.course-tags span strong {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  color: var(--accent-terracotta);
-  font-size: 0.76rem;
-}
-
-.course-tags span:hover {
-  border-color: var(--accent-terracotta);
-  background-color: var(--accent-peach);
-}
-
-/* Featured Institutional Finance Research Projects Grid */
-.finance-research-header {
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.finance-research-header h4 {
-  font-size: 1.4rem;
-  color: var(--text-headline);
-}
-
-.finance-research-header p {
-  font-size: 0.96rem;
-  color: var(--text-muted);
-}
-
-.finance-projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 10px;
-}
-
-.finance-project-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-card);
-  padding: 32px 34px;
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.finance-project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--accent-terracotta);
-}
-
-.project-card-header {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 16px;
-}
-
-.project-meta-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.course-code-pill {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  background-color: var(--accent-peach);
-  color: var(--accent-terracotta);
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border-input);
-}
-
-.project-supervisor {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.project-title {
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
-  color: var(--text-headline);
-  line-height: 1.3;
-}
-
-.project-assets-analyzed {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-}
-
-.project-assets-analyzed strong {
-  color: var(--text-headline);
-}
-
-/* Irfanur's Contribution Callout Box */
-.contribution-callout-box {
-  background: linear-gradient(135deg, #FAF8F5 0%, #FFFDF9 100%);
-  border: 1px solid var(--border-card);
-  border-left: 4px solid var(--accent-terracotta);
-  border-radius: var(--radius-md);
-  padding: 18px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contribution-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent-terracotta);
-}
-
-.contribution-header .contrib-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--accent-terracotta);
-}
-
-.contribution-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.contribution-list li {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-body);
-  position: relative;
-  padding-left: 18px;
-}
-
-.contribution-list li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--accent-terracotta);
-  font-weight: 700;
-}
-
-/* Key Metrics Box */
-.project-metrics-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px;
-}
-
-.metric-highlight-box {
-  background: var(--bg-canvas-alt);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.metric-highlight-box .metric-label {
-  font-size: 0.74rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
-}
-
-.metric-highlight-box .metric-value {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-headline);
-}
-
-.metric-highlight-box .metric-sub {
-  font-size: 0.78rem;
-  color: var(--accent-sage);
-  font-weight: 600;
-}
-
-.project-methodology-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-top: 4px;
-}
-
-.method-tag {
-  font-size: 0.78rem;
-  font-weight: 600;
-  background: var(--bg-surface-soft);
-  color: var(--text-body);
-  border: 1px solid var(--border-subtle);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-}
-
 /* ==========================================================================
-   SECTION 4: CONTACT & OUTREACH (#contact)
-   Alice Lee Clean Contact Box & Social Links
+   CONTACT SECTION (#contact)
    ========================================================================== */
-.contact-alice-section {
-  padding-bottom: 20px;
-}
-
 .contact-box-inner {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 48px;
+  padding: 44px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .contact-title {
-  font-size: clamp(2rem, 3.6vw, 2.7rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
   letter-spacing: -0.02em;
 }
 
+.contact-availability {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
 .contact-subtext {
-  max-width: 620px;
-  font-size: 1.05rem;
-  line-height: 1.68;
+  max-width: 580px;
+  font-size: 0.98rem;
+  line-height: 1.65;
   color: var(--text-body);
 }
 
 .contact-interactive-card {
   width: 100%;
-  max-width: 620px;
+  max-width: 580px;
   background-color: var(--bg-canvas-alt);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 24px 28px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  margin: 16px 0 8px 0;
+  gap: 18px;
+  margin: 10px 0 6px 0;
   box-shadow: var(--shadow-subtle);
 }
 
@@ -1434,11 +1253,11 @@ code {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 4px;
+  gap: 2px;
 }
 
 .email-label {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1447,7 +1266,7 @@ code {
 
 .email-value {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-headline);
   letter-spacing: -0.01em;
@@ -1464,15 +1283,15 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 12px;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .social-link-item {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--accent-terracotta);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
   background-color: var(--accent-peach);
   transition: all 0.2s ease;
@@ -1484,21 +1303,19 @@ code {
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   ALICE LEE SIGNATURE DECORATIVE BAR & FOOTER
-   ========================================================================== */
+/* Divider & Footer */
 .gold-bar.footer {
-  height: 4px;
+  height: 3px;
   background: var(--accent-gold-line);
-  margin: 40px 0 24px 0;
+  margin: 36px 0 20px 0;
   border-radius: 2px;
   width: 100%;
 }
 
 .alice-footer {
-  padding: 10px 0 40px 0;
+  padding: 10px 0 36px 0;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 .footer-inner-content {
@@ -1516,7 +1333,7 @@ code {
 }
 
 /* ==========================================================================
-   INTERACTIVE CASE STUDY MODAL DIALOG (#caseStudyModal)
+   CASE STUDY MODAL DIALOG (#caseStudyModal)
    ========================================================================== */
 .case-study-modal {
   position: fixed;
@@ -1549,11 +1366,11 @@ code {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-modal);
-  max-width: 760px;
+  max-width: 720px;
   width: 100%;
   max-height: 88vh;
   overflow-y: auto;
-  padding: 44px;
+  padding: 40px;
   box-shadow: var(--shadow-modal);
   transform: translateY(20px) scale(0.98);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1566,14 +1383,14 @@ code {
 
 .modal-close-btn {
   position: absolute;
-  top: 20px;
-  right: 22px;
+  top: 18px;
+  right: 20px;
   background: var(--bg-surface-soft);
   border: 1px solid var(--border-subtle);
   font-size: 1.6rem;
   line-height: 1;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -1586,70 +1403,64 @@ code {
 .modal-close-btn:hover {
   background: var(--accent-peach);
   color: var(--accent-terracotta);
-  transform: scale(1.05);
 }
 
-.modal-body-content h3 {
-  font-size: 1.9rem;
-  letter-spacing: -0.015em;
-  margin-bottom: 6px;
-}
-
-.modal-tagline {
-  font-size: 1.05rem;
-  color: var(--accent-terracotta);
-  font-weight: 600;
+.modal-inner-header {
   margin-bottom: 22px;
-  line-height: 1.45;
 }
 
-.modal-section-title {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
+.modal-kicker {
+  font-size: 0.78rem;
   font-weight: 700;
-  margin: 22px 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-terracotta);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-headline {
+  font-size: 1.8rem;
+  letter-spacing: -0.015em;
   color: var(--text-headline);
 }
 
-.modal-body-content p {
-  font-size: 0.98rem;
-  color: var(--text-body);
-  line-height: 1.68;
-  margin-bottom: 14px;
-}
-
-.modal-metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 18px 0;
-}
-
-.modal-metric-card {
-  background-color: var(--bg-canvas-alt);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 14px;
-  text-align: center;
-}
-
-.modal-metric-num {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent-terracotta);
-  display: block;
-}
-
-.modal-metric-label {
-  font-size: 0.78rem;
+.modal-subheading {
+  font-size: 0.96rem;
   color: var(--text-muted);
-  font-weight: 600;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.modal-case-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-case-block {
+  background: var(--bg-canvas-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.modal-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  margin-bottom: 6px;
+}
+
+.modal-case-block p {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.65;
 }
 
 .modal-actions-row {
-  margin-top: 28px;
-  padding-top: 22px;
+  margin-top: 24px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   gap: 12px;
@@ -1657,68 +1468,48 @@ code {
 }
 
 /* ==========================================================================
-   DESKTOP HOVER ELEVATION (Scoped to pointer devices)
+   HOVER & MEDIA QUERIES (360, 414, 768, 1024, 1280, 1440, 1920)
    ========================================================================== */
 @media (hover: hover) and (pointer: fine) {
   .flagship-showcase-card:hover,
   .experience-card:hover,
   .academic-main-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
   }
 }
-
-/* ==========================================================================
-   RESPONSIVE DESIGN & MOBILE NAVIGATION SAFETY
-   Flawless Adaptation across Desktop (1280px+), Tablet (768px), Mobile (375px)
-   ========================================================================== */
 
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
   .hero-editorial-container {
     grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 36px;
+    gap: 32px;
+    padding: 32px;
   }
 
   .hero-portrait-col {
     flex-direction: row;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
   }
 
   .hero-portrait-wrap {
-    max-width: 180px;
+    max-width: 160px;
   }
 
   .hero-portrait-caption {
     text-align: left;
   }
 
-  .hero-pillars-grid {
-    grid-template-columns: 1fr;
-  }
-
   .experience-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .specialization-columns {
     grid-template-columns: 1fr;
   }
 }
 
 /* Mobile & Tablet Portrait (768px and below) */
 @media (max-width: 768px) {
-  /* Prevent horizontal overflow on mobile viewports */
   .wrapper.cc-homepage {
     padding: 0 16px 40px 16px;
-  }
-
-  /* Header Navigation: Accessible Horizontal Pill Bar (NEVER display: none!) */
-  .header-nav {
-    position: sticky;
-    top: 0;
   }
 
   .nav-container {
@@ -1729,15 +1520,11 @@ code {
     gap: 10px;
   }
 
-  .nav-container > div:first-child,
   .logo-lockup {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
 
-  /* Functional, accessible, touch-friendly navigation pills */
   .nav-menu {
     display: flex;
     align-items: center;
@@ -1745,13 +1532,13 @@ code {
     gap: 8px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
     padding: 4px 0;
     width: 100%;
   }
 
   .nav-menu::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
   }
 
   .nav-link {
@@ -1762,7 +1549,7 @@ code {
     font-size: 0.86rem;
     font-weight: 600;
     white-space: nowrap;
-    min-height: 38px;
+    min-height: 40px;
     display: flex;
     align-items: center;
   }
@@ -1774,21 +1561,20 @@ code {
   }
 
   .nav-link.active::after {
-    display: none; /* Pills don't need underline on mobile */
+    display: none;
   }
 
-  .nav-extra {
-    display: none; /* Saved for space in mobile header; full release links exist in content */
+  .nav-actions {
+    display: none;
   }
 
-  /* Hero Section Mobile */
   .hero-editorial-section {
-    padding: 24px 0;
+    padding: 20px 0;
   }
 
   .hero-editorial-container {
-    padding: 22px 18px;
-    gap: 24px;
+    padding: 20px 16px;
+    gap: 20px;
   }
 
   .hero-portrait-col {
@@ -1798,7 +1584,7 @@ code {
   }
 
   .hero-portrait-wrap {
-    max-width: 200px;
+    max-width: 180px;
   }
 
   .hero-portrait-caption {
@@ -1816,40 +1602,24 @@ code {
     min-height: 44px;
   }
 
-  /* Homepage Intro Banner */
-  .homepage-introduction-text {
-    padding: 28px 0;
-    margin-bottom: 32px;
-  }
-
-  /* Flagship Card: Remove fixed aspect ratio to prevent content collapse on mobile */
-  .homepage-ratio.full-wide {
-    aspect-ratio: auto;
-    min-height: auto;
-  }
-
   .card-visual-header.probaho-bg {
-    padding: 24px 18px;
+    padding: 22px 16px;
   }
 
   .inner-brand-showcase {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
   }
 
   .showcase-logo {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
   }
 
   .showcase-card-body {
-    padding: 24px 18px;
-    gap: 20px;
-  }
-
-  .software-pillars-grid {
-    grid-template-columns: 1fr;
+    padding: 22px 16px;
+    gap: 18px;
   }
 
   .showcase-actions-bar {
@@ -1862,36 +1632,42 @@ code {
     min-height: 44px;
   }
 
-  /* Experience Cards Mobile */
-  .experience-card {
-    padding: 24px 18px;
+  .case-projects-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* Academics Mobile */
-  .academic-main-card {
-    padding: 24px 18px;
+  .case-card-body {
+    padding: 20px 16px;
   }
 
-  .academic-leadership-box {
-    padding: 18px;
-  }
-
-  .leadership-header {
+  .case-card-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 8px;
   }
 
-  /* Contact Section Mobile */
+  .case-card-footer .btn-alice-primary {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .experience-card {
+    padding: 22px 16px;
+  }
+
+  .academic-main-card {
+    padding: 22px 16px;
+  }
+
   .contact-box-inner {
-    padding: 28px 18px;
+    padding: 24px 16px;
   }
 
   .contact-interactive-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
   .email-display-group {
@@ -1900,7 +1676,7 @@ code {
   }
 
   .email-value {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     word-break: break-all;
   }
 
@@ -1928,18 +1704,13 @@ code {
     justify-content: center;
   }
 
-  /* Modal Mobile */
   .case-study-modal {
     padding: 12px;
   }
 
   .modal-dialog {
-    padding: 28px 18px 24px 18px;
+    padding: 24px 16px 20px 16px;
     max-height: 92vh;
-  }
-
-  .modal-metrics-grid {
-    grid-template-columns: 1fr;
   }
 
   .modal-actions-row {
@@ -1952,21 +1723,28 @@ code {
   }
 }
 
-/* Extra-narrow screens (<= 375px) */
-@media (max-width: 375px) {
+/* Narrow screens (414px and below) */
+@media (max-width: 414px) {
   .hero-title {
     font-size: 2.1rem;
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 
   .flagship-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra-narrow screens (360px and below) */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.95rem;
   }
 
   .email-value {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }

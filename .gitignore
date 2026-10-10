@@ -15,3 +15,7 @@ Desktop.ini
 # Vercel deployment cache and project link metadata
 .vercel/
 .env*
+
+# Test output artifacts
+tests/screenshots/
+tests/responsive_screens/

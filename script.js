@@ -1,7 +1,7 @@
 /**
- * IRFANUR RAHMAN — PORTFOLIO RUNTIME ENGINE
- * Alice Lee (byalicelee.com) Design System
- * Interactive Features: Case Study Modal, Scroll-Spy, and Resilient Email Copy
+ * Irfanur Rahman Portfolio Runtime Engine
+ * Plain, human British English, strictly factual presentation.
+ * Interactive features: Case study modal, dynamic project synchronization, and email copy.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function onScroll() {
       const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-      const headerOffset = 140; // Accounts for sticky header height & buffer
+      const headerOffset = 120;
 
       let currentSectionId = '';
 
@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // If at bottom of page, highlight contact
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 60) {
         currentSectionId = 'contact';
       }
 
@@ -45,12 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    // Run once on initial load
     onScroll();
   })();
 
   // ==========================================================================
-  // 2. Interactive Case Study Modal Dialog
+  // 2. Interactive Case Study Modal Dialog (5 Required Headings)
   // ==========================================================================
   (function initCaseStudyModals() {
     const modal = document.getElementById('caseStudyModal');
@@ -62,18 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const caseStudyData = {
       'modal-probaho': {
         title: 'PROBAHO CRM Solutions',
-        tagline: 'Offline-First Enterprise Business Management & Retail Showroom Operations Platform',
-        metrics: [
-          { value: '< 1ms', label: 'Local Query Latency' },
-          { value: '100%', label: 'Offline Checkout Uptime' },
-          { value: '64', label: 'BD Districts Logistics' }
-        ],
-        problem: 'Fast-paced retail showrooms, apparel chains, and wholesale distributors across Bangladesh face chronic broadband instability. Cloud-dependent CRMs freeze cash registers at counter checkout, causing severe transaction bottlenecks, lost sales, and manual bookkeeping chaos during internet outages.',
-        architecture: 'Engineered a resilient desktop architecture powered by Electron 43 and React 19. Embedded an in-process SQLite 3 WebAssembly engine (sql.js) with local-file persistence, eliminating external database dependencies. Business operations execute locally in sub-milliseconds with absolute data sovereignty and local JSON/SQLite cryptographic export backups.',
-        capabilities: 'Features native integration profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban, and eCourier with automated COD remittance and return deduction reconciliation. Delivers background release streaming via GitHub Releases CDN with real-time download progress and 1-click silent relaunch, thermal receipt generation, hardware barcode scanning, and Role-Based Access Control (Admin vs. Staff) with immutable audit stamps.',
+        subtitle: 'A free desktop business system for retail showrooms and distributors',
+        theProblem: 'Retail showrooms and distributors in Bangladesh often experience unstable broadband connections. When cloud based billing systems lose connection, counters cannot print receipts or record sales, creating long queues and forcing staff onto paper records.',
+        whoItIsFor: 'Single and multi branch retail showrooms, fashion outlets, and trade distributors that need dependable daily sales and stock tracking on counter computers.',
+        whatIDecidedAndWhy: 'I chose an offline first desktop architecture using Electron and React, with SQLite WebAssembly via sql.js storing data directly in local files. This lets staff keep ringing up sales and looking up stock without internet. I also built courier integration profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban and eCourier to match local delivery workflows.',
+        tradeOffsAndLimits: 'Because each terminal stores its database locally, live inventory updates across multiple cash registers or remote branches require an active connection or manual export until multi device sync is added.',
+        whatIWouldImproveNext: 'Direct Bluetooth and USB thermal receipt printing, automated cloud backup when internet reconnects, and central inventory pooling across multiple store locations.',
         links: [
-          { text: 'View Repository on GitHub', url: 'https://github.com/GlichPoP/probaho-crm', primary: true },
-          { text: 'Download Windows Installer (.exe)', url: 'https://github.com/GlichPoP/probaho-crm/releases', primary: false }
+          { text: 'View repository on GitHub', url: 'https://github.com/GlichPoP/probaho-crm', primary: true },
+          { text: 'Download installer', url: 'https://github.com/GlichPoP/probaho-crm/releases', primary: false }
         ]
       }
     };
@@ -82,17 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = caseStudyData[modalKey];
       if (!data || !modal || !modalBodyContent) return;
 
-      const metricsHtml = data.metrics ? `
-        <div class="modal-metrics-grid">
-          ${data.metrics.map(m => `
-            <div class="modal-metric-card">
-              <span class="modal-metric-num">${m.value}</span>
-              <span class="modal-metric-label">${m.label}</span>
-            </div>
-          `).join('')}
-        </div>
-      ` : '';
-
       const linksHtml = data.links ? data.links.map(link => `
         <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="${link.primary ? 'btn-alice-primary' : 'btn-alice-secondary'}">
           ${link.text} ↗
@@ -100,19 +84,38 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('') : '';
 
       modalBodyContent.innerHTML = `
-        <h3>${data.title}</h3>
-        <p class="modal-tagline">${data.tagline}</p>
-        
-        ${metricsHtml}
+        <div class="modal-inner-header">
+          <span class="modal-kicker">Case Study</span>
+          <h3 class="modal-headline">${data.title}</h3>
+          <p class="modal-subheading">${data.subtitle}</p>
+        </div>
 
-        <h4 class="modal-section-title">The Operational Challenge</h4>
-        <p>${data.problem}</p>
+        <div class="modal-case-sections">
+          <section class="modal-case-block">
+            <h4 class="modal-section-title">The problem</h4>
+            <p>${data.theProblem}</p>
+          </section>
 
-        <h4 class="modal-section-title">System Architecture & Technical Solution</h4>
-        <p>${data.architecture}</p>
+          <section class="modal-case-block">
+            <h4 class="modal-section-title">Who it is for</h4>
+            <p>${data.whoItIsFor}</p>
+          </section>
 
-        <h4 class="modal-section-title">Core Capabilities & Integrations</h4>
-        <p>${data.capabilities}</p>
+          <section class="modal-case-block">
+            <h4 class="modal-section-title">What I decided and why</h4>
+            <p>${data.whatIDecidedAndWhy}</p>
+          </section>
+
+          <section class="modal-case-block">
+            <h4 class="modal-section-title">Trade offs and limits</h4>
+            <p>${data.tradeOffsAndLimits}</p>
+          </section>
+
+          <section class="modal-case-block">
+            <h4 class="modal-section-title">What I would improve next</h4>
+            <p>${data.whatIWouldImproveNext}</p>
+          </section>
+        </div>
 
         <div class="modal-actions-row">
           ${linksHtml}
@@ -150,7 +153,37 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ==========================================================================
-  // 3. Resilient 1-Click Email Copy with Debounced Feedback
+  // 3. Dynamic Projects Data Sync (projects.json)
+  // ==========================================================================
+  (function initProjectsDataSync() {
+    fetch('projects.json')
+      .then(response => {
+        if (!response.ok) return null;
+        return response.json();
+      })
+      .then(projects => {
+        if (!projects || !Array.isArray(projects)) return;
+
+        const caseProjects = projects.filter(p => p.type === 'case');
+        const countSpan = document.getElementById('caseGlanceCount');
+        if (countSpan && caseProjects.length > 0) {
+          countSpan.textContent = `${caseProjects.length} case projects`;
+        }
+
+        // Check if there are media files for probaho
+        const mediaGallery = document.getElementById('probahoMediaGallery');
+        if (mediaGallery) {
+          // Keep hidden as per rule 23 until user places assets
+          mediaGallery.style.display = 'none';
+        }
+      })
+      .catch(() => {
+        // Fallback silently if projects.json cannot be fetched
+      });
+  })();
+
+  // ==========================================================================
+  // 4. Dependable 1-Click Email Copy with Debounced Feedback
   // ==========================================================================
   (function initEmailCopy() {
     const copyBtn = document.getElementById('copyEmailBtn');
@@ -165,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let copySuccess = false;
 
-      // Primary: Modern Clipboard API
       if (navigator.clipboard && window.isSecureContext) {
         try {
           await navigator.clipboard.writeText(emailToCopy);
@@ -175,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Fallback: document.execCommand('copy') for HTTP/restricted contexts
       if (!copySuccess) {
         try {
           const tempTextArea = document.createElement('textarea');
@@ -193,7 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Visual feedback with debounce protection
       if (feedbackTimeout) {
         clearTimeout(feedbackTimeout);
       }
@@ -212,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ==========================================================================
-  // 4. Smart Send Message Handler (Direct Gmail Webmail & Mobile Mailto)
+  // 5. Smart Send Message Handler (Direct Gmail Webmail & Mobile Mailto)
   // ==========================================================================
   (function initSendMessage() {
     const sendBtn = document.getElementById('sendMessageBtn');
@@ -221,13 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
     sendBtn.addEventListener('click', (e) => {
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       if (isMobile) {
-        // On mobile devices, native mailto: opens the native Gmail / Mail app directly
         e.preventDefault();
         window.location.href = 'mailto:irfanur6@gmail.com?subject=Inquiry%20from%20Portfolio';
       }
-      // On desktop, the standard link targets Gmail webmail compose in a new tab
     });
   })();
 
 });
-

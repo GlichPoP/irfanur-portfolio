@@ -1,0 +1,116 @@
+[
+  {
+    "id": "probaho-crm",
+    "type": "tool",
+    "title": "PROBAHO CRM Solutions",
+    "year": "2026",
+    "course": "",
+    "short_summary": "A free desktop business system for retail showrooms and distributors that keeps billing and inventory records working when the internet drops. Built with local SQLite WebAssembly storage, automatic update checking, and courier delivery management.",
+    "my_role": "",
+    "how_it_was_made": "Built with AI tools. I designed the product, defined the features, tested and released it.",
+    "thumbnail": "assets/probaho-dashboard.png",
+    "link": "https://github.com/GlichPoP/probaho-crm",
+    "installer_link": "https://github.com/GlichPoP/probaho-crm/releases",
+    "pdf_file": "",
+    "page_count": null,
+    "file_size": "",
+    "tags": [
+      "Electron",
+      "React",
+      "TypeScript",
+      "SQLite WebAssembly",
+      "Offline first",
+      "Courier delivery profiles"
+    ],
+    "features": [
+      "Keeps billing and inventory working when the internet is down",
+      "Records who created and last edited each record",
+      "Built in courier profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban and eCourier",
+      "Local backup export with single file database persistence",
+      "v1.0.0 released"
+    ]
+  },
+  {
+    "id": "fin423-portfolio-optimization",
+    "type": "case",
+    "title": "Portfolio Optimization and Efficient Frontier Simulation",
+    "year": "2025",
+    "course": "FIN423: Securities Analysis and Portfolio Management",
+    "short_summary": "Evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days. Simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal Sharpe ratio allocation.",
+    "my_role": "Lead analyst for Grameenphone stock valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.",
+    "how_it_was_made": "Team project",
+    "thumbnail": "assets/thumb-fin423.png",
+    "link": "",
+    "pdf_file": "pdfs/fin423-portfolio-optimization-efficient-frontier.pdf",
+    "page_count": 38,
+    "file_size": "2.39 MB",
+    "metrics": [
+      { "label": "Optimum Sharpe ratio", "value": "3.44" },
+      { "label": "Optimum expected return", "value": "56.59%" },
+      { "label": "Optimal allocation", "value": "51% BRAC Bank, 28% Square, 21% GP" }
+    ],
+    "tags": [
+      "Portfolio Theory",
+      "Efficient Frontier",
+      "Covariance Matrix",
+      "Sharpe Ratio",
+      "Beta Regression",
+      "Dividend Discount Model"
+    ]
+  },
+  {
+    "id": "fin433-square-pharma-equity-research",
+    "type": "case",
+    "title": "Equity Research and Valuation Modeling of Square Pharmaceuticals Ltd",
+    "year": "2025",
+    "course": "FIN433: Financial Modeling",
+    "short_summary": "Prepared an institutional equity research report on Square Pharmaceuticals Ltd. Built a valuation model combining free cash flow to firm, dividend discount models, and relative peer multiples alongside five year pro forma projections.",
+    "my_role": "Corporate governance structure, shareholding breakdown, board risk assessment, and long term revenue growth drivers.",
+    "how_it_was_made": "Team project",
+    "thumbnail": "assets/thumb-fin433.png",
+    "link": "",
+    "pdf_file": "pdfs/fin433-equity-research-square-pharmaceuticals.pdf",
+    "page_count": 48,
+    "file_size": "9.42 MB",
+    "metrics": [
+      { "label": "Target fair value", "value": "BDT 397.20" },
+      { "label": "Implied upside", "value": "79.6%" },
+      { "label": "WACC discount rate", "value": "10.49%" }
+    ],
+    "tags": [
+      "Valuation Model",
+      "Cash Flow Valuation",
+      "Pro Forma Projections",
+      "Sensitivity Analysis",
+      "Corporate Governance",
+      "Risk Assessment"
+    ]
+  },
+  {
+    "id": "fin422-pharma-sector-valuation",
+    "type": "case",
+    "title": "Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals",
+    "year": "2024",
+    "course": "FIN422: Fundamentals of Investments",
+    "short_summary": "Analysed company fundamentals, industry growth trends, and ten year stock return distributions across Square Pharma, Beximco, Renata, and Ibn Sina. Applied two stage dividend discount models and cash flow methods to compare intrinsic values against market prices.",
+    "my_role": "Valuation models, return distribution statistics, and pharmaceutical industry competitive analysis.",
+    "how_it_was_made": "Team project",
+    "thumbnail": "assets/thumb-fin422.png",
+    "link": "",
+    "pdf_file": "pdfs/fin422-equity-research-pharma-valuation.pdf",
+    "page_count": 22,
+    "file_size": "1.76 MB",
+    "metrics": [
+      { "label": "FCFF intrinsic value", "value": "BDT 210.98" },
+      { "label": "FCFE intrinsic value", "value": "BDT 208.00" },
+      { "label": "Ten year standard deviation", "value": "4.91%" }
+    ],
+    "tags": [
+      "Dividend Discount Model",
+      "Cash Flow Valuation",
+      "Industry Analysis",
+      "Return Volatility",
+      "Peer Multiples"
+    ]
+  }
+]
