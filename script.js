@@ -211,4 +211,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // ==========================================================================
+  // 4. Smart Send Message Handler (Direct Gmail Webmail & Mobile Mailto)
+  // ==========================================================================
+  (function initSendMessage() {
+    const sendBtn = document.getElementById('sendMessageBtn');
+    if (!sendBtn) return;
+
+    sendBtn.addEventListener('click', (e) => {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        // On mobile devices, native mailto: opens the native Gmail / Mail app directly
+        e.preventDefault();
+        window.location.href = 'mailto:irfanur6@gmail.com?subject=Inquiry%20from%20Portfolio';
+      }
+      // On desktop, the standard link targets Gmail webmail compose in a new tab
+    });
+  })();
+
 });
+
