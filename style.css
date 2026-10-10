@@ -679,14 +679,15 @@ code {
   justify-content: space-between;
   padding: 10px 16px;
   background: #231E30;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 12px;
 }
 
 .mockup-dots {
   display: flex;
   align-items: center;
   gap: 6px;
-  width: 60px;
+  flex-shrink: 0;
 }
 
 .mockup-dot {
@@ -701,47 +702,44 @@ code {
 .mockup-dot.green { background-color: #27C93F; }
 
 .mockup-address-bar {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 600px;
+  flex: 1;
 }
 
 .mockup-meta-pill {
   font-size: 0.72rem;
-  padding: 2px 8px;
-  background: rgba(90, 143, 125, 0.25);
+  padding: 3px 10px;
+  background: rgba(90, 143, 125, 0.3);
   color: #A3D9C9;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(90, 143, 125, 0.45);
+  border: 1px solid rgba(90, 143, 125, 0.5);
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .mockup-viewport {
   width: 100%;
-  max-height: 480px;
-  overflow: hidden;
+  height: auto;
+  overflow: visible;
   background: #0F0E17;
   position: relative;
+  line-height: 0;
 }
 
 .mockup-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 0.4s ease;
-}
-
-.showcase-mockup-frame:hover .mockup-img {
-  transform: scale(1.01);
+  object-fit: contain;
+  border-radius: 0 0 11px 11px;
 }
 
 .showcase-badges {
