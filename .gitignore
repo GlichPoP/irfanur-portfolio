@@ -11,3 +11,7 @@ Desktop.ini
 .idea/
 *.swp
 *~
+
+# Vercel deployment cache and project link metadata
+.vercel/
+.env*

@@ -1,0 +1,14 @@
+# Deployment exclusion list for Vercel Edge hosting
+.agents
+.agents/**
+tests
+tests/**
+README.md
+.gitignore
+.git
+.git/**
+.vscode
+.vscode/**
+.idea
+.idea/**
+.env*
