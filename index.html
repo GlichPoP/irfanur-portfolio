@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.2">
+  <link rel="stylesheet" href="style.css?v=3.3">
 
   <!-- Privacy friendly analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
@@ -267,9 +267,14 @@
               </div>
 
               <div class="case-card-footer">
-                <a href="pdfs/fin423-portfolio-optimization-efficient-frontier.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
-                  Open PDF ↗
-                </a>
+                <div class="case-btn-group">
+                  <button class="btn-alice-secondary btn-sm" data-modal="modal-fin423" type="button">
+                    Executive summary
+                  </button>
+                  <a href="pdfs/fin423-portfolio-optimization-efficient-frontier.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                    Open PDF ↗
+                  </a>
+                </div>
                 <span class="case-file-meta">38 pages</span>
               </div>
             </div>
@@ -317,9 +322,14 @@
               </div>
 
               <div class="case-card-footer">
-                <a href="pdfs/fin433-equity-research-square-pharmaceuticals.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
-                  Open PDF ↗
-                </a>
+                <div class="case-btn-group">
+                  <button class="btn-alice-secondary btn-sm" data-modal="modal-fin433" type="button">
+                    Executive summary
+                  </button>
+                  <a href="pdfs/fin433-equity-research-square-pharmaceuticals.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                    Open PDF ↗
+                  </a>
+                </div>
                 <span class="case-file-meta">48 pages</span>
               </div>
             </div>
@@ -367,9 +377,14 @@
               </div>
 
               <div class="case-card-footer">
-                <a href="pdfs/fin422-equity-research-pharma-valuation.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
-                  Open PDF ↗
-                </a>
+                <div class="case-btn-group">
+                  <button class="btn-alice-secondary btn-sm" data-modal="modal-fin422" type="button">
+                    Executive summary
+                  </button>
+                  <a href="pdfs/fin422-equity-research-pharma-valuation.pdf" target="_blank" rel="noopener noreferrer" class="btn-alice-primary btn-sm">
+                    Open PDF ↗
+                  </a>
+                </div>
                 <span class="case-file-meta">22 pages</span>
               </div>
             </div>
@@ -482,6 +497,69 @@
       </div>
     </section>
 
+    <!-- Section: Core Competencies (#competencies) -->
+    <section id="competencies" class="section-block">
+      <div class="section-header-row">
+        <div>
+          <span class="section-eyebrow">Professional Capabilities</span>
+          <h2 class="section-title">Core Competencies</h2>
+        </div>
+        <p class="section-desc">
+          Practical analytical strengths across corporate finance, enterprise systems, supply chains, and digital tools.
+        </p>
+      </div>
+
+      <div class="competencies-grid">
+        <article class="competency-card">
+          <div class="competency-pillar-header">
+            <span class="pillar-bullet">01</span>
+            <h3 class="competency-title">Financial Valuation and Modeling</h3>
+          </div>
+          <ul class="competency-list">
+            <li>Discounted cash flow, Dividend Discount Model, and corporate equity valuation.</li>
+            <li>Markowitz mean variance portfolio optimization and efficient frontier calculation.</li>
+            <li>Financial statement ratio analysis, DuPont decomposition, and variance testing.</li>
+          </ul>
+        </article>
+
+        <article class="competency-card">
+          <div class="competency-pillar-header">
+            <span class="pillar-bullet">02</span>
+            <h3 class="competency-title">Corporate ERP and Accounting Systems</h3>
+          </div>
+          <ul class="competency-list">
+            <li>General ledger voucher posting and cost centre tracking in Oracle ERP.</li>
+            <li>Bank reconciliations, sub ledger auditing, and trial balance variance reviews.</li>
+            <li>Financial reporting hygiene, debit credit validation, and documentation audit trails.</li>
+          </ul>
+        </article>
+
+        <article class="competency-card">
+          <div class="competency-pillar-header">
+            <span class="pillar-bullet">03</span>
+            <h3 class="competency-title">Supply Chain and Inventory Operations</h3>
+          </div>
+          <ul class="competency-list">
+            <li>Cross border inventory tracking across dual country retail channels.</li>
+            <li>Order fulfillment workflows, stockout reduction, and SKU synchronization on Shopify.</li>
+            <li>Domestic courier logistics integration with Pathao, Steadfast, and RedX dispatch.</li>
+          </ul>
+        </article>
+
+        <article class="competency-card">
+          <div class="competency-pillar-header">
+            <span class="pillar-bullet">04</span>
+            <h3 class="competency-title">Modern Business Software and Tools</h3>
+          </div>
+          <ul class="competency-list">
+            <li>Offline first desktop architectures with local SQLite databases and data export.</li>
+            <li>AI assisted development workflows for rapid internal business tool creation.</li>
+            <li>Spreadsheet financial modeling, clean data visualization, and executive reporting.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- Section 3: Education & Credentials (#education) -->
     <section id="education" class="section-block">
       <div class="section-header-row">
@@ -518,10 +596,33 @@
               </p>
             </div>
 
-            <!-- Certifications Line (Text only, no images) -->
-            <div class="certifications-box">
-              <strong class="cert-title">Certifications:</strong>
-              <span class="cert-list">Google Certified Educator Level 1 and Level 2, Gemini Certified Educator, Gemini Certified Student, and Claude certifications from Anthropic.</span>
+            <!-- Certifications Block with Structured Credential Chips -->
+            <div class="certifications-block">
+              <h4 class="cert-block-title">Professional Certifications</h4>
+              <div class="cert-groups-container">
+                <div class="cert-group-card">
+                  <div class="cert-group-header">
+                    <span class="cert-issuer-badge">Google</span>
+                    <span class="cert-issuer-sub">Education and AI Credentials</span>
+                  </div>
+                  <div class="cert-chips-row">
+                    <span class="cert-chip">Google Certified Educator Level 1</span>
+                    <span class="cert-chip">Google Certified Educator Level 2</span>
+                    <span class="cert-chip">Gemini Certified Educator</span>
+                    <span class="cert-chip">Gemini Certified Student</span>
+                  </div>
+                </div>
+
+                <div class="cert-group-card">
+                  <div class="cert-group-header">
+                    <span class="cert-issuer-badge">Anthropic</span>
+                    <span class="cert-issuer-sub">AI Practitioner Credentials</span>
+                  </div>
+                  <div class="cert-chips-row">
+                    <span class="cert-chip">Claude Certifications</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Leadership and Activities Subsection -->
@@ -609,6 +710,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3.2"></script>
+  <script src="script.js?v=3.3"></script>
 </body>
 </html>

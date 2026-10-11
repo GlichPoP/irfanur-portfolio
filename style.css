@@ -890,6 +890,13 @@ code {
   border-top: 1px solid var(--border-subtle);
 }
 
+.case-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .case-file-meta {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -1022,6 +1029,77 @@ code {
 }
 
 /* ==========================================================================
+   CORE COMPETENCIES SECTION (#competencies)
+   ========================================================================== */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.competency-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 32px 34px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.competency-pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+}
+
+.pillar-bullet {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  background: var(--accent-peach);
+  border: 1px solid var(--border-input);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.competency-title {
+  font-size: 1.22rem;
+  color: var(--text-headline);
+  line-height: 1.3;
+}
+
+.competency-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.competency-list li {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 18px;
+}
+
+.competency-list li::before {
+  content: '•';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: var(--accent-terracotta);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
    EDUCATION & CREDENTIALS SECTION (#education)
    ========================================================================== */
 .academics-container {
@@ -1119,28 +1197,81 @@ code {
   line-height: 1.65;
 }
 
-.certifications-box {
-  background-color: var(--bg-surface-soft);
+/* Certifications with Issuer Grouped Chips */
+.certifications-block {
+  background: var(--bg-canvas-alt);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 16px 20px;
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
 }
 
-.cert-title {
-  font-size: 0.85rem;
+.cert-block-title {
+  font-size: 1.18rem;
+  color: var(--text-headline);
+}
+
+.cert-groups-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.cert-group-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-group-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cert-issuer-badge {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent-terracotta);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
-.cert-list {
-  font-size: 0.92rem;
+.cert-issuer-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cert-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-chip {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-headline);
-  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.cert-chip:hover {
+  background: var(--accent-peach);
+  border-color: var(--border-input);
+  color: var(--accent-terracotta);
 }
 
 .academic-leadership-box {
@@ -1473,7 +1604,8 @@ code {
 @media (hover: hover) and (pointer: fine) {
   .flagship-showcase-card:hover,
   .experience-card:hover,
-  .academic-main-card:hover {
+  .academic-main-card:hover,
+  .competency-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
   }
@@ -1502,6 +1634,14 @@ code {
   }
 
   .experience-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competencies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-groups-container {
     grid-template-columns: 1fr;
   }
 }
@@ -1643,12 +1783,27 @@ code {
   .case-card-footer {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+  }
+
+  .case-btn-group {
+    flex-direction: column;
+    width: 100%;
     gap: 8px;
   }
 
-  .case-card-footer .btn-alice-primary {
+  .case-btn-group .btn-alice-primary,
+  .case-btn-group .btn-alice-secondary {
     width: 100%;
     min-height: 44px;
+  }
+
+  .competency-card {
+    padding: 22px 16px;
+  }
+
+  .certifications-block {
+    padding: 20px 16px;
   }
 
   .experience-card {
