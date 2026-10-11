@@ -19,3 +19,6 @@ Desktop.ini
 # Test output artifacts
 tests/screenshots/
 tests/responsive_screens/
+
+.vercel
+.env*
