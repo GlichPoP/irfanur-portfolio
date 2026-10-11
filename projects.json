@@ -43,7 +43,7 @@
     "link": "",
     "pdf_file": "pdfs/fin423-portfolio-optimization-efficient-frontier.pdf",
     "page_count": 38,
-    "file_size": "2.39 MB",
+    "file_size": "",
     "metrics": [
       { "label": "Optimum Sharpe ratio", "value": "3.44" },
       { "label": "Optimum expected return", "value": "56.59%" },
@@ -71,7 +71,7 @@
     "link": "",
     "pdf_file": "pdfs/fin433-equity-research-square-pharmaceuticals.pdf",
     "page_count": 48,
-    "file_size": "9.42 MB",
+    "file_size": "",
     "metrics": [
       { "label": "Target fair value", "value": "BDT 397.20" },
       { "label": "Implied upside", "value": "79.6%" },
@@ -99,7 +99,7 @@
     "link": "",
     "pdf_file": "pdfs/fin422-equity-research-pharma-valuation.pdf",
     "page_count": 22,
-    "file_size": "1.76 MB",
+    "file_size": "",
     "metrics": [
       { "label": "FCFF intrinsic value", "value": "BDT 210.98" },
       { "label": "FCFE intrinsic value", "value": "BDT 208.00" },
