@@ -170,12 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
           countSpan.textContent = `${caseProjects.length} case projects`;
         }
 
-        // Check if there are media files for probaho
-        const mediaGallery = document.getElementById('probahoMediaGallery');
-        if (mediaGallery) {
-          // Keep hidden as per rule 23 until user places assets
-          mediaGallery.style.display = 'none';
-        }
       })
       .catch(() => {
         // Fallback silently if projects.json cannot be fetched
