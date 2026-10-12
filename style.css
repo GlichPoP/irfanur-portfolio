@@ -870,8 +870,7 @@ code {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  min-height: 154px;
-  margin-top: auto;
+  min-height: 165px;
   padding-top: 4px;
 }
 
@@ -885,6 +884,18 @@ code {
   justify-content: center;
   gap: 2px;
   min-height: 58px;
+}
+
+
+.case-calc-note {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  background: var(--bg-canvas-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  margin: 6px 0 0 0;
 }
 
 .case-metric-box.is-full-width {
@@ -907,7 +918,7 @@ code {
 }
 
 .case-card-footer {
-  margin-top: 8px;
+  margin-top: auto;
   padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
@@ -936,6 +947,7 @@ code {
   border: 1px solid var(--border-input);
   padding: 2px 7px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
 }
 
 .case-actions-bar {
@@ -1158,6 +1170,51 @@ code {
 /* ==========================================================================
    EDUCATION & CREDENTIALS SECTION (#education)
    ========================================================================== */
+
+.academic-compact-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 32px 36px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.academic-compact-card:hover {
+  border-color: var(--accent-terracotta);
+  box-shadow: var(--shadow-hover);
+}
+
+.compact-edu-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.compact-edu-group:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.compact-edu-heading {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.compact-edu-text {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
 .academics-container {
   display: flex;
   flex-direction: column;
@@ -2010,6 +2067,7 @@ code {
   .experience-card,
   .competency-card,
   .academic-main-card,
+  .academic-compact-card,
   .contact-box-inner {
     page-break-inside: avoid !important;
     break-inside: avoid !important;

@@ -26,8 +26,7 @@
       "Keeps billing and inventory working when the internet is down",
       "Records who created and last edited each record",
       "Built in courier profiles for Pathao, Steadfast, RedX, Paperfly, Sundarban and eCourier",
-      "Local backup export with single file database persistence",
-      "v1.0.0 released"
+      "Backup export saves all data to a single file."
     ]
   },
   {
@@ -35,19 +34,19 @@
     "type": "case",
     "title": "Portfolio Optimization and Efficient Frontier Simulation",
     "year": "2025",
-    "course": "FIN423: Securities Analysis and Portfolio Management",
-    "short_summary": "Evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days. Simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal Sharpe ratio allocation.",
-    "my_role": "Lead analyst for Grameenphone stock valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.",
+    "course": "FIN423: Investment Theory, 2025",
+    "short_summary": "The group evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days. The group simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal Sharpe ratio allocation.",
+    "my_role": "Responsible for Grameenphone valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.",
     "how_it_was_made": "Team project",
     "thumbnail": "assets/thumb-fin423.png",
     "link": "",
     "pdf_file": "pdfs/fin423-portfolio-optimization-efficient-frontier.pdf",
     "page_count": 38,
-    "file_size": "",
+    "file_size": "2.39 MB",
     "metrics": [
-      { "label": "Optimum Sharpe ratio", "value": "3.44" },
-      { "label": "Optimum expected return", "value": "56.59%" },
-      { "label": "Optimal allocation", "value": "51% BRAC Bank, 28% Square, 21% GP" }
+      { "label": "Optimum Sharpe ratio (Group result)", "value": "3.44" },
+      { "label": "Optimum expected return (Group result)", "value": "56.59%" },
+      { "label": "Optimal asset allocation: BRAC Bank, Square, GP (Group result)", "value": "51% / 28% / 21%" }
     ],
     "tags": [
       "Portfolio Theory",
@@ -63,19 +62,19 @@
     "type": "case",
     "title": "Equity Research and Valuation Modeling of Square Pharmaceuticals Ltd",
     "year": "2025",
-    "course": "FIN433: Financial Modeling",
-    "short_summary": "Prepared an institutional equity research report on Square Pharmaceuticals Ltd. Built a valuation model combining free cash flow to firm, dividend discount models, and relative peer multiples alongside five year pro forma projections.",
+    "course": "FIN433: Financial Modeling, 2025",
+    "short_summary": "Prepared an institutional equity research report evaluating market position, financial performance, and capital allocation of Square Pharmaceuticals Ltd. The group built a valuation combining free cash flow to firm, dividend discount models and peer multiples, with five year projections.",
     "my_role": "Corporate governance structure, shareholding breakdown, board risk assessment, and long term revenue growth drivers.",
     "how_it_was_made": "Team project",
     "thumbnail": "assets/thumb-fin433.png",
     "link": "",
     "pdf_file": "pdfs/fin433-equity-research-square-pharmaceuticals.pdf",
     "page_count": 48,
-    "file_size": "",
+    "file_size": "9.42 MB",
     "metrics": [
-      { "label": "Target fair value", "value": "BDT 397.20" },
-      { "label": "Implied upside", "value": "79.6%" },
-      { "label": "WACC discount rate", "value": "10.49%" }
+      { "label": "Target fair value (Group result)", "value": "BDT 397.20" },
+      { "label": "Implied upside (Group result)", "value": "79.6%" },
+      { "label": "Baseline discount rate benchmark (Group result)", "value": "10.49% WACC" }
     ],
     "tags": [
       "Valuation Model",
@@ -91,19 +90,19 @@
     "type": "case",
     "title": "Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals",
     "year": "2024",
-    "course": "FIN422: Fundamentals of Investments",
-    "short_summary": "Analysed company fundamentals, industry growth trends, and ten year stock return distributions across Square Pharma, Beximco, Renata, and Ibn Sina. Applied two stage dividend discount models and cash flow methods to compare intrinsic values against market prices.",
-    "my_role": "Valuation models, return distribution statistics, and pharmaceutical industry competitive analysis.",
+    "course": "FIN422: Fundamentals of Investments, 2024",
+    "short_summary": "The group analysed company fundamentals, industry growth trends, and ten year stock return distributions across pharmaceutical firms. The group applied two stage dividend discount models and cash flow methods to compare intrinsic values against prevailing market prices.",
+    "my_role": "P/E relative valuation for the group's equity research and valuation paper.",
     "how_it_was_made": "Team project",
     "thumbnail": "assets/thumb-fin422.png",
     "link": "",
     "pdf_file": "pdfs/fin422-equity-research-pharma-valuation.pdf",
     "page_count": 22,
-    "file_size": "",
+    "file_size": "1.76 MB",
     "metrics": [
-      { "label": "FCFF intrinsic value", "value": "BDT 210.98" },
-      { "label": "FCFE intrinsic value", "value": "BDT 208.00" },
-      { "label": "Ten year standard deviation", "value": "4.91%" }
+      { "label": "FCFF intrinsic value (Group result)", "value": "BDT 210.98" },
+      { "label": "FCFE intrinsic value (Group result)", "value": "BDT 208.00" },
+      { "label": "Ten year monthly return standard deviation benchmark (Group result)", "value": "4.91% Volatility" }
     ],
     "tags": [
       "Dividend Discount Model",

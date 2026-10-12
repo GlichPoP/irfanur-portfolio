@@ -78,16 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
       'modal-fin423': {
         kicker: 'Executive Summary',
         title: 'Portfolio Optimization and Efficient Frontier Simulation',
-        subtitle: 'FIN423: Securities Analysis and Portfolio Management, 2025',
+        subtitle: 'FIN423: Investment Theory, 2025',
         sections: [
-          { title: 'Research objective and asset universe', text: 'Evaluated individual equity risk, historical return profiles, and mutual covariance relationships across four Dhaka Stock Exchange equities (Grameenphone, BRAC Bank, Square Pharmaceuticals, and Apex Tannery) over 250 trading days to construct the Markowitz efficient frontier.' },
-          { title: 'My role and key contributions', text: 'Lead analyst responsible for fundamental valuation of Grameenphone stock, formulation of daily and annualized variance covariance matrices, beta regression against the DSEX index, and execution of the 34 portfolio weight combination simulation.' },
-          { title: 'Key analytical findings', text: 'Identified the Minimum Variance Portfolio at 9.92% risk with 29.65% expected return. Discovered the Maximum Sharpe Ratio Portfolio yielding an optimal Sharpe ratio of 3.44 and expected return of 56.59% at 14.25% portfolio volatility.' },
-          { title: 'Optimal asset allocation', text: 'The optimal risk adjusted allocation comprised 51% BRAC Bank, 28% Square Pharmaceuticals, and 21% Grameenphone, demonstrating that strategic diversification significantly enhances risk adjusted returns over individual stock holdings.' },
+          { title: 'Research objective and asset universe', text: 'The group evaluated individual equity risk, historical return profiles, and mutual covariance relationships across four Dhaka Stock Exchange equities (Grameenphone, BRAC Bank, Square Pharmaceuticals, and Apex Tannery) over 250 trading days to construct the Markowitz efficient frontier.' },
+          { title: 'My role and key contributions', text: 'Responsible for Grameenphone valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.' },
+          { title: 'Key analytical findings', text: 'Identified the Minimum Variance Portfolio at 9.92% risk with 29.65% expected return. Discovered the Maximum Sharpe Ratio Portfolio yielding an optimal Sharpe ratio of 3.44 and expected return of 56.59% at 14.25% portfolio volatility (Group result).' },
+          { title: 'Optimal asset allocation', text: 'The optimal risk adjusted allocation comprised 51% BRAC Bank, 28% Square Pharmaceuticals, and 21% Grameenphone, demonstrating that strategic diversification significantly enhances risk adjusted returns over individual stock holdings (Group result).' },
           { title: 'Methodology and models', text: 'Markowitz Modern Portfolio Theory, Gordon Growth Dividend Discount Model, historical five year P/E multiple regression, Capital Allocation Line (CAL) derivation, and covariance matrix formulation.' }
         ],
         links: [
-          { text: 'Open full research report (38 pages)', url: 'pdfs/fin423-portfolio-optimization-efficient-frontier.pdf', primary: true }
+          { text: 'Open full research report (38 pages • 2.39 MB)', url: 'pdfs/fin423-portfolio-optimization-efficient-frontier.pdf', primary: true }
         ]
       },
 
@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Equity Research and Valuation Modeling of Square Pharmaceuticals Ltd',
         subtitle: 'FIN433: Financial Modeling, 2025',
         sections: [
-          { title: 'Research objective and coverage', text: 'Conducted an institutional equity research valuation of Square Pharmaceuticals Ltd, the market leader in the Bangladesh pharmaceutical manufacturing sector, evaluating historical operational performance, pipeline expansions, and future cash generation.' },
-          { title: 'My role and key contributions', text: 'Conducted corporate governance architecture analysis, shareholding breakdown (sponsor, institutional, foreign, and public), board of directors oversight evaluation, and long term revenue driver forecasting.' },
-          { title: 'Valuation conclusion and recommendation', text: 'Issued a BUY recommendation with a target fair value of BDT 397.20 against a prevailing market price of BDT 221.00, representing an implied upside of 79.6%.' },
-          { title: 'Key financial metrics and discount rates', text: 'Derived a Weighted Average Cost of Capital (WACC) of 10.49% with an estimated Cost of Equity of 12.51% and terminal growth rate of 5.82%. Projected five year pro forma revenues expanding at a compound annual growth rate of 11.66%.' },
-          { title: 'Methodology and models', text: 'Valuation football field synthesizing Free Cash Flow to Firm (FCFF), Free Cash Flow to Equity (FCFE), Dividend Discount Model (DDM), relative peer multiples, and multi dimensional sensitivity analysis across discount rates and terminal margins.' }
+          { title: 'Research objective and coverage', text: 'Conducted an institutional equity research valuation of Square Pharmaceuticals Ltd, evaluating historical operational performance, pipeline expansions, and future cash generation.' },
+          { title: 'My role and key contributions', text: 'Corporate governance structure, shareholding breakdown, board risk assessment, and long term revenue growth drivers.' },
+          { title: 'Valuation conclusion and recommendation', text: 'Issued a BUY recommendation with a target fair value of BDT 397.20 against a prevailing market price of BDT 221.00, representing an implied upside of 79.6% (Group result).' },
+          { title: 'Key financial metrics and discount rates', text: 'Derived a Weighted Average Cost of Capital (WACC) of 10.49% with an estimated Cost of Equity of 12.51% and terminal growth rate of 5.82% (Group result). Projected five year pro forma revenues expanding at a compound annual growth rate of 11.66%.' },
+          { title: 'Methodology and models', text: 'The group built a valuation combining free cash flow to firm, dividend discount models and peer multiples, with five year projections.' }
         ],
         links: [
-          { text: 'Open full research report (48 pages)', url: 'pdfs/fin433-equity-research-square-pharmaceuticals.pdf', primary: true }
+          { text: 'Open full research report (48 pages • 9.42 MB)', url: 'pdfs/fin433-equity-research-square-pharmaceuticals.pdf', primary: true }
         ]
       },
 
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals',
         subtitle: 'FIN422: Fundamentals of Investments, 2024',
         sections: [
-          { title: 'Research objective and sector scope', text: 'Analysed industry dynamics, macro regulatory tailwinds, and financial statements across four leading Bangladesh pharmaceutical manufacturers: Square Pharmaceuticals, Beximco Pharma, Renata, and Ibn Sina.' },
-          { title: 'My role and key contributions', text: 'Coauthored fundamental valuation models, calculated statistical return dispersion across a ten year historical window, and conducted competitive industry structure evaluation using Porter\'s Five Forces.' },
-          { title: 'Key analytical findings', text: 'Calculated intrinsic valuation for Square Pharmaceuticals of BDT 210.98 via Free Cash Flow to Firm and BDT 208.00 via Free Cash Flow to Equity, confirming strong alignment with underlying market pricing.' },
-          { title: 'Statistical return dispersion', text: 'Ten year monthly return analysis revealed a standard deviation of 4.91% alongside positive skewness (0.76) and kurtosis (3.49), confirming leptokurtic distribution characteristics across domestic pharmaceutical stocks.' },
-          { title: 'Methodology and models', text: 'Two stage Dividend Discount Model, FCFF and FCFE discounted cash flow models, Porter\'s Five Forces framework, peer valuation multiples, and ten year monthly return volatility statistics.' }
+          { title: 'Research objective and sector scope', text: 'The group analysed company fundamentals, industry growth trends, and ten year stock return distributions across pharmaceutical firms.' },
+          { title: 'My role and key contributions', text: 'P/E relative valuation for the group\'s equity research and valuation paper.' },
+          { title: 'Key analytical findings', text: 'Calculated intrinsic valuation for Square Pharmaceuticals of BDT 210.98 via Free Cash Flow to Firm and BDT 208.00 via Free Cash Flow to Equity (Group result).' },
+          { title: 'Statistical return dispersion', text: 'Ten year monthly return analysis revealed a standard deviation of 4.91% alongside positive skewness (0.76) and kurtosis (3.49), confirming leptokurtic distribution characteristics across domestic pharmaceutical stocks (Group result).' },
+          { title: 'Methodology and models', text: 'The group applied two stage dividend discount models and cash flow methods to compare intrinsic values against prevailing market prices.' }
         ],
         links: [
-          { text: 'Open full research report (22 pages)', url: 'pdfs/fin422-equity-research-pharma-valuation.pdf', primary: true }
+          { text: 'Open full research report (22 pages • 1.76 MB)', url: 'pdfs/fin422-equity-research-pharma-valuation.pdf', primary: true }
         ]
       }
     };
@@ -269,20 +269,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // ==========================================================================
-  // 5. Smart Send Message Handler (Direct Gmail Webmail & Mobile Mailto)
-  // ==========================================================================
-  (function initSendMessage() {
-    const sendBtn = document.getElementById('sendMessageBtn');
-    if (!sendBtn) return;
-
-    sendBtn.addEventListener('click', (e) => {
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if (isMobile) {
-        e.preventDefault();
-        window.location.href = 'mailto:irfanur6@gmail.com?subject=Inquiry%20from%20Portfolio';
-      }
-    });
-  })();
-
+  // Standard mailto link on #sendMessageBtn is handled natively by the browser.
 });
