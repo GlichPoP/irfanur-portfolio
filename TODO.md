@@ -38,7 +38,7 @@ A complete forensic scan was conducted across all three academic research PDF fi
 - Irfanur Rahman (Student ID: 21204012)
 - Riyana Mohiuddin (Student ID: 21204011)
 
-*Note: Per instruction, these PDF files have not been edited. If you prefer to redact your classmates' student IDs and names before sharing publicly, you can replace the files in `pdfs/` with redacted copies.*
+*Status: Permanent true redaction completed. All student ID numbers have been permanently excised from all three PDFs and verified via full-text extraction (zero 8-digit numbers remaining). Author and creator metadata has been removed, and cover thumbnails in assets/ have been regenerated without IDs.*
 
 ---
 

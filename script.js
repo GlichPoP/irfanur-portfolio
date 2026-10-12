@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
           { title: 'Methodology and models', text: 'Markowitz Modern Portfolio Theory, Gordon Growth Dividend Discount Model, historical five year P/E multiple regression, Capital Allocation Line (CAL) derivation, and covariance matrix formulation.' }
         ],
         links: [
-          { text: 'Open full research report (38 pages • 2.39 MB)', url: 'pdfs/fin423-portfolio-optimization-efficient-frontier.pdf', primary: true }
+          { text: 'Open full research report (38 pages • 2.41 MB)', url: 'pdfs/fin423-portfolio-optimization-efficient-frontier.pdf', primary: true }
         ]
       },
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
           { title: 'Methodology and models', text: 'The group built a valuation combining free cash flow to firm, dividend discount models and peer multiples, with five year projections.' }
         ],
         links: [
-          { text: 'Open full research report (48 pages • 9.42 MB)', url: 'pdfs/fin433-equity-research-square-pharmaceuticals.pdf', primary: true }
+          { text: 'Open full research report (48 pages • 9.22 MB)', url: 'pdfs/fin433-equity-research-square-pharmaceuticals.pdf', primary: true }
         ]
       },
 
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
           { title: 'Methodology and models', text: 'The group applied two stage dividend discount models and cash flow methods to compare intrinsic values against prevailing market prices.' }
         ],
         links: [
-          { text: 'Open full research report (22 pages • 1.76 MB)', url: 'pdfs/fin422-equity-research-pharma-valuation.pdf', primary: true }
+          { text: 'Open full research report (22 pages • 1.77 MB)', url: 'pdfs/fin422-equity-research-pharma-valuation.pdf', primary: true }
         ]
       }
     };
