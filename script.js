@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sections: [
           { title: 'Research objective and asset universe', text: 'The group evaluated individual equity risk, historical return profiles, and mutual covariance relationships across four Dhaka Stock Exchange equities (Grameenphone, BRAC Bank, Square Pharmaceuticals, and Apex Tannery) over 250 trading days to construct the Markowitz efficient frontier.' },
           { title: 'My role and key contributions', text: 'Responsible for Grameenphone valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.' },
-          { title: 'Key analytical findings', text: 'Identified the Minimum Variance Portfolio at 9.92% risk with 29.65% expected return. Discovered the Maximum Sharpe Ratio Portfolio yielding an optimal Sharpe ratio of 3.44 and expected return of 56.59% at 14.25% portfolio volatility (Group result).' },
+          { title: 'Key analytical findings', text: 'Identified the Minimum Variance Portfolio at 9.92% risk with 29.65% expected return. Discovered the Optimum Portfolio delivering an expected return of 56.59% at 14.25% portfolio volatility across 34 simulated weight allocations (Group result).' },
           { title: 'Optimal asset allocation', text: 'The optimal risk adjusted allocation comprised 51% BRAC Bank, 28% Square Pharmaceuticals, and 21% Grameenphone, demonstrating that strategic diversification significantly enhances risk adjusted returns over individual stock holdings (Group result).' },
           { title: 'Methodology and models', text: 'Markowitz Modern Portfolio Theory, Gordon Growth Dividend Discount Model, historical five year P/E multiple regression, Capital Allocation Line (CAL) derivation, and covariance matrix formulation.' }
         ],
@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       'modal-fin422': {
         kicker: 'Executive Summary',
-        title: 'Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals',
+        title: 'Equity Research Report and Valuation Analysis of Square Pharmaceuticals Ltd',
         subtitle: 'FIN422: Fundamentals of Investments, 2024',
         sections: [
-          { title: 'Research objective and sector scope', text: 'The group analysed company fundamentals, industry growth trends, and ten year stock return distributions across pharmaceutical firms.' },
+          { title: 'Research objective and sector scope', text: 'The paper values Square Pharmaceuticals and benchmarks its operational performance, valuation multiples and stock return volatility against Beximco Pharma, Renata and Ibn Sina.' },
           { title: 'My role and key contributions', text: 'P/E relative valuation for the group\'s equity research and valuation paper.' },
           { title: 'Key analytical findings', text: 'Calculated intrinsic valuation for Square Pharmaceuticals of BDT 210.98 via Free Cash Flow to Firm and BDT 208.00 via Free Cash Flow to Equity (Group result).' },
           { title: 'Statistical return dispersion', text: 'Ten year monthly return analysis revealed a standard deviation of 4.91% alongside positive skewness (0.76) and kurtosis (3.49), confirming leptokurtic distribution characteristics across domestic pharmaceutical stocks (Group result).' },

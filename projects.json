@@ -35,7 +35,7 @@
     "title": "Portfolio Optimization and Efficient Frontier Simulation",
     "year": "2025",
     "course": "FIN423: Investment Theory, 2025",
-    "short_summary": "The group evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days. The group simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal Sharpe ratio allocation.",
+    "short_summary": "The group evaluated risk, return and covariance relationships across four Dhaka Stock Exchange equities over 250 trading days. The group simulated 34 portfolio weight combinations to construct the Markowitz efficient frontier and identify the optimal risk return allocation.",
     "my_role": "Responsible for Grameenphone valuation, covariance matrix formulation, and 34 portfolio efficient frontier simulation.",
     "how_it_was_made": "Team project",
     "thumbnail": "assets/thumb-fin423.png",
@@ -44,15 +44,15 @@
     "page_count": 38,
     "file_size": "2.41 MB",
     "metrics": [
-      { "label": "Optimum Sharpe ratio (Group result)", "value": "3.44" },
       { "label": "Optimum expected return (Group result)", "value": "56.59%" },
+      { "label": "Optimum portfolio risk (Group result)", "value": "14.25%" },
       { "label": "Optimal asset allocation: BRAC Bank, Square, GP (Group result)", "value": "51% / 28% / 21%" }
     ],
     "tags": [
       "Portfolio Theory",
       "Efficient Frontier",
       "Covariance Matrix",
-      "Sharpe Ratio",
+      "Portfolio Risk",
       "Beta Regression",
       "Dividend Discount Model"
     ]
@@ -88,10 +88,10 @@
   {
     "id": "fin422-pharma-sector-valuation",
     "type": "case",
-    "title": "Valuation Analysis and Industry Research of Bangladesh Pharmaceuticals",
+    "title": "Equity Research Report and Valuation Analysis of Square Pharmaceuticals Ltd",
     "year": "2024",
     "course": "FIN422: Fundamentals of Investments, 2024",
-    "short_summary": "The group analysed company fundamentals, industry growth trends, and ten year stock return distributions across pharmaceutical firms. The group applied two stage dividend discount models and cash flow methods to compare intrinsic values against prevailing market prices.",
+    "short_summary": "The paper values Square Pharmaceuticals and benchmarks it against Beximco Pharma, Renata and Ibn Sina. The group examined historical monthly return distributions over ten years, applying two stage dividend discount and discounted cash flow models to assess intrinsic share value.",
     "my_role": "P/E relative valuation for the group's equity research and valuation paper.",
     "how_it_was_made": "Team project",
     "thumbnail": "assets/thumb-fin422.png",
