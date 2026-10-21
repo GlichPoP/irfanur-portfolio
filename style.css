@@ -1187,15 +1187,19 @@ code {
    EDUCATION & CREDENTIALS SECTION (#education)
    ========================================================================== */
 
+/* ==========================================================================
+   EDUCATION & CREDENTIALS SECTION (#education) - REFINED ALICE LEE STYLING
+   ========================================================================== */
+
 .academic-compact-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
-  padding: 32px 36px;
+  padding: 36px 40px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1207,29 +1211,276 @@ code {
 .compact-edu-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .compact-edu-group:not(:last-child) {
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .compact-edu-heading {
   font-family: var(--font-serif);
-  font-size: 1.08rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.compact-edu-text {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Education & Program Distinct Rows */
+.edu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edu-item-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background-color: var(--bg-surface-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.edu-item-row:hover {
+  border-color: rgba(217, 119, 87, 0.4);
+  background-color: #FAF7F2;
+}
+
+.edu-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.edu-item-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-headline);
   line-height: 1.35;
   margin: 0;
 }
 
-.compact-edu-text {
-  font-size: 0.95rem;
+.edu-item-sub {
+  font-size: 0.9rem;
   color: var(--text-body);
-  line-height: 1.6;
+  line-height: 1.55;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edu-item-sub strong {
+  color: var(--text-headline);
+  font-weight: 600;
+}
+
+.edu-item-timeline {
+  flex-shrink: 0;
+}
+
+.edu-timeline-pill {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  background-color: var(--accent-peach);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+/* Shared Separator Bars and Dots */
+.sep-bar {
+  color: #C4BFB6;
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+.sep-dot {
+  color: var(--accent-terracotta);
+  font-size: 0.85rem;
+  margin: 0 4px;
+}
+
+/* Certifications 2-Column Grid */
+.cert-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.cert-card-item {
+  background-color: var(--bg-surface-soft);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.cert-card-item:hover {
+  border-color: rgba(217, 119, 87, 0.45);
+  background-color: #FAF7F2;
+  box-shadow: 0 2px 8px rgba(45, 42, 38, 0.04);
+}
+
+.cert-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cert-issuer-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+}
+
+.cert-issuer-badge.cert-cilt {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border-color: #C8E6C9;
+}
+
+.cert-issuer-badge.cert-openai {
+  background-color: #E3F2FD;
+  color: #1565C0;
+  border-color: #BBDEFB;
+}
+
+.cert-issuer-badge.cert-anthropic {
+  background-color: #FBE9E7;
+  color: #D84315;
+  border-color: #FFCCBC;
+}
+
+.cert-issuer-badge.cert-google {
+  background-color: #FFF3E0;
+  color: #E65100;
+  border-color: #FFE0B2;
+}
+
+.cert-year-tag {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cert-card-name {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  line-height: 1.35;
   margin: 0;
 }
+
+.cert-card-details {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* Student Leadership Corporate Partner Chips */
+.partner-chips-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.partner-lead-label {
+  font-weight: 600;
+  color: var(--text-headline);
+  margin-right: 2px;
+}
+
+.partner-pill {
+  color: var(--text-body);
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 1px 8px;
+  font-size: 0.8rem;
+}
+
+.partner-sep {
+  color: var(--accent-terracotta);
+  font-size: 0.8rem;
+}
+
+.sub-lead {
+  color: var(--text-headline);
+  font-weight: 600;
+}
+
+.sub-sep {
+  color: #C4BFB6;
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+.sub-detail {
+  color: var(--text-body);
+}
+
+@media (max-width: 768px) {
+  .academic-compact-card {
+    padding: 24px 18px;
+    gap: 22px;
+  }
+  .cert-items-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .edu-item-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .sub-sep {
+    display: none;
+  }
+  .edu-item-sub {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
 
 .academics-container {
   display: flex;
