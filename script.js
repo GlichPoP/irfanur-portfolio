@@ -287,4 +287,113 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // Standard mailto link on #sendMessageBtn is handled natively by the browser.
+
+  // ==========================================================================
+  // 3. Desktop Mockup Interactive Slider / Carousel
+  // ==========================================================================
+  (function initCarousels() {
+    const frames = document.querySelectorAll('.showcase-mockup-frame[data-carousel]');
+
+    frames.forEach((frame) => {
+      const slides = frame.querySelectorAll('.carousel-slide');
+      const prevBtn = frame.querySelector('.carousel-nav-btn.prev');
+      const nextBtn = frame.querySelector('.carousel-nav-btn.next');
+      const tabBtns = frame.querySelectorAll('.carousel-tab-btn');
+      const counterEl = frame.querySelector('.carousel-step-count');
+      const addressBarEl = frame.querySelector('.mockup-address-bar');
+      const captionTitleEl = frame.querySelector('.carousel-active-title');
+      const captionDescEl = frame.querySelector('.carousel-active-desc');
+
+      if (!slides.length) return;
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      function goToSlide(index) {
+        if (index < 0) {
+          currentIndex = totalSlides - 1;
+        } else if (index >= totalSlides) {
+          currentIndex = 0;
+        } else {
+          currentIndex = index;
+        }
+
+        slides.forEach((slide, i) => {
+          if (i === currentIndex) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+
+        tabBtns.forEach((btn, i) => {
+          if (i === currentIndex) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+          } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          }
+        });
+
+        const activeSlide = slides[currentIndex];
+        const title = activeSlide.getAttribute('data-title') || '';
+        const desc = activeSlide.getAttribute('data-desc') || '';
+        const appName = frame.getAttribute('data-app-name') || 'Desktop App';
+
+        if (counterEl) {
+          counterEl.textContent = `${currentIndex + 1} / ${totalSlides}`;
+        }
+        if (addressBarEl) {
+          addressBarEl.textContent = `${appName} (Offline SQLite WebAssembly) — ${title}`;
+        }
+        if (captionTitleEl) {
+          captionTitleEl.textContent = title;
+        }
+        if (captionDescEl) {
+          captionDescEl.textContent = desc;
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          goToSlide(currentIndex - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          goToSlide(currentIndex + 1);
+        });
+      }
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const idx = parseInt(btn.getAttribute('data-index') || '0', 10);
+          goToSlide(idx);
+        });
+      });
+
+      // Touch swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      frame.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      frame.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          goToSlide(currentIndex + 1);
+        } else if (touchEndX - touchStartX > 50) {
+          goToSlide(currentIndex - 1);
+        }
+      }, { passive: true });
+    });
+  })();
+
 });

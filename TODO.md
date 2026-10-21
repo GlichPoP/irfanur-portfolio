@@ -42,12 +42,9 @@
 
 ---
 
-## 3. PROBAHO CRM Media Assets Request
+## 3. PROBAHO CRM & ERP Media Assets (Completed)
 
-- **Current Status:** The `assets/probaho` folder currently contains no additional media files beyond the high resolution desktop dashboard mockup. Per instructions, the gallery remains hidden until additional screenshots are provided.
-- **Request for Irfanur:** To display an interactive screenshot gallery and demo walkthrough, please provide:
-  1. 3 to 5 additional screenshots of key workflows (e.g. POS counter billing, inventory stock management, courier delivery configuration for Pathao/Steadfast, and backup export).
-  2. A short demo video (30 to 60 seconds, MP4 or WebM format) demonstrating offline POS order entry and receipt printing.
+- **Status:** Completed. The user provided four high-resolution screenshots for Probaho CRM (Dashboard & KPI, Orders Management, Inventory Catalog, Payments & Cash Ledger). Four matching screenshots were captured from within the live Probaho ERP application (Dashboard, Warehouses, Inventory, Procurement). Both tools are now equipped with interactive multi-screen desktop sliders.
 
 ---
 

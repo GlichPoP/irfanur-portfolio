@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.8">
+  <link rel="stylesheet" href="style.css?v=3.9">
 
   <!-- Privacy friendly analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
@@ -138,22 +138,83 @@
               Built with AI tools. I designed the product, defined the features, tested and released it.
             </div>
 
-            <!-- Complete Desktop Software Preview Frame -->
-            <div class="showcase-mockup-frame">
+            <!-- Complete Desktop Software Preview Frame with Interactive Slider -->
+            <div class="showcase-mockup-frame" data-carousel="probaho-crm" data-app-name="PROBAHO CRM Desktop">
               <div class="mockup-header-bar">
                 <div class="mockup-dots">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
                   <span class="mockup-dot green"></span>
                 </div>
-                <div class="mockup-address-bar">PROBAHO CRM Desktop (Offline SQLite WebAssembly)</div>
-                <div class="mockup-meta-pill">Desktop App</div>
+                <div class="mockup-address-bar">PROBAHO CRM Desktop (Offline SQLite WebAssembly) — Executive Command Center</div>
+                <div class="mockup-meta-pill"><span class="carousel-step-count">1 / 4</span></div>
               </div>
-              <div class="mockup-viewport">
-                <picture>
-                  <source srcset="assets/probaho-dashboard.webp" type="image/webp">
-                  <img src="assets/probaho-dashboard.png" alt="PROBAHO CRM Solutions desktop interface showing sales and inventory" class="mockup-img" width="2880" height="1800" loading="lazy">
-                </picture>
+
+              <div class="mockup-viewport carousel-viewport">
+                <div class="carousel-slides-track">
+                  <!-- Slide 1: Dashboard -->
+                  <div class="carousel-slide active" data-title="Executive Command Center" data-desc="Real time sales, COD remittances, and gross profit metrics">
+                    <picture>
+                      <source srcset="assets/probaho/01-dashboard.webp" type="image/webp">
+                      <img src="assets/probaho/01-dashboard.png" alt="PROBAHO CRM Executive Command Center showing real time sales and profit metrics" class="mockup-img" width="1024" height="640" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 2: Orders -->
+                  <div class="carousel-slide" data-title="Orders Management" data-desc="Track customer orders, couriers, and multi stage delivery status">
+                    <picture>
+                      <source srcset="assets/probaho/02-orders.webp" type="image/webp">
+                      <img src="assets/probaho/02-orders.png" alt="PROBAHO CRM Orders Management interface with Pathao, RedX and Steadfast courier tracking" class="mockup-img" width="1024" height="640" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 3: Inventory -->
+                  <div class="carousel-slide" data-title="Inventory Catalog" data-desc="Manage products, variants, unit prices, and stock alert matrix">
+                    <picture>
+                      <source srcset="assets/probaho/03-inventory.webp" type="image/webp">
+                      <img src="assets/probaho/03-inventory.png" alt="PROBAHO CRM Inventory Catalog with SKU cost valuations and stock levels" class="mockup-img" width="1024" height="640" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 4: Payments -->
+                  <div class="carousel-slide" data-title="Payments & Cash Ledger" data-desc="Track cash inflows, courier COD settlements, vendor payouts, and bank transfers">
+                    <picture>
+                      <source srcset="assets/probaho/04-payments.webp" type="image/webp">
+                      <img src="assets/probaho/04-payments.png" alt="PROBAHO CRM Payments and cash ledger view with bank transfer and bKash settlements" class="mockup-img" width="1024" height="640" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav-btn prev" type="button" aria-label="Previous screen" title="Previous screen">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-nav-btn next" type="button" aria-label="Next screen" title="Next screen">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <!-- Interactive Toolbar / Tabs -->
+              <div class="carousel-toolbar">
+                <div class="carousel-caption">
+                  <span class="carousel-active-title">Executive Command Center</span>
+                  <span class="carousel-active-desc">Real time sales, COD remittances, and gross profit metrics</span>
+                </div>
+                <div class="carousel-tabs" role="tablist" aria-label="Probaho CRM screens">
+                  <button class="carousel-tab-btn active" type="button" data-index="0" role="tab" aria-selected="true">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Dashboard & KPI</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="1" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Orders</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="2" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Inventory</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="3" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Payments</span>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -230,22 +291,83 @@
               Built with AI tools. I designed the product, defined the features, tested and released it.
             </div>
 
-            <!-- Complete Desktop Software Preview Frame -->
-            <div class="showcase-mockup-frame">
+            <!-- Complete Desktop Software Preview Frame with Interactive Slider -->
+            <div class="showcase-mockup-frame probaho-erp-frame" data-carousel="probaho-erp" data-app-name="Probaho ERP Desktop">
               <div class="mockup-header-bar">
                 <div class="mockup-dots">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
                   <span class="mockup-dot green"></span>
                 </div>
-                <div class="mockup-address-bar">Probaho ERP Desktop (Offline SQLite WebAssembly)</div>
-                <div class="mockup-meta-pill">Desktop App</div>
+                <div class="mockup-address-bar">Probaho ERP Desktop (Offline SQLite WebAssembly) — Supply Chain Overview</div>
+                <div class="mockup-meta-pill"><span class="carousel-step-count">1 / 4</span></div>
               </div>
-              <div class="mockup-viewport">
-                <picture>
-                  <source srcset="assets/probaho-erp-dashboard.webp" type="image/webp">
-                  <img src="assets/probaho-erp-dashboard.png" alt="Probaho ERP desktop interface showing supply chain and multi-warehouse operations" class="mockup-img" width="2880" height="1800" loading="lazy">
-                </picture>
+
+              <div class="mockup-viewport carousel-viewport">
+                <div class="carousel-slides-track">
+                  <!-- Slide 1: Supply Chain Dashboard -->
+                  <div class="carousel-slide active" data-title="Supply Chain Overview" data-desc="Central operations dashboard, stock valuations, and logistics telemetry">
+                    <picture>
+                      <source srcset="assets/probaho-erp/01-dashboard.webp" type="image/webp">
+                      <img src="assets/probaho-erp/01-dashboard.png" alt="Probaho ERP Supply Chain Dashboard interface" class="mockup-img" width="2880" height="1800" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 2: Warehouses -->
+                  <div class="carousel-slide" data-title="Warehouses & Bin Management" data-desc="Multi depot bin allocations, batch tracking, and stock transfer reconciliation">
+                    <picture>
+                      <source srcset="assets/probaho-erp/02-warehouses.webp" type="image/webp">
+                      <img src="assets/probaho-erp/02-warehouses.png" alt="Probaho ERP Multi Warehouse and Bin Control interface" class="mockup-img" width="2880" height="1800" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 3: Inventory -->
+                  <div class="carousel-slide" data-title="Inventory & Stock Control" data-desc="Real time stock levels, reorder alerts, and SKU valuation ledgers">
+                    <picture>
+                      <source srcset="assets/probaho-erp/03-inventory.webp" type="image/webp">
+                      <img src="assets/probaho-erp/03-inventory.png" alt="Probaho ERP Inventory and stock control interface" class="mockup-img" width="2880" height="1800" loading="lazy">
+                    </picture>
+                  </div>
+                  <!-- Slide 4: Procurement -->
+                  <div class="carousel-slide" data-title="Procurement & Purchase Orders" data-desc="Supplier purchase order lifecycles and Goods Receipt Note inspections">
+                    <picture>
+                      <source srcset="assets/probaho-erp/04-procurement.webp" type="image/webp">
+                      <img src="assets/probaho-erp/04-procurement.png" alt="Probaho ERP Procurement and Purchase Order management interface" class="mockup-img" width="2880" height="1800" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav-btn prev" type="button" aria-label="Previous screen" title="Previous screen">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-nav-btn next" type="button" aria-label="Next screen" title="Next screen">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <!-- Interactive Toolbar / Tabs -->
+              <div class="carousel-toolbar">
+                <div class="carousel-caption">
+                  <span class="carousel-active-title">Supply Chain Overview</span>
+                  <span class="carousel-active-desc">Central operations dashboard, stock valuations, and logistics telemetry</span>
+                </div>
+                <div class="carousel-tabs" role="tablist" aria-label="Probaho ERP screens">
+                  <button class="carousel-tab-btn active" type="button" data-index="0" role="tab" aria-selected="true">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Dashboard</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="1" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Warehouses</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="2" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Inventory</span>
+                  </button>
+                  <button class="carousel-tab-btn" type="button" data-index="3" role="tab" aria-selected="false">
+                    <span class="tab-dot"></span>
+                    <span class="tab-label">Procurement</span>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -667,6 +789,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3.8"></script>
+  <script src="script.js?v=3.9"></script>
 </body>
 </html>

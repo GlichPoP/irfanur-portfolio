@@ -2112,3 +2112,214 @@ code {
     color: inherit !important;
   }
 }
+
+
+/* ==========================================================================
+   INTERACTIVE DESKTOP MOCKUP CAROUSEL / SLIDER
+   ========================================================================== */
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #0D0B12;
+  aspect-ratio: 16 / 10;
+}
+
+.carousel-slides-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.98);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
+  position: relative;
+}
+
+.carousel-slide picture,
+.carousel-slide .mockup-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(22, 19, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(35, 30, 50, 0.95);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-nav-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-nav-btn.prev {
+  left: 14px;
+}
+
+.carousel-nav-btn.next {
+  right: 14px;
+}
+
+.carousel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1B1726;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+  flex: 1 1 240px;
+}
+
+.carousel-active-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.carousel-active-desc {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.35;
+}
+
+.carousel-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.carousel-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.74rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.carousel-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.carousel-tab-btn.active {
+  background: rgba(217, 119, 87, 0.24);
+  border-color: #D97757;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.carousel-tab-btn .tab-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.carousel-tab-btn.active .tab-dot {
+  background: #D97757;
+  box-shadow: 0 0 6px #D97757;
+}
+
+/* Probaho ERP carousel overrides for emerald accents */
+.probaho-erp-frame .carousel-toolbar {
+  background: #12211C;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.probaho-erp-frame .carousel-tab-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+.probaho-erp-frame .carousel-tab-btn.active .tab-dot {
+  background: #10B981;
+  box-shadow: 0 0 6px #10B981;
+}
+
+@media (max-width: 768px) {
+  .carousel-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .carousel-tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .carousel-tab-btn {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
+  .carousel-nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
