@@ -493,7 +493,7 @@ code {
 }
 
 /* ==========================================================================
-   FLAGSHIP SHOWCASE CARD (PROBAHO CRM)
+   FLAGSHIP SHOWCASE CARDS (PROBAHO CRM & PROBAHO ERP)
    ========================================================================== */
 .flagship-showcase-card {
   background-color: var(--bg-surface);
@@ -504,9 +504,25 @@ code {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.flagship-showcase-card + .flagship-showcase-card {
+  margin-top: 48px;
+}
+
 .card-visual-header.probaho-bg {
   width: 100%;
   background: linear-gradient(135deg, #2D253A 0%, #1E1B2E 100%);
+  color: #FFFFFF;
+  padding: 36px 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-visual-header.probaho-erp-bg {
+  width: 100%;
+  background: linear-gradient(135deg, #172D26 0%, #0F1E19 100%);
   color: #FFFFFF;
   padding: 36px 40px 30px 40px;
   display: flex;
@@ -1859,7 +1875,8 @@ code {
     min-height: 44px;
   }
 
-  .card-visual-header.probaho-bg {
+  .card-visual-header.probaho-bg,
+  .card-visual-header.probaho-erp-bg {
     padding: 22px 16px;
   }
 

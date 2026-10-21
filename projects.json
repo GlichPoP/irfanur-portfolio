@@ -30,6 +30,36 @@
     ]
   },
   {
+    "id": "probaho-erp",
+    "type": "tool",
+    "title": "Probaho ERP",
+    "year": "2026",
+    "course": "",
+    "short_summary": "A lightweight, offline first business suite built for distributors, retail networks, and logistics managers. Operates completely locally using SQLite WebAssembly, managing supplier purchase orders, multi-warehouse stock levels, goods receipts, and outbound dispatch without cloud server dependencies or recurring subscriptions.",
+    "my_role": "",
+    "how_it_was_made": "Built with AI tools. I designed the product, defined the features, tested and released it.",
+    "thumbnail": "assets/probaho-erp-dashboard.png",
+    "link": "https://github.com/GlichPoP/probaho-erp",
+    "installer_link": "https://github.com/GlichPoP/probaho-erp/releases",
+    "pdf_file": "",
+    "page_count": null,
+    "file_size": "",
+    "tags": [
+      "Electron",
+      "React 19",
+      "TypeScript",
+      "SQLite WebAssembly",
+      "Multi-warehouse control",
+      "Procurement workflows"
+    ],
+    "features": [
+      "Tracks inventory across multiple warehouses with bin allocation, stock valuation, and transfer reconciliation",
+      "Handles end to end procurement from vendor purchase orders to formal goods receipt notes",
+      "Generates outbound dispatch notes and waybills with carrier tracking and return to origin management",
+      "Stores all data locally in SQLite WebAssembly with one click backup export and recovery"
+    ]
+  },
+  {
     "id": "fin423-portfolio-optimization",
     "type": "case",
     "title": "Portfolio Optimization and Efficient Frontier Simulation",
@@ -44,9 +74,18 @@
     "page_count": 38,
     "file_size": "2.41 MB",
     "metrics": [
-      { "label": "Optimum expected return (Group result)", "value": "56.59%" },
-      { "label": "Optimum portfolio risk (Group result)", "value": "14.25%" },
-      { "label": "Optimal asset allocation: BRAC Bank, Square, GP (Group result)", "value": "51% / 28% / 21%" }
+      {
+        "label": "Optimum expected return (Group result)",
+        "value": "56.59%"
+      },
+      {
+        "label": "Optimum portfolio risk (Group result)",
+        "value": "14.25%"
+      },
+      {
+        "label": "Optimal asset allocation: BRAC Bank, Square, GP (Group result)",
+        "value": "51% / 28% / 21%"
+      }
     ],
     "tags": [
       "Portfolio Theory",
@@ -72,9 +111,18 @@
     "page_count": 48,
     "file_size": "9.22 MB",
     "metrics": [
-      { "label": "Target fair value (Group result)", "value": "BDT 397.20" },
-      { "label": "Implied upside (Group result)", "value": "79.6%" },
-      { "label": "Baseline discount rate benchmark (Group result)", "value": "10.49% WACC" }
+      {
+        "label": "Target fair value (Group result)",
+        "value": "BDT 397.20"
+      },
+      {
+        "label": "Implied upside (Group result)",
+        "value": "79.6%"
+      },
+      {
+        "label": "Baseline discount rate benchmark (Group result)",
+        "value": "10.49% WACC"
+      }
     ],
     "tags": [
       "Valuation Model",
@@ -100,9 +148,18 @@
     "page_count": 22,
     "file_size": "1.77 MB",
     "metrics": [
-      { "label": "FCFF intrinsic value (Group result)", "value": "BDT 210.98" },
-      { "label": "FCFE intrinsic value (Group result)", "value": "BDT 208.00" },
-      { "label": "Ten year monthly return standard deviation benchmark (Group result)", "value": "4.91% Volatility" }
+      {
+        "label": "FCFF intrinsic value (Group result)",
+        "value": "BDT 210.98"
+      },
+      {
+        "label": "FCFE intrinsic value (Group result)",
+        "value": "BDT 208.00"
+      },
+      {
+        "label": "Ten year monthly return standard deviation benchmark (Group result)",
+        "value": "4.91% Volatility"
+      }
     ],
     "tags": [
       "Dividend Discount Model",

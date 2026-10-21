@@ -75,6 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       },
 
+      'modal-probaho-erp': {
+        kicker: 'Case Study',
+        title: 'Probaho ERP',
+        subtitle: 'Enterprise supply chain, procurement and multi-warehouse operations suite',
+        sections: [
+          { title: 'The problem', text: 'Multi location distributors and retailers in Bangladesh need to track inventory movements across separate warehouses, manage supplier purchase orders, and coordinate dispatch without relying on slow internet connections or expensive monthly enterprise software subscriptions.' },
+          { title: 'Who it is for', text: 'Distributors, retail chains, and logistics managers who operate central depots, regional transit points, and retail stockrooms needing dependable local record keeping.' },
+          { title: 'What I decided and why', text: 'I chose an offline first desktop architecture using Electron, React 19, TypeScript, and SQLite WebAssembly through sql.js. This stores all supplier contracts, purchase orders, goods receipt notes, and warehouse balances on local hardware. I structured the system into modular operations for suppliers, multi-warehouse bin control, stock transfer reconciliation, and outbound waybill generation.' },
+          { title: 'Trade offs and limits', text: 'Because the database lives locally on counter and office computers, synchronising stock movements across distant branches in real time requires periodic snapshot exports or network connectivity.' },
+          { title: 'What I would improve next', text: 'Direct barcode and RFID scanning integration, automated supplier email dispatch for purchase orders, and scheduled background peer to peer database synchronisation across warehouse locations.' }
+        ],
+        links: [
+          { text: 'View repository on GitHub', url: 'https://github.com/GlichPoP/probaho-erp', primary: true },
+          { text: 'Download installer', url: 'https://github.com/GlichPoP/probaho-erp/releases', primary: false }
+        ]
+      },
+
       'modal-fin423': {
         kicker: 'Executive Summary',
         title: 'Portfolio Optimization and Efficient Frontier Simulation',
