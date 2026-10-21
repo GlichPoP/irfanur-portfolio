@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'modal-probaho-erp': {
         kicker: 'Case Study',
         title: 'Probaho ERP',
-        subtitle: 'Enterprise supply chain, procurement and multi-warehouse operations suite',
+        subtitle: 'Supply chain, procurement and multi-warehouse operations suite',
         sections: [
-          { title: 'The problem', text: 'Multi location distributors and retailers in Bangladesh need to track inventory movements across separate warehouses, manage supplier purchase orders, and coordinate dispatch without relying on slow internet connections or expensive monthly enterprise software subscriptions.' },
+          { title: 'The problem', text: 'Multi location distributors and retailers in Bangladesh need to track inventory movements across separate warehouses, manage supplier purchase orders, and coordinate dispatch without relying on slow internet connections or expensive monthly software subscriptions.' },
           { title: 'Who it is for', text: 'Distributors, retail chains, and logistics managers who operate central depots, regional transit points, and retail stockrooms needing dependable local record keeping.' },
           { title: 'What I decided and why', text: 'I chose an offline first desktop architecture using Electron, React 19, TypeScript, and SQLite WebAssembly through sql.js. This stores all supplier contracts, purchase orders, goods receipt notes, and warehouse balances on local hardware. I structured the system into modular operations for suppliers, multi-warehouse bin control, stock transfer reconciliation, and outbound waybill generation.' },
           { title: 'Trade offs and limits', text: 'Because the database lives locally on counter and office computers, synchronising stock movements across distant branches in real time requires periodic snapshot exports or network connectivity.' },
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
           counterEl.textContent = `${currentIndex + 1} / ${totalSlides}`;
         }
         if (addressBarEl) {
-          addressBarEl.textContent = `${appName} (Offline SQLite WebAssembly) — ${title}`;
+          addressBarEl.textContent = `${appName} (Offline SQLite WebAssembly): ${title}`;
         }
         if (captionTitleEl) {
           captionTitleEl.textContent = title;
